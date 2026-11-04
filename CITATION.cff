@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this competition solution, please cite the software and the upstream RealPDE benchmark."
+type: software
+license: MIT
+repository-code: "https://github.com/andychangyy-maker/Cupid-RealPDE"
+url: "https://github.com/andychangyy-maker/Cupid-RealPDE"
+version: "948801-public.1"
+date-released: "2026-11-04"
+title: "Cupid: Uncertainty-Aware Flow Forecasting with Causal Online Calibration"
+authors:
+  - family-names: Chang
+    given-names: Yaoyu
+  - family-names: Liu
+    given-names: Wenhao
+  - family-names: Shi
+    given-names: Hao
+abstract: "Team Cupid's RealPDE 2026 Track 2 competition solution: a frozen multi-member flow forecaster with causal online calibration and a complete from-scratch training pipeline."
+keywords:
+  - flow forecasting
+  - uncertainty quantification
+  - test-time adaptation
+  - scientific machine learning
+  - RealPDE

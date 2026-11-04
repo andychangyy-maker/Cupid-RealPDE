@@ -1,0 +1,41 @@
+{
+  "run_date": "2026-10-10",
+  "assembled_on": "2026-11-04",
+  "files": [
+    {
+      "path": "training_report.json",
+      "original_relative_path": "training/training_report.json",
+      "sha256": "592c26200e7aede93ac0d38ab535fd4f1b7f7d97760fd752ddcadf909b72085e",
+      "bytes": 6518,
+      "modified": false
+    },
+    {
+      "path": "final_api.json",
+      "original_relative_path": "validation/final_api.json",
+      "sha256": "6bd7be840fef2c56a08ab69869da939618c63db460a611f7bbec7401da3e1380",
+      "bytes": 514,
+      "modified": false
+    },
+    {
+      "path": "fresh_replay.json",
+      "original_relative_path": "validation/new_compiled.json",
+      "sha256": "4aa6f79736435df9fc566d5491acfe5747d7aa1333073c6d2a360a1107657008",
+      "bytes": 116231,
+      "modified": false
+    },
+    {
+      "path": "sealed_replay.json",
+      "original_relative_path": "validation/baseline_compiled.json",
+      "sha256": "45b1c9c4307747dd219610775dc07a3e816b1b9b6cb64f605c4753c5b142ce3e",
+      "bytes": 116253,
+      "modified": false
+    },
+    {
+      "path": "validation_report.json",
+      "original_relative_path": "validation/validation_report.json",
+      "sha256": "9b87a1a073bf799313d5111a9fb976992d8972b8ec92c2f1abe86f3c12e8d4d0",
+      "bytes": 2403,
+      "modified": false
+    }
+  ]
+}

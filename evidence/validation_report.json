@@ -1,0 +1,63 @@
+{
+  "complete": true,
+  "started_unix": 1791596183.5182052,
+  "runtime": "Docker Engine --network none",
+  "literal_docker_engine_run": true,
+  "gpu_name": "NVIDIA A800-SXM4-80GB",
+  "gpu_memory_bytes": 85167243264,
+  "torch": "2.4.1+cu124",
+  "cuda_build": "12.4",
+  "output_initially_empty": true,
+  "data_read_only": true,
+  "external_ipv4_ipv6_dns_unavailable": true,
+  "scope": "Container probe only; host Docker inspect and engine evidence required",
+  "frozen_training_image_id": "sha256:c013fda8b1126dc44143a85b53da049fb28bb1a2cf900b4fd6e91d7554465f7e",
+  "steps": [
+    {
+      "name": "final_api",
+      "complete": true,
+      "started_unix": 1791596186.8840737,
+      "seconds": 165.31102204322815
+    },
+    {
+      "name": "new_compiled",
+      "complete": true,
+      "started_unix": 1791596352.1954203,
+      "seconds": 405.19756412506104
+    },
+    {
+      "name": "baseline_compiled",
+      "complete": true,
+      "started_unix": 1791596757.3931258,
+      "seconds": 402.7319030761719
+    }
+  ],
+  "val_delta": {
+    "rel_l2_score": 0.0021054699463149973,
+    "tke_score": -0.012531238591520832,
+    "mvpe_score": -0.0010182120223447555,
+    "sps_score": -0.011250172632990996,
+    "quality_mean": -0.005673538325126515
+  },
+  "quality_gate_passed": true,
+  "quality_gate_scope": "Internal rejection limits only; not official reproducibility tolerance",
+  "timing": {
+    "new": {
+      "ttt_step_total_seconds": 8.875614851001842,
+      "mean_seconds": 0.00265657433433159,
+      "p50_seconds": 0.002381882999998197,
+      "p95_seconds": 0.004220051999993757,
+      "scope": "Synchronized wall time around ttt_step; excludes data normalization, scoring and result copies; not official Time"
+    },
+    "baseline": {
+      "ttt_step_total_seconds": 8.892230983997138,
+      "mean_seconds": 0.0026615477354077037,
+      "p50_seconds": 0.0023978750000424043,
+      "p95_seconds": 0.004287536999981967,
+      "scope": "Synchronized wall time around ttt_step; excludes data normalization, scoring and result copies; not official Time"
+    }
+  },
+  "release_ready": false,
+  "remaining_boundary": "Docker Engine training and public replay are local evidence, not official hidden development or final test acceptance. External submission and organizer access must be checked separately.",
+  "elapsed_seconds": 976.609137058258
+}

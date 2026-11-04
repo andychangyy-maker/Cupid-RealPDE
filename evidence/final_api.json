@@ -1,0 +1,23 @@
+{
+  "complete": true,
+  "device": "cuda",
+  "torch": "2.4.1+cu124",
+  "cuda_build": "12.4",
+  "load_seconds": 160.396271245,
+  "seconds": 161.599462883,
+  "causal_steps": 8,
+  "reset_maxabs": 0.0,
+  "shape": [
+    1,
+    20,
+    32,
+    64,
+    3
+  ],
+  "dtype": "float32",
+  "bounds_ordered": true,
+  "pressure_zero": true,
+  "network_isolation": "not established by this script",
+  "common_compiled": true,
+  "evidence": "Final API and reset check; not official score or Time measurement"
+}

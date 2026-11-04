@@ -1,0 +1,9 @@
+# Preserve the frozen package byte-for-byte on all platforms.
+submission/** -text
+# Keep the historical dependency trees from dominating GitHub language statistics.
+submission/legacy/** linguist-vendored
+submission/teacher_legacy/** linguist-vendored
+submission/runtime/**/vendor/** linguist-vendored
+submission/third_party_licenses/** linguist-vendored
+submission/wheels/** linguist-vendored
+docs/frozen-source-manifest.json linguist-generated

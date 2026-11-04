@@ -1,0 +1,31 @@
+{
+  "kind": "selected_fields_from_historical_training_supervisor",
+  "source_filename": "DOCKER_TRAINING_RESULT.json",
+  "source_sha256": "19cf30370102ec575f64dea8d1e46e5f95e593ebae871d8c52f62de17387da1d",
+  "fields": {
+    "recorded_utc": "2026-10-09T21:02:35.833037+00:00",
+    "track": 2,
+    "submission_id": 948801,
+    "frozen_image": "andychang123/realpde-track2:20261009-release1",
+    "frozen_digest": "sha256:9457e8f5594b459d69e3cbf8510f8a6ab1b2acf4b03961bbe742afbdf3669048",
+    "docker_engine_training_complete": true,
+    "training_stages_completed": 31,
+    "train_api_seconds": 14843.55007923,
+    "supervised_train_seconds": 14854.183264493942,
+    "training_container_started_utc": "2026-10-09T16:41:30.211003941Z",
+    "training_container_finished_utc": "2026-10-09T20:48:55.447071096Z",
+    "training_exit_code": 0,
+    "training_oom_killed": false,
+    "cpu_limit": 16,
+    "memory_limit_bytes": 128000000000,
+    "gpu": "1 x A800-SXM4-80GB",
+    "docker_engine_version": "29.9.0",
+    "network_mode": "none",
+    "public_data_read_only": true,
+    "initial_output_empty": true,
+    "old_weights_mounted": false,
+    "peak_allocated_bytes": 23974356992,
+    "peak_reserved_bytes": 25352470528
+  },
+  "scope": "Training receipt only. Subsequent inference results are in validation_report.json. No claim that historical pending status had already passed."
+}

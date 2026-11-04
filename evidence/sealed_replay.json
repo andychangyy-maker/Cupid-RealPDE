@@ -1,0 +1,3300 @@
+{
+  "complete": true,
+  "package": "/output/baseline/model",
+  "scores": {
+    "all": {
+      "samples": 3341,
+      "raw_rel_l2": 0.06894315678968611,
+      "raw_tke_rel_l2": 0.4136613016177066,
+      "raw_mvpe_rel_l2": 0.05989192237180486,
+      "sps_weighted": 0.5646604114015484,
+      "sps_coverage": 0.9039066997450643,
+      "sps_sufficient_stats": {
+        "dm_numerator": 155716929.45818397,
+        "tke_numerator": 97791532.0303555,
+        "mvpe_numerator": 158338237.60186937,
+        "denominator": 245924044
+      },
+      "rel_l2_score": 96.66771140795076,
+      "tke_score": 82.86166740377125,
+      "mvpe_score": 97.09247258454006,
+      "sps_score": 56.46604114015484,
+      "quality_mean": 83.27197313410423
+    },
+    "val": {
+      "samples": 716,
+      "raw_rel_l2": 0.06922825895166597,
+      "raw_tke_rel_l2": 0.4105400605928465,
+      "raw_mvpe_rel_l2": 0.06086972458860394,
+      "sps_weighted": 0.5644005762877807,
+      "sps_coverage": 0.902956403957432,
+      "sps_sufficient_stats": {
+        "dm_numerator": 33334874.542345766,
+        "tke_numerator": 21012923.6148515,
+        "mvpe_numerator": 33859650.11028846,
+        "denominator": 52698820
+      },
+      "rel_l2_score": 96.65439234882965,
+      "tke_score": 82.96895922601351,
+      "mvpe_score": 97.04640599731479,
+      "sps_score": 56.44005762877807,
+      "quality_mean": 83.277453800234
+    },
+    "early": {
+      "samples": 648,
+      "raw_rel_l2": 0.06980202842020879,
+      "raw_tke_rel_l2": 0.4173531622430425,
+      "raw_mvpe_rel_l2": 0.06024028249458628,
+      "sps_weighted": 0.5619958501426475,
+      "sps_coverage": 0.9034829003900405,
+      "sps_sufficient_stats": {
+        "dm_numerator": 30069426.817760594,
+        "tke_numerator": 18844804.798293382,
+        "mvpe_numerator": 30592130.990107834,
+        "denominator": 47698895
+      },
+      "rel_l2_score": 96.6275988011527,
+      "tke_score": 82.735118361614,
+      "mvpe_score": 97.07605549670906,
+      "sps_score": 56.199585014264756,
+      "quality_mean": 83.15958941843513
+    }
+  },
+  "steps": 3341,
+  "reset_maxabs": 0.0,
+  "common_compiled": true,
+  "compile_status": {
+    "common_compiled": true,
+    "common_graph": true,
+    "refresh_graph": true,
+    "readout_compiled": true,
+    "readout_observe_graph": true,
+    "readout_apply_graph": true
+  },
+  "load_seconds": 157.9474036449999,
+  "replay_seconds": 240.15759553399994,
+  "total_seconds": 398.11355975900005,
+  "timing": {
+    "ttt_step_total_seconds": 8.892230983997138,
+    "mean_seconds": 0.0026615477354077037,
+    "p50_seconds": 0.0023978750000424043,
+    "p95_seconds": 0.004287536999981967,
+    "scope": "Synchronized wall time around ttt_step; excludes data normalization, scoring and result copies; not official Time"
+  },
+  "trajectories": [
+    {
+      "file": "10125_0.h5",
+      "aoa": 0,
+      "states": {
+        "all": {
+          "samples": 29,
+          "rel_sum": 1.1054378561675549,
+          "tke_sum": 10.92236441373825,
+          "mvpe_sum": 0.7279900833964348,
+          "sps_dm_numerator": 1576509.47991696,
+          "sps_tke_numerator": 976322.0399045646,
+          "sps_mvpe_numerator": 1615745.5654869974,
+          "sps_denominator": 2098127,
+          "coverage_numerator": 2015146
+        },
+        "val": {
+          "samples": 6,
+          "rel_sum": 0.2310517281293869,
+          "tke_sum": 2.0544183552265167,
+          "mvpe_sum": 0.12623444572091103,
+          "sps_dm_numerator": 326690.62425485253,
+          "sps_tke_numerator": 210944.95524983108,
+          "sps_mvpe_numerator": 337651.0242680013,
+          "sps_denominator": 434052,
+          "coverage_numerator": 417767
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.3087659291923046,
+          "tke_sum": 2.919164329767227,
+          "mvpe_sum": 0.21665302850306034,
+          "sps_dm_numerator": 432982.6649635434,
+          "sps_tke_numerator": 271949.4667933285,
+          "sps_mvpe_numerator": 442509.75192686915,
+          "sps_denominator": 578699,
+          "coverage_numerator": 554089
+        }
+      }
+    },
+    {
+      "file": "10125_10.h5",
+      "aoa": 10,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 2.684332687407732,
+          "tke_sum": 16.620381742715836,
+          "mvpe_sum": 2.8205712772905827,
+          "sps_dm_numerator": 2074103.3930573165,
+          "sps_tke_numerator": 1311091.621591799,
+          "sps_mvpe_numerator": 2063641.6021992266,
+          "sps_denominator": 3090210,
+          "coverage_numerator": 2885490
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.5805206000804901,
+          "tke_sum": 3.75845068693161,
+          "mvpe_sum": 0.6004346460103989,
+          "sps_dm_numerator": 445515.2649842799,
+          "sps_tke_numerator": 275562.66134304553,
+          "sps_mvpe_numerator": 444318.0423923284,
+          "sps_denominator": 662740,
+          "coverage_numerator": 620295
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.4995059370994568,
+          "tke_sum": 3.1888678073883057,
+          "mvpe_sum": 0.518058106303215,
+          "sps_dm_numerator": 396818.9918642044,
+          "sps_tke_numerator": 248700.59365178645,
+          "sps_mvpe_numerator": 395314.87530586123,
+          "sps_denominator": 588541,
+          "coverage_numerator": 550092
+        }
+      }
+    },
+    {
+      "file": "10125_15.h5",
+      "aoa": 15,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.3711152747273445,
+          "tke_sum": 17.13467785716057,
+          "mvpe_sum": 3.121027819812298,
+          "sps_dm_numerator": 1891852.5836839676,
+          "sps_tke_numerator": 1217997.7607284784,
+          "sps_mvpe_numerator": 1912714.9300626218,
+          "sps_denominator": 3090430,
+          "coverage_numerator": 2821530
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.7400631159543991,
+          "tke_sum": 3.8122728765010834,
+          "mvpe_sum": 0.6973081082105637,
+          "sps_dm_numerator": 403268.385028556,
+          "sps_tke_numerator": 255775.11230748892,
+          "sps_mvpe_numerator": 406988.5597945303,
+          "sps_denominator": 662087,
+          "coverage_numerator": 602568
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.6481170728802681,
+          "tke_sum": 2.9794033765792847,
+          "mvpe_sum": 0.5717513561248779,
+          "sps_dm_numerator": 359547.81525698304,
+          "sps_tke_numerator": 240176.89858551323,
+          "sps_mvpe_numerator": 365625.3512765169,
+          "sps_denominator": 588892,
+          "coverage_numerator": 537927
+        }
+      }
+    },
+    {
+      "file": "10125_20.h5",
+      "aoa": 20,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.9473487436771393,
+          "tke_sum": 17.582535088062286,
+          "mvpe_sum": 3.5688518546521664,
+          "sps_dm_numerator": 1906958.3454021066,
+          "sps_tke_numerator": 1237931.4533629715,
+          "sps_mvpe_numerator": 1937385.3603819758,
+          "sps_denominator": 3228425,
+          "coverage_numerator": 2915645
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.8599912747740746,
+          "tke_sum": 3.5603723227977753,
+          "mvpe_sum": 0.7460664324462414,
+          "sps_dm_numerator": 407329.7856808007,
+          "sps_tke_numerator": 272247.39485152066,
+          "sps_mvpe_numerator": 416422.31012395024,
+          "sps_denominator": 691761,
+          "coverage_numerator": 625035
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.7630741447210312,
+          "tke_sum": 3.325694352388382,
+          "mvpe_sum": 0.6996006444096565,
+          "sps_dm_numerator": 360752.13116660714,
+          "sps_tke_numerator": 235529.5591429025,
+          "sps_mvpe_numerator": 365645.13800260425,
+          "sps_denominator": 615044,
+          "coverage_numerator": 555849
+        }
+      }
+    },
+    {
+      "file": "10125_5.h5",
+      "aoa": 5,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.823998223990202,
+          "tke_sum": 18.540195673704147,
+          "mvpe_sum": 1.3359055742621422,
+          "sps_dm_numerator": 2215481.598691702,
+          "sps_tke_numerator": 1284982.9479206651,
+          "sps_mvpe_numerator": 2264152.211111039,
+          "sps_denominator": 3019110,
+          "coverage_numerator": 2884008
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.3822318762540817,
+          "tke_sum": 4.045871824026108,
+          "mvpe_sum": 0.30092768743634224,
+          "sps_dm_numerator": 477674.24800133705,
+          "sps_tke_numerator": 273528.60570314527,
+          "sps_mvpe_numerator": 485853.0259913504,
+          "sps_denominator": 646812,
+          "coverage_numerator": 620307
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.34886763617396355,
+          "tke_sum": 3.3807223439216614,
+          "mvpe_sum": 0.24283398501574993,
+          "sps_dm_numerator": 420529.5339343846,
+          "sps_tke_numerator": 248477.80014561117,
+          "sps_mvpe_numerator": 431077.32947942615,
+          "sps_denominator": 574875,
+          "coverage_numerator": 547877
+        }
+      }
+    },
+    {
+      "file": "11400_0.h5",
+      "aoa": 0,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.5692568197846413,
+          "tke_sum": 13.571268483996391,
+          "mvpe_sum": 1.1380933988839388,
+          "sps_dm_numerator": 2288822.6335182786,
+          "sps_tke_numerator": 1504915.8828757256,
+          "sps_mvpe_numerator": 2333631.2427152395,
+          "sps_denominator": 3049557,
+          "coverage_numerator": 2921205
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.33109890297055244,
+          "tke_sum": 2.9071293473243713,
+          "mvpe_sum": 0.2577655725181103,
+          "sps_dm_numerator": 494181.31151238084,
+          "sps_tke_numerator": 325262.5424352288,
+          "sps_mvpe_numerator": 501870.0543305278,
+          "sps_denominator": 653421,
+          "coverage_numerator": 630863
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.2937839850783348,
+          "tke_sum": 2.4565500766038895,
+          "mvpe_sum": 0.2087458986788988,
+          "sps_dm_numerator": 436315.21364837885,
+          "sps_tke_numerator": 292269.67711248994,
+          "sps_mvpe_numerator": 445151.1960079074,
+          "sps_denominator": 580448,
+          "coverage_numerator": 556090
+        }
+      }
+    },
+    {
+      "file": "11400_10.h5",
+      "aoa": 10,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 2.504847139120102,
+          "tke_sum": 16.365973085165024,
+          "mvpe_sum": 2.5484499484300613,
+          "sps_dm_numerator": 2101289.467555836,
+          "sps_tke_numerator": 1329505.0993011221,
+          "sps_mvpe_numerator": 2098563.4124176204,
+          "sps_denominator": 3098481,
+          "coverage_numerator": 2887085
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.5370091758668423,
+          "tke_sum": 3.8682873845100403,
+          "mvpe_sum": 0.5693630427122116,
+          "sps_dm_numerator": 453692.18724536896,
+          "sps_tke_numerator": 274390.56002755463,
+          "sps_mvpe_numerator": 450882.5960829258,
+          "sps_denominator": 664379,
+          "coverage_numerator": 622871
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.4663685970008373,
+          "tke_sum": 2.883836954832077,
+          "mvpe_sum": 0.4439792111515999,
+          "sps_dm_numerator": 403033.35565944016,
+          "sps_tke_numerator": 262448.0757282227,
+          "sps_mvpe_numerator": 405087.704744637,
+          "sps_denominator": 590189,
+          "coverage_numerator": 552532
+        }
+      }
+    },
+    {
+      "file": "11400_15.h5",
+      "aoa": 15,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.15543270111084,
+          "tke_sum": 16.109815448522568,
+          "mvpe_sum": 2.746149219572544,
+          "sps_dm_numerator": 1911737.8849697113,
+          "sps_tke_numerator": 1249398.8579081818,
+          "sps_mvpe_numerator": 1945481.853638187,
+          "sps_denominator": 3092472,
+          "coverage_numerator": 2817678
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.6581814363598824,
+          "tke_sum": 3.263759881258011,
+          "mvpe_sum": 0.6216381229460239,
+          "sps_dm_numerator": 413293.3096280694,
+          "sps_tke_numerator": 275308.11536468565,
+          "sps_mvpe_numerator": 416399.45695747435,
+          "sps_denominator": 663410,
+          "coverage_numerator": 605705
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.6024702489376068,
+          "tke_sum": 3.0244944393634796,
+          "mvpe_sum": 0.4823765493929386,
+          "sps_dm_numerator": 362005.66063573956,
+          "sps_tke_numerator": 237667.84723252058,
+          "sps_mvpe_numerator": 371807.76946897805,
+          "sps_denominator": 588300,
+          "coverage_numerator": 535154
+        }
+      }
+    },
+    {
+      "file": "11400_20.h5",
+      "aoa": 20,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.8649290055036545,
+          "tke_sum": 16.800617396831512,
+          "mvpe_sum": 3.289854221045971,
+          "sps_dm_numerator": 1885001.4512557685,
+          "sps_tke_numerator": 1248861.7603460252,
+          "sps_mvpe_numerator": 1930694.856902808,
+          "sps_denominator": 3229345,
+          "coverage_numerator": 2894233
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.8320658430457115,
+          "tke_sum": 3.4631601572036743,
+          "mvpe_sum": 0.7541830167174339,
+          "sps_dm_numerator": 403134.6194437444,
+          "sps_tke_numerator": 270078.7276559621,
+          "sps_mvpe_numerator": 409269.02358938754,
+          "sps_denominator": 692028,
+          "coverage_numerator": 619175
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.7202403098344803,
+          "tke_sum": 3.2581560909748077,
+          "mvpe_sum": 0.6048944965004921,
+          "sps_dm_numerator": 361324.24968363345,
+          "sps_tke_numerator": 238412.61752179265,
+          "sps_mvpe_numerator": 370619.42773491144,
+          "sps_denominator": 614967,
+          "coverage_numerator": 554979
+        }
+      }
+    },
+    {
+      "file": "11400_5.h5",
+      "aoa": 5,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.6114492677152157,
+          "tke_sum": 19.21015113592148,
+          "mvpe_sum": 1.131719220429659,
+          "sps_dm_numerator": 2239012.477742225,
+          "sps_tke_numerator": 1262128.5528052002,
+          "sps_mvpe_numerator": 2287829.2601847053,
+          "sps_denominator": 3012472,
+          "coverage_numerator": 2877850
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.3360644690692425,
+          "tke_sum": 4.1636382937431335,
+          "mvpe_sum": 0.23119954951107502,
+          "sps_dm_numerator": 481628.9211246371,
+          "sps_tke_numerator": 269518.14756956697,
+          "sps_mvpe_numerator": 492398.82575407624,
+          "sps_denominator": 645140,
+          "coverage_numerator": 615268
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.3174835257232189,
+          "tke_sum": 3.748691588640213,
+          "mvpe_sum": 0.22068781033158302,
+          "sps_dm_numerator": 422134.95870628953,
+          "sps_tke_numerator": 235566.28364273906,
+          "sps_mvpe_numerator": 431855.5578392446,
+          "sps_denominator": 573571,
+          "coverage_numerator": 543639
+        }
+      }
+    },
+    {
+      "file": "12675_0.h5",
+      "aoa": 0,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.4842637553811073,
+          "tke_sum": 15.731433466076851,
+          "mvpe_sum": 0.9910548748448491,
+          "sps_dm_numerator": 2283497.3761613667,
+          "sps_tke_numerator": 1406221.3860604465,
+          "sps_mvpe_numerator": 2334863.1842060685,
+          "sps_denominator": 3046914,
+          "coverage_numerator": 2908965
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.32583026215434074,
+          "tke_sum": 3.1104203313589096,
+          "mvpe_sum": 0.23156459257006645,
+          "sps_dm_numerator": 488308.93665230274,
+          "sps_tke_numerator": 311149.6534202248,
+          "sps_mvpe_numerator": 498059.65533450246,
+          "sps_denominator": 652718,
+          "coverage_numerator": 624058
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.28336151689291,
+          "tke_sum": 2.9035282731056213,
+          "mvpe_sum": 0.18270989786833525,
+          "sps_dm_numerator": 435204.80184847116,
+          "sps_tke_numerator": 271527.3410958648,
+          "sps_mvpe_numerator": 445710.36396852136,
+          "sps_denominator": 580033,
+          "coverage_numerator": 555448
+        }
+      }
+    },
+    {
+      "file": "12675_10.h5",
+      "aoa": 10,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 2.6666919365525246,
+          "tke_sum": 17.980892539024353,
+          "mvpe_sum": 2.735788766294718,
+          "sps_dm_numerator": 2045503.5678015724,
+          "sps_tke_numerator": 1251685.4928134307,
+          "sps_mvpe_numerator": 2040762.9959175289,
+          "sps_denominator": 3101023,
+          "coverage_numerator": 2862697
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.5658711679279804,
+          "tke_sum": 3.9912306368350983,
+          "mvpe_sum": 0.5875802077353001,
+          "sps_dm_numerator": 439752.2177949771,
+          "sps_tke_numerator": 263217.19756630063,
+          "sps_mvpe_numerator": 438181.924180761,
+          "sps_denominator": 664212,
+          "coverage_numerator": 614267
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.5120457261800766,
+          "tke_sum": 3.6289457082748413,
+          "mvpe_sum": 0.6241598464548588,
+          "sps_dm_numerator": 390199.2672485262,
+          "sps_tke_numerator": 231287.35385741293,
+          "sps_mvpe_numerator": 381025.55545946956,
+          "sps_denominator": 590778,
+          "coverage_numerator": 545295
+        }
+      }
+    },
+    {
+      "file": "12675_15.h5",
+      "aoa": 15,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.0906187146902084,
+          "tke_sum": 16.604516729712486,
+          "mvpe_sum": 2.846233259886503,
+          "sps_dm_numerator": 1885355.0827810168,
+          "sps_tke_numerator": 1215659.6679869518,
+          "sps_mvpe_numerator": 1905457.4589823335,
+          "sps_denominator": 3090976,
+          "coverage_numerator": 2798026
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.6645084768533707,
+          "tke_sum": 3.288769915699959,
+          "mvpe_sum": 0.5546891279518604,
+          "sps_dm_numerator": 401804.7831714004,
+          "sps_tke_numerator": 267975.79277219623,
+          "sps_mvpe_numerator": 410585.299183324,
+          "sps_denominator": 661747,
+          "coverage_numerator": 597734
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.6233276799321175,
+          "tke_sum": 3.3220640420913696,
+          "mvpe_sum": 0.5930074751377106,
+          "sps_dm_numerator": 354449.2585145384,
+          "sps_tke_numerator": 225199.6640490666,
+          "sps_mvpe_numerator": 357106.8158855736,
+          "sps_denominator": 589272,
+          "coverage_numerator": 532367
+        }
+      }
+    },
+    {
+      "file": "12675_20.h5",
+      "aoa": 20,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.832088865339756,
+          "tke_sum": 16.63532191514969,
+          "mvpe_sum": 3.2381906658411026,
+          "sps_dm_numerator": 1833751.776790738,
+          "sps_tke_numerator": 1218008.5439621583,
+          "sps_mvpe_numerator": 1879958.28335163,
+          "sps_denominator": 3228905,
+          "coverage_numerator": 2852353
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.8309123143553734,
+          "tke_sum": 3.945127695798874,
+          "mvpe_sum": 0.7682696431875229,
+          "sps_dm_numerator": 391026.41952745616,
+          "sps_tke_numerator": 247504.68981599808,
+          "sps_mvpe_numerator": 396266.7396528125,
+          "sps_denominator": 691940,
+          "coverage_numerator": 609213
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.7125694453716278,
+          "tke_sum": 3.195332258939743,
+          "mvpe_sum": 0.5480564162135124,
+          "sps_dm_numerator": 350900.95084509254,
+          "sps_tke_numerator": 230381.24972626567,
+          "sps_mvpe_numerator": 363635.23565639555,
+          "sps_denominator": 614923,
+          "coverage_numerator": 544660
+        }
+      }
+    },
+    {
+      "file": "12675_5.h5",
+      "aoa": 5,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.6656867936253548,
+          "tke_sum": 19.03906899690628,
+          "mvpe_sum": 1.1400678399950266,
+          "sps_dm_numerator": 2213268.9859372824,
+          "sps_tke_numerator": 1258515.8619476259,
+          "sps_mvpe_numerator": 2266177.3738786727,
+          "sps_denominator": 3011523,
+          "coverage_numerator": 2863241
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.34579962119460106,
+          "tke_sum": 4.2319155633449554,
+          "mvpe_sum": 0.2598222102969885,
+          "sps_dm_numerator": 477929.5240613222,
+          "sps_tke_numerator": 266066.6913276464,
+          "sps_mvpe_numerator": 486649.35400632024,
+          "sps_denominator": 645632,
+          "coverage_numerator": 615627
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.3299257941544056,
+          "tke_sum": 3.332980304956436,
+          "mvpe_sum": 0.2273400016129017,
+          "sps_dm_numerator": 418802.9923655689,
+          "sps_tke_numerator": 249300.2042223215,
+          "sps_mvpe_numerator": 429049.15388804674,
+          "sps_denominator": 573445,
+          "coverage_numerator": 545812
+        }
+      }
+    },
+    {
+      "file": "13950_0.h5",
+      "aoa": 0,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.4967352040112019,
+          "tke_sum": 18.556338876485825,
+          "mvpe_sum": 0.96603315602988,
+          "sps_dm_numerator": 2227450.3084388077,
+          "sps_tke_numerator": 1272825.4126934558,
+          "sps_mvpe_numerator": 2281459.1171411574,
+          "sps_denominator": 3047132,
+          "coverage_numerator": 2891065
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.3152611404657364,
+          "tke_sum": 3.997149735689163,
+          "mvpe_sum": 0.196568064391613,
+          "sps_dm_numerator": 480226.9076900184,
+          "sps_tke_numerator": 273099.92240446806,
+          "sps_mvpe_numerator": 492382.45357602835,
+          "sps_denominator": 652939,
+          "coverage_numerator": 622892
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.29215605184435844,
+          "tke_sum": 3.4025394320487976,
+          "mvpe_sum": 0.20655926875770092,
+          "sps_dm_numerator": 422804.78805214167,
+          "sps_tke_numerator": 246353.49638836086,
+          "sps_mvpe_numerator": 431503.66749447584,
+          "sps_denominator": 580664,
+          "coverage_numerator": 551227
+        }
+      }
+    },
+    {
+      "file": "13950_10.h5",
+      "aoa": 10,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 2.8043923266232014,
+          "tke_sum": 16.49894767999649,
+          "mvpe_sum": 3.1129508428275585,
+          "sps_dm_numerator": 1971575.9737938195,
+          "sps_tke_numerator": 1259188.901947625,
+          "sps_mvpe_numerator": 1949005.8800250143,
+          "sps_denominator": 3099069,
+          "coverage_numerator": 2829888
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.6035843081772327,
+          "tke_sum": 3.7032382488250732,
+          "mvpe_sum": 0.7755846939980984,
+          "sps_dm_numerator": 424430.44501167536,
+          "sps_tke_numerator": 265004.3059236184,
+          "sps_mvpe_numerator": 411307.7101599276,
+          "sps_denominator": 664056,
+          "coverage_numerator": 609400
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.5567148067057133,
+          "tke_sum": 3.0111559629440308,
+          "mvpe_sum": 0.6058785915374756,
+          "sps_dm_numerator": 366764.10123488307,
+          "sps_tke_numerator": 241061.5229126364,
+          "sps_mvpe_numerator": 363325.63482800126,
+          "sps_denominator": 590279,
+          "coverage_numerator": 534644
+        }
+      }
+    },
+    {
+      "file": "13950_15.h5",
+      "aoa": 15,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.1215716302394867,
+          "tke_sum": 17.45904478430748,
+          "mvpe_sum": 2.731096535921097,
+          "sps_dm_numerator": 1839165.0408052504,
+          "sps_tke_numerator": 1158847.7769473866,
+          "sps_mvpe_numerator": 1870256.2810816318,
+          "sps_denominator": 3089366,
+          "coverage_numerator": 2767577
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.6633394733071327,
+          "tke_sum": 3.708358198404312,
+          "mvpe_sum": 0.5822579562664032,
+          "sps_dm_numerator": 395098.00156363845,
+          "sps_tke_numerator": 249173.54095812887,
+          "sps_mvpe_numerator": 401547.8328650147,
+          "sps_denominator": 662379,
+          "coverage_numerator": 592656
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.6129686459898949,
+          "tke_sum": 3.727113217115402,
+          "mvpe_sum": 0.5323141515254974,
+          "sps_dm_numerator": 346601.24614708126,
+          "sps_tke_numerator": 207690.73441818357,
+          "sps_mvpe_numerator": 352880.57052636147,
+          "sps_denominator": 588316,
+          "coverage_numerator": 522180
+        }
+      }
+    },
+    {
+      "file": "13950_20.h5",
+      "aoa": 20,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.6657316461205482,
+          "tke_sum": 15.465101018548012,
+          "mvpe_sum": 3.221903908997774,
+          "sps_dm_numerator": 1819390.6930188984,
+          "sps_tke_numerator": 1238997.4224434868,
+          "sps_mvpe_numerator": 1853704.9468521923,
+          "sps_denominator": 3227323,
+          "coverage_numerator": 2834251
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.8128549307584763,
+          "tke_sum": 3.0789200961589813,
+          "mvpe_sum": 0.7240001112222672,
+          "sps_dm_numerator": 383426.31181687117,
+          "sps_tke_numerator": 269183.1979429126,
+          "sps_mvpe_numerator": 390014.83630640805,
+          "sps_denominator": 691541,
+          "coverage_numerator": 599680
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.711433432996273,
+          "tke_sum": 2.8510507196187973,
+          "mvpe_sum": 0.5778669081628323,
+          "sps_dm_numerator": 343174.0306735933,
+          "sps_tke_numerator": 238063.1584597677,
+          "sps_mvpe_numerator": 353228.88338395953,
+          "sps_denominator": 614806,
+          "coverage_numerator": 538027
+        }
+      }
+    },
+    {
+      "file": "13950_5.h5",
+      "aoa": 5,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.8665069788694382,
+          "tke_sum": 20.078707665205002,
+          "mvpe_sum": 1.3410711288452148,
+          "sps_dm_numerator": 2117025.763831407,
+          "sps_tke_numerator": 1183013.2870454043,
+          "sps_mvpe_numerator": 2167359.26486665,
+          "sps_denominator": 3017090,
+          "coverage_numerator": 2832470
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.42123519256711006,
+          "tke_sum": 4.466768562793732,
+          "mvpe_sum": 0.307329511269927,
+          "sps_dm_numerator": 450852.7846351415,
+          "sps_tke_numerator": 248390.44232609868,
+          "sps_mvpe_numerator": 461652.59884929657,
+          "sps_denominator": 646089,
+          "coverage_numerator": 605671
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.3664044663310051,
+          "tke_sum": 3.702291190624237,
+          "mvpe_sum": 0.30672712437808514,
+          "sps_dm_numerator": 399932.2499758601,
+          "sps_tke_numerator": 227790.19682703912,
+          "sps_mvpe_numerator": 405557.74224349856,
+          "sps_denominator": 574518,
+          "coverage_numerator": 538082
+        }
+      }
+    },
+    {
+      "file": "16500_0.h5",
+      "aoa": 0,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.4972279891371727,
+          "tke_sum": 20.214738965034485,
+          "mvpe_sum": 0.9884229525923729,
+          "sps_dm_numerator": 2204054.119245723,
+          "sps_tke_numerator": 1210018.716597721,
+          "sps_mvpe_numerator": 2255308.473784268,
+          "sps_denominator": 3038519,
+          "coverage_numerator": 2862183
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.31687240302562714,
+          "tke_sum": 3.8733712136745453,
+          "mvpe_sum": 0.20107406936585903,
+          "sps_dm_numerator": 473426.01338505745,
+          "sps_tke_numerator": 272855.451621145,
+          "sps_mvpe_numerator": 485108.9617803097,
+          "sps_denominator": 651215,
+          "coverage_numerator": 613938
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.29808802530169487,
+          "tke_sum": 4.0532669723033905,
+          "mvpe_sum": 0.20258630067110062,
+          "sps_dm_numerator": 420471.85220071673,
+          "sps_tke_numerator": 226293.12267254293,
+          "sps_mvpe_numerator": 430107.4579292238,
+          "sps_denominator": 579084,
+          "coverage_numerator": 547993
+        }
+      }
+    },
+    {
+      "file": "16500_10.h5",
+      "aoa": 10,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 2.585023071616888,
+          "tke_sum": 16.597664549946785,
+          "mvpe_sum": 2.574957996606827,
+          "sps_dm_numerator": 1976316.3046089187,
+          "sps_tke_numerator": 1247974.5384786204,
+          "sps_mvpe_numerator": 1977851.691054441,
+          "sps_denominator": 3105883,
+          "coverage_numerator": 2816052
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.5313547998666763,
+          "tke_sum": 3.353396564722061,
+          "mvpe_sum": 0.5400197356939316,
+          "sps_dm_numerator": 429632.17497849464,
+          "sps_tke_numerator": 276404.2009023763,
+          "sps_mvpe_numerator": 428991.9799078852,
+          "sps_denominator": 666057,
+          "coverage_numerator": 608313
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.5062179528176785,
+          "tke_sum": 3.0920477509498596,
+          "mvpe_sum": 0.5012034960091114,
+          "sps_dm_numerator": 373487.2863972485,
+          "sps_tke_numerator": 237545.5965095833,
+          "sps_mvpe_numerator": 373972.13505607843,
+          "sps_denominator": 591795,
+          "coverage_numerator": 534292
+        }
+      }
+    },
+    {
+      "file": "16500_15.h5",
+      "aoa": 15,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.2371657118201256,
+          "tke_sum": 16.17151838541031,
+          "mvpe_sum": 2.7041818499565125,
+          "sps_dm_numerator": 1749051.1772117615,
+          "sps_tke_numerator": 1149298.530782953,
+          "sps_mvpe_numerator": 1789428.043473512,
+          "sps_denominator": 3079565,
+          "coverage_numerator": 2688386
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.6984093189239502,
+          "tke_sum": 3.3552929759025574,
+          "mvpe_sum": 0.6037293560802937,
+          "sps_dm_numerator": 372217.2795278132,
+          "sps_tke_numerator": 247665.20073392987,
+          "sps_mvpe_numerator": 379286.14365951717,
+          "sps_denominator": 659824,
+          "coverage_numerator": 574611
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.6084001958370209,
+          "tke_sum": 3.665762424468994,
+          "mvpe_sum": 0.48337870463728905,
+          "sps_dm_numerator": 337073.491752401,
+          "sps_tke_numerator": 204922.27695639431,
+          "sps_mvpe_numerator": 346718.84541518986,
+          "sps_denominator": 585898,
+          "coverage_numerator": 517031
+        }
+      }
+    },
+    {
+      "file": "16500_20.h5",
+      "aoa": 20,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.675847105681896,
+          "tke_sum": 14.91887329518795,
+          "mvpe_sum": 3.3611439242959023,
+          "sps_dm_numerator": 1748868.5338092,
+          "sps_tke_numerator": 1211031.2632111013,
+          "sps_mvpe_numerator": 1772297.1222749054,
+          "sps_denominator": 3221548,
+          "coverage_numerator": 2770783
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.7969776839017868,
+          "tke_sum": 3.163449317216873,
+          "mvpe_sum": 0.7013659477233887,
+          "sps_dm_numerator": 371498.131836161,
+          "sps_tke_numerator": 258506.98083677888,
+          "sps_mvpe_numerator": 378286.16933728755,
+          "sps_denominator": 690142,
+          "coverage_numerator": 590731
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.7212387919425964,
+          "tke_sum": 3.1363167464733124,
+          "mvpe_sum": 0.6423494815826416,
+          "sps_dm_numerator": 329037.67874732614,
+          "sps_tke_numerator": 220476.34577263892,
+          "sps_mvpe_numerator": 335074.6839392334,
+          "sps_denominator": 613756,
+          "coverage_numerator": 525523
+        }
+      }
+    },
+    {
+      "file": "16500_5.h5",
+      "aoa": 5,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.5650938786566257,
+          "tke_sum": 19.116758227348328,
+          "mvpe_sum": 1.1683979965746403,
+          "sps_dm_numerator": 2235244.5271994323,
+          "sps_tke_numerator": 1265552.8606923744,
+          "sps_mvpe_numerator": 2275537.4676893204,
+          "sps_denominator": 3069832,
+          "coverage_numerator": 2893591
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.33229639381170273,
+          "tke_sum": 4.09078785777092,
+          "mvpe_sum": 0.261116698384285,
+          "sps_dm_numerator": 479443.2551355809,
+          "sps_tke_numerator": 271402.0338507965,
+          "sps_mvpe_numerator": 486685.8035532832,
+          "sps_denominator": 658103,
+          "coverage_numerator": 619762
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.31765713542699814,
+          "tke_sum": 3.5924376249313354,
+          "mvpe_sum": 0.21281907707452774,
+          "sps_dm_numerator": 420538.6466321349,
+          "sps_tke_numerator": 240815.0086785257,
+          "sps_mvpe_numerator": 431005.4690950513,
+          "sps_denominator": 584345,
+          "coverage_numerator": 549701
+        }
+      }
+    },
+    {
+      "file": "17775_10.h5",
+      "aoa": 10,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 2.6705571115016937,
+          "tke_sum": 18.15441870689392,
+          "mvpe_sum": 2.526736568659544,
+          "sps_dm_numerator": 1925853.9603764974,
+          "sps_tke_numerator": 1178907.2812803052,
+          "sps_mvpe_numerator": 1939077.1705431342,
+          "sps_denominator": 3112180,
+          "coverage_numerator": 2787155
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.5563622191548347,
+          "tke_sum": 3.9530272781848907,
+          "mvpe_sum": 0.5304979979991913,
+          "sps_dm_numerator": 414797.5757010393,
+          "sps_tke_numerator": 249291.48911181465,
+          "sps_mvpe_numerator": 416969.4897193089,
+          "sps_denominator": 666804,
+          "coverage_numerator": 597069
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.5662054866552353,
+          "tke_sum": 3.9517113268375397,
+          "mvpe_sum": 0.5878908038139343,
+          "sps_dm_numerator": 356435.35246019065,
+          "sps_tke_numerator": 208152.84454971552,
+          "sps_mvpe_numerator": 355283.62002284825,
+          "sps_denominator": 592843,
+          "coverage_numerator": 522415
+        }
+      }
+    },
+    {
+      "file": "17775_15.h5",
+      "aoa": 15,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.382608376443386,
+          "tke_sum": 16.695189014077187,
+          "mvpe_sum": 2.8751376569271088,
+          "sps_dm_numerator": 1685262.3471955657,
+          "sps_tke_numerator": 1097713.1070435792,
+          "sps_mvpe_numerator": 1722042.3892409652,
+          "sps_denominator": 3074653,
+          "coverage_numerator": 2655054
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.7277645319700241,
+          "tke_sum": 3.432661920785904,
+          "mvpe_sum": 0.6751902848482132,
+          "sps_dm_numerator": 358264.6046423316,
+          "sps_tke_numerator": 237153.93992978334,
+          "sps_mvpe_numerator": 362092.12877346575,
+          "sps_denominator": 658460,
+          "coverage_numerator": 566071
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.6663779467344284,
+          "tke_sum": 3.4285851418972015,
+          "mvpe_sum": 0.6111023165285587,
+          "sps_dm_numerator": 317880.65970130265,
+          "sps_tke_numerator": 201566.6703602448,
+          "sps_mvpe_numerator": 321768.4068622738,
+          "sps_denominator": 586312,
+          "coverage_numerator": 501170
+        }
+      }
+    },
+    {
+      "file": "17775_20.h5",
+      "aoa": 20,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.6410076320171356,
+          "tke_sum": 15.147483468055725,
+          "mvpe_sum": 3.4741976149380207,
+          "sps_dm_numerator": 1717028.8811020255,
+          "sps_tke_numerator": 1178782.8295986205,
+          "sps_mvpe_numerator": 1729536.75680165,
+          "sps_denominator": 3223194,
+          "coverage_numerator": 2738641
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.7688572481274605,
+          "tke_sum": 3.2027169466018677,
+          "mvpe_sum": 0.7391700893640518,
+          "sps_dm_numerator": 368061.6278912574,
+          "sps_tke_numerator": 253340.62256463617,
+          "sps_mvpe_numerator": 370337.14101165533,
+          "sps_denominator": 690533,
+          "coverage_numerator": 585810
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.6859264820814133,
+          "tke_sum": 3.1210691928863525,
+          "mvpe_sum": 0.6275196298956871,
+          "sps_dm_numerator": 329295.5042295307,
+          "sps_tke_numerator": 216869.3118768856,
+          "sps_mvpe_numerator": 333574.0985493809,
+          "sps_denominator": 613868,
+          "coverage_numerator": 524703
+        }
+      }
+    },
+    {
+      "file": "17775_5.h5",
+      "aoa": 5,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.6307920962572098,
+          "tke_sum": 19.538601219654083,
+          "mvpe_sum": 1.1105423271656036,
+          "sps_dm_numerator": 2160810.0654610842,
+          "sps_tke_numerator": 1214194.4124672413,
+          "sps_mvpe_numerator": 2211817.0134124607,
+          "sps_denominator": 3056360,
+          "coverage_numerator": 2851038
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.34498007968068123,
+          "tke_sum": 4.252351552248001,
+          "mvpe_sum": 0.24961576238274574,
+          "sps_dm_numerator": 465579.13939480484,
+          "sps_tke_numerator": 259279.46194198728,
+          "sps_mvpe_numerator": 474971.1188906729,
+          "sps_denominator": 655067,
+          "coverage_numerator": 613595
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.32034628838300705,
+          "tke_sum": 4.0176690220832825,
+          "mvpe_sum": 0.22587855346500874,
+          "sps_dm_numerator": 412497.76469260454,
+          "sps_tke_numerator": 223413.95675846934,
+          "sps_mvpe_numerator": 421783.82787775993,
+          "sps_denominator": 582111,
+          "coverage_numerator": 545675
+        }
+      }
+    },
+    {
+      "file": "19050_0.h5",
+      "aoa": 0,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.7644915953278542,
+          "tke_sum": 19.1736478805542,
+          "mvpe_sum": 1.1589622385799885,
+          "sps_dm_numerator": 2050584.6908525676,
+          "sps_tke_numerator": 1165290.8356783092,
+          "sps_mvpe_numerator": 2106839.8060129285,
+          "sps_denominator": 3000042,
+          "coverage_numerator": 2761818
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.3798552677035332,
+          "tke_sum": 4.079593181610107,
+          "mvpe_sum": 0.25473763793706894,
+          "sps_dm_numerator": 437553.13311362267,
+          "sps_tke_numerator": 249940.02595424652,
+          "sps_mvpe_numerator": 449099.09253308177,
+          "sps_denominator": 643099,
+          "coverage_numerator": 589710
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.34854087978601456,
+          "tke_sum": 3.7512110769748688,
+          "mvpe_sum": 0.2149177212268114,
+          "sps_dm_numerator": 389536.9654997289,
+          "sps_tke_numerator": 218865.28084093332,
+          "sps_mvpe_numerator": 401944.1583625227,
+          "sps_denominator": 571206,
+          "coverage_numerator": 525384
+        }
+      }
+    },
+    {
+      "file": "19050_10.h5",
+      "aoa": 10,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 2.6945441216230392,
+          "tke_sum": 18.56134793162346,
+          "mvpe_sum": 2.5231101140379906,
+          "sps_dm_numerator": 1917060.3501491025,
+          "sps_tke_numerator": 1151697.201916717,
+          "sps_mvpe_numerator": 1933635.967860192,
+          "sps_denominator": 3115273,
+          "coverage_numerator": 2776570
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.5728132165968418,
+          "tke_sum": 3.701872229576111,
+          "mvpe_sum": 0.5991437323391438,
+          "sps_dm_numerator": 409468.5374586731,
+          "sps_tke_numerator": 253381.67164941877,
+          "sps_mvpe_numerator": 408301.23970194906,
+          "sps_denominator": 667022,
+          "coverage_numerator": 590263
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.5511164516210556,
+          "tke_sum": 3.7909816801548004,
+          "mvpe_sum": 0.5406527295708656,
+          "sps_dm_numerator": 361778.1458245367,
+          "sps_tke_numerator": 212450.44754423946,
+          "sps_mvpe_numerator": 363184.2390676439,
+          "sps_denominator": 593557,
+          "coverage_numerator": 527595
+        }
+      }
+    },
+    {
+      "file": "19050_15.h5",
+      "aoa": 15,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.362650044262409,
+          "tke_sum": 16.539283886551857,
+          "mvpe_sum": 2.5258619114756584,
+          "sps_dm_numerator": 1654818.768862009,
+          "sps_tke_numerator": 1080868.8493149132,
+          "sps_mvpe_numerator": 1714330.2369557694,
+          "sps_denominator": 3073586,
+          "coverage_numerator": 2611570
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.7377133294939995,
+          "tke_sum": 3.6555197834968567,
+          "mvpe_sum": 0.5850208699703217,
+          "sps_dm_numerator": 351358.33808742464,
+          "sps_tke_numerator": 226894.0002919808,
+          "sps_mvpe_numerator": 361975.18994728476,
+          "sps_denominator": 657926,
+          "coverage_numerator": 555308
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.6109418645501137,
+          "tke_sum": 3.070038840174675,
+          "mvpe_sum": 0.4256671592593193,
+          "sps_dm_numerator": 319734.51447972655,
+          "sps_tke_numerator": 209797.92067533731,
+          "sps_mvpe_numerator": 333279.37640054524,
+          "sps_denominator": 585667,
+          "coverage_numerator": 503782
+        }
+      }
+    },
+    {
+      "file": "19050_20.h5",
+      "aoa": 20,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.811289481818676,
+          "tke_sum": 15.388030618429184,
+          "mvpe_sum": 3.516571491956711,
+          "sps_dm_numerator": 1660966.4860075265,
+          "sps_tke_numerator": 1139003.98856356,
+          "sps_mvpe_numerator": 1682125.0341399908,
+          "sps_denominator": 3220947,
+          "coverage_numerator": 2696350
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.829153522849083,
+          "tke_sum": 3.216128796339035,
+          "mvpe_sum": 0.7132728695869446,
+          "sps_dm_numerator": 352211.0349043757,
+          "sps_tke_numerator": 244853.70325054228,
+          "sps_mvpe_numerator": 360161.099674955,
+          "sps_denominator": 690228,
+          "coverage_numerator": 572967
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.7532764300704002,
+          "tke_sum": 3.0654623806476593,
+          "mvpe_sum": 0.6929610967636108,
+          "sps_dm_numerator": 310269.4631960392,
+          "sps_tke_numerator": 210288.8357155472,
+          "sps_mvpe_numerator": 314512.8065572679,
+          "sps_denominator": 613242,
+          "coverage_numerator": 507123
+        }
+      }
+    },
+    {
+      "file": "19050_5.h5",
+      "aoa": 5,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.721016850322485,
+          "tke_sum": 19.185690492391586,
+          "mvpe_sum": 1.2086777240037918,
+          "sps_dm_numerator": 2118736.172094643,
+          "sps_tke_numerator": 1201071.8303406015,
+          "sps_mvpe_numerator": 2167895.8754611164,
+          "sps_denominator": 3043656,
+          "coverage_numerator": 2818624
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.36323587596416473,
+          "tke_sum": 4.010859847068787,
+          "mvpe_sum": 0.25847809948027134,
+          "sps_dm_numerator": 452228.0027844012,
+          "sps_tke_numerator": 259219.61198429763,
+          "sps_mvpe_numerator": 462277.8387429267,
+          "sps_denominator": 651589,
+          "coverage_numerator": 600848
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.336845476180315,
+          "tke_sum": 3.726266622543335,
+          "mvpe_sum": 0.2709257546812296,
+          "sps_dm_numerator": 403526.4293716252,
+          "sps_tke_numerator": 227000.46731486917,
+          "sps_mvpe_numerator": 409846.47873322666,
+          "sps_denominator": 579657,
+          "coverage_numerator": 537619
+        }
+      }
+    },
+    {
+      "file": "20325_0.h5",
+      "aoa": 0,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.807647556066513,
+          "tke_sum": 19.743220388889313,
+          "mvpe_sum": 1.1179436100646853,
+          "sps_dm_numerator": 2006744.6708567888,
+          "sps_tke_numerator": 1124990.841472745,
+          "sps_mvpe_numerator": 2069561.522626698,
+          "sps_denominator": 2988286,
+          "coverage_numerator": 2736408
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.38378187268972397,
+          "tke_sum": 4.170355379581451,
+          "mvpe_sum": 0.24668698944151402,
+          "sps_dm_numerator": 431369.90680989623,
+          "sps_tke_numerator": 243276.16375739872,
+          "sps_mvpe_numerator": 443835.0443867445,
+          "sps_denominator": 640453,
+          "coverage_numerator": 588187
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.3542678952217102,
+          "tke_sum": 3.7324286103248596,
+          "mvpe_sum": 0.21533380448818207,
+          "sps_dm_numerator": 380670.4316781014,
+          "sps_tke_numerator": 214540.9708270952,
+          "sps_mvpe_numerator": 393225.87587606907,
+          "sps_denominator": 569349,
+          "coverage_numerator": 521412
+        }
+      }
+    },
+    {
+      "file": "20325_10.h5",
+      "aoa": 10,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 2.8300038650631905,
+          "tke_sum": 18.177796244621277,
+          "mvpe_sum": 2.6314491480588913,
+          "sps_dm_numerator": 1832066.6450408176,
+          "sps_tke_numerator": 1120313.9484846368,
+          "sps_mvpe_numerator": 1849010.268693857,
+          "sps_denominator": 3086754,
+          "coverage_numerator": 2704707
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.6302331387996674,
+          "tke_sum": 4.009186267852783,
+          "mvpe_sum": 0.5835977010428905,
+          "sps_dm_numerator": 388914.52487482876,
+          "sps_tke_numerator": 235627.20613058656,
+          "sps_mvpe_numerator": 392707.37247828394,
+          "sps_denominator": 661515,
+          "coverage_numerator": 576898
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.5367770381271839,
+          "tke_sum": 3.4670940935611725,
+          "mvpe_sum": 0.533661812543869,
+          "sps_dm_numerator": 349892.5401171595,
+          "sps_tke_numerator": 213320.9411727488,
+          "sps_mvpe_numerator": 350469.5738904923,
+          "sps_denominator": 587620,
+          "coverage_numerator": 518366
+        }
+      }
+    },
+    {
+      "file": "20325_15.h5",
+      "aoa": 15,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.5526544228196144,
+          "tke_sum": 17.582888185977936,
+          "mvpe_sum": 2.798769824206829,
+          "sps_dm_numerator": 1598549.3575265855,
+          "sps_tke_numerator": 1026448.917586945,
+          "sps_mvpe_numerator": 1650924.3337272555,
+          "sps_denominator": 3069646,
+          "coverage_numerator": 2571853
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.7937126606702805,
+          "tke_sum": 3.952061802148819,
+          "mvpe_sum": 0.6793122701346874,
+          "sps_dm_numerator": 339514.24017070234,
+          "sps_tke_numerator": 216485.67320492864,
+          "sps_mvpe_numerator": 347712.61176405847,
+          "sps_denominator": 657675,
+          "coverage_numerator": 548544
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.679506205022335,
+          "tke_sum": 3.391658753156662,
+          "mvpe_sum": 0.45269742235541344,
+          "sps_dm_numerator": 304802.66631518304,
+          "sps_tke_numerator": 194057.20129873604,
+          "sps_mvpe_numerator": 320323.9503697753,
+          "sps_denominator": 584915,
+          "coverage_numerator": 491573
+        }
+      }
+    },
+    {
+      "file": "20325_20.h5",
+      "aoa": 20,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.673506125807762,
+          "tke_sum": 15.332930997014046,
+          "mvpe_sum": 3.480708036571741,
+          "sps_dm_numerator": 1650562.7566006482,
+          "sps_tke_numerator": 1127580.7047094852,
+          "sps_mvpe_numerator": 1664895.754290074,
+          "sps_denominator": 3218249,
+          "coverage_numerator": 2673592
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.7954465076327324,
+          "tke_sum": 3.0060964971780777,
+          "mvpe_sum": 0.7322115153074265,
+          "sps_dm_numerator": 348743.90548841655,
+          "sps_tke_numerator": 247857.0137044266,
+          "sps_mvpe_numerator": 353164.7821214348,
+          "sps_denominator": 688992,
+          "coverage_numerator": 567122
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.711770661175251,
+          "tke_sum": 2.790733575820923,
+          "mvpe_sum": 0.6968380808830261,
+          "sps_dm_numerator": 312076.8012396991,
+          "sps_tke_numerator": 217629.97668182105,
+          "sps_mvpe_numerator": 313118.3059299141,
+          "sps_denominator": 612785,
+          "coverage_numerator": 511411
+        }
+      }
+    },
+    {
+      "file": "20325_5.h5",
+      "aoa": 5,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.7607376836240292,
+          "tke_sum": 20.230455100536346,
+          "mvpe_sum": 1.1431212592869997,
+          "sps_dm_numerator": 2108008.5334096104,
+          "sps_tke_numerator": 1166312.3995443135,
+          "sps_mvpe_numerator": 2167158.5231313556,
+          "sps_denominator": 3050052,
+          "coverage_numerator": 2815190
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.37212179228663445,
+          "tke_sum": 4.3325221836566925,
+          "mvpe_sum": 0.23294794373214245,
+          "sps_dm_numerator": 454929.6415338814,
+          "sps_tke_numerator": 251301.70591796935,
+          "sps_mvpe_numerator": 468336.1675994545,
+          "sps_denominator": 653748,
+          "coverage_numerator": 607219
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.34096191823482513,
+          "tke_sum": 4.0318145751953125,
+          "mvpe_sum": 0.24256771430373192,
+          "sps_dm_numerator": 401254.45514561236,
+          "sps_tke_numerator": 217878.65293175727,
+          "sps_mvpe_numerator": 410706.8632937372,
+          "sps_denominator": 581123,
+          "coverage_numerator": 538121
+        }
+      }
+    },
+    {
+      "file": "21600_0.h5",
+      "aoa": 0,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 2.2681528367102146,
+          "tke_sum": 21.27508169412613,
+          "mvpe_sum": 1.3213851321488619,
+          "sps_dm_numerator": 1874095.6154356152,
+          "sps_tke_numerator": 1034176.450207375,
+          "sps_mvpe_numerator": 1953782.4635155946,
+          "sps_denominator": 2984137,
+          "coverage_numerator": 2660324
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.487128347158432,
+          "tke_sum": 4.763112932443619,
+          "mvpe_sum": 0.27017218992114067,
+          "sps_dm_numerator": 401451.18894410133,
+          "sps_tke_numerator": 217562.2744294256,
+          "sps_mvpe_numerator": 419729.20622339845,
+          "sps_denominator": 639546,
+          "coverage_numerator": 570147
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.43822629004716873,
+          "tke_sum": 4.084683269262314,
+          "mvpe_sum": 0.2603455390781164,
+          "sps_dm_numerator": 355452.19749443233,
+          "sps_tke_numerator": 195396.45586760342,
+          "sps_mvpe_numerator": 370361.51852431893,
+          "sps_denominator": 568243,
+          "coverage_numerator": 504279
+        }
+      }
+    },
+    {
+      "file": "21600_10.h5",
+      "aoa": 10,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.0852657333016396,
+          "tke_sum": 18.427575290203094,
+          "mvpe_sum": 2.8691589422523975,
+          "sps_dm_numerator": 1756337.466394052,
+          "sps_tke_numerator": 1084251.7925128266,
+          "sps_mvpe_numerator": 1773562.5527261123,
+          "sps_denominator": 3091676,
+          "coverage_numerator": 2665329
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.6931290850043297,
+          "tke_sum": 4.168977797031403,
+          "mvpe_sum": 0.6535072922706604,
+          "sps_dm_numerator": 369706.4410111159,
+          "sps_tke_numerator": 225275.44925322384,
+          "sps_mvpe_numerator": 372837.13474190235,
+          "sps_denominator": 662965,
+          "coverage_numerator": 566386
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.5879967361688614,
+          "tke_sum": 3.318825364112854,
+          "mvpe_sum": 0.4839656949043274,
+          "sps_dm_numerator": 332818.25180092454,
+          "sps_tke_numerator": 210543.5548375994,
+          "sps_mvpe_numerator": 340733.9963121414,
+          "sps_denominator": 588043,
+          "coverage_numerator": 504741
+        }
+      }
+    },
+    {
+      "file": "21600_15.h5",
+      "aoa": 15,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.724696673452854,
+          "tke_sum": 16.203303426504135,
+          "mvpe_sum": 3.333003856241703,
+          "sps_dm_numerator": 1533109.6586796045,
+          "sps_tke_numerator": 1023584.5309553891,
+          "sps_mvpe_numerator": 1558951.4472546726,
+          "sps_denominator": 3065721,
+          "coverage_numerator": 2520720
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.7970991209149361,
+          "tke_sum": 3.5826400220394135,
+          "mvpe_sum": 0.6983865797519684,
+          "sps_dm_numerator": 328617.9560519159,
+          "sps_tke_numerator": 217118.2218431458,
+          "sps_mvpe_numerator": 335420.4143794626,
+          "sps_denominator": 656204,
+          "coverage_numerator": 539878
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.7120609804987907,
+          "tke_sum": 3.2168029248714447,
+          "mvpe_sum": 0.6029087193310261,
+          "sps_dm_numerator": 295094.7560120374,
+          "sps_tke_numerator": 193126.79567784816,
+          "sps_mvpe_numerator": 302152.7958793193,
+          "sps_denominator": 584860,
+          "coverage_numerator": 484089
+        }
+      }
+    },
+    {
+      "file": "21600_20.h5",
+      "aoa": 20,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.7498963475227356,
+          "tke_sum": 15.509539723396301,
+          "mvpe_sum": 3.7877345494925976,
+          "sps_dm_numerator": 1604897.9132181257,
+          "sps_tke_numerator": 1098398.4957815409,
+          "sps_mvpe_numerator": 1603606.5762768239,
+          "sps_denominator": 3207615,
+          "coverage_numerator": 2650434
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.8194257915019989,
+          "tke_sum": 3.2565808296203613,
+          "mvpe_sum": 0.8940397016704082,
+          "sps_dm_numerator": 343125.0841280818,
+          "sps_tke_numerator": 237887.9357065186,
+          "sps_mvpe_numerator": 338785.3248972893,
+          "sps_denominator": 687252,
+          "coverage_numerator": 566411
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.7093354538083076,
+          "tke_sum": 2.960730403661728,
+          "mvpe_sum": 0.8030280023813248,
+          "sps_dm_numerator": 302618.958006531,
+          "sps_tke_numerator": 205822.5112280622,
+          "sps_mvpe_numerator": 296924.5550260097,
+          "sps_denominator": 610399,
+          "coverage_numerator": 501801
+        }
+      }
+    },
+    {
+      "file": "21600_5.h5",
+      "aoa": 5,
+      "states": {
+        "all": {
+          "samples": 23,
+          "rel_sum": 0.9095409214496613,
+          "tke_sum": 11.058303266763687,
+          "mvpe_sum": 0.534323412925005,
+          "sps_dm_numerator": 1122531.9198672175,
+          "sps_tke_numerator": 618883.5440884978,
+          "sps_mvpe_numerator": 1157620.3874015957,
+          "sps_denominator": 1639076,
+          "coverage_numerator": 1513743
+        },
+        "val": {
+          "samples": 5,
+          "rel_sum": 0.1929430142045021,
+          "tke_sum": 2.3880703151226044,
+          "mvpe_sum": 0.11616076715290546,
+          "sps_dm_numerator": 245069.59432516992,
+          "sps_tke_numerator": 135029.63001023978,
+          "sps_mvpe_numerator": 252286.17966917157,
+          "sps_denominator": 356384,
+          "coverage_numerator": 329403
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.32921044901013374,
+          "tke_sum": 3.8286165297031403,
+          "mvpe_sum": 0.18970764428377151,
+          "sps_dm_numerator": 388188.8408269584,
+          "sps_tke_numerator": 215165.92690356076,
+          "sps_mvpe_numerator": 401150.24563471973,
+          "sps_denominator": 570301,
+          "coverage_numerator": 525797
+        }
+      }
+    },
+    {
+      "file": "22875_0.h5",
+      "aoa": 0,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.6711633950471878,
+          "tke_sum": 18.442956656217575,
+          "mvpe_sum": 1.2405135501176119,
+          "sps_dm_numerator": 2035110.2199157625,
+          "sps_tke_numerator": 1172950.2235056087,
+          "sps_mvpe_numerator": 2074776.5421397388,
+          "sps_denominator": 3027283,
+          "coverage_numerator": 2771659
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.35566750541329384,
+          "tke_sum": 3.790927529335022,
+          "mvpe_sum": 0.2555557619780302,
+          "sps_dm_numerator": 436831.4807962477,
+          "sps_tke_numerator": 256136.0901060924,
+          "sps_mvpe_numerator": 446075.6102685183,
+          "sps_denominator": 648181,
+          "coverage_numerator": 592513
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.3385729119181633,
+          "tke_sum": 3.7669613361358643,
+          "mvpe_sum": 0.26751204021275043,
+          "sps_dm_numerator": 381545.17824168503,
+          "sps_tke_numerator": 213431.47363523394,
+          "sps_mvpe_numerator": 387959.67557531595,
+          "sps_denominator": 576002,
+          "coverage_numerator": 523837
+        }
+      }
+    },
+    {
+      "file": "22875_10.h5",
+      "aoa": 10,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.3801206201314926,
+          "tke_sum": 17.85558421909809,
+          "mvpe_sum": 2.9238040037453175,
+          "sps_dm_numerator": 1704035.572304286,
+          "sps_tke_numerator": 1079513.569505237,
+          "sps_mvpe_numerator": 1738267.294700116,
+          "sps_denominator": 3128157,
+          "coverage_numerator": 2635969
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.743500754237175,
+          "tke_sum": 3.7697833776474,
+          "mvpe_sum": 0.6849775835871696,
+          "sps_dm_numerator": 357806.06533727795,
+          "sps_tke_numerator": 227915.9025144577,
+          "sps_mvpe_numerator": 362390.7299468219,
+          "sps_denominator": 670039,
+          "coverage_numerator": 555793
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.6343765258789062,
+          "tke_sum": 3.194234013557434,
+          "mvpe_sum": 0.45884091034531593,
+          "sps_dm_numerator": 322916.5577942729,
+          "sps_tke_numerator": 209105.20279001445,
+          "sps_mvpe_numerator": 335831.6742977798,
+          "sps_denominator": 595978,
+          "coverage_numerator": 502957
+        }
+      }
+    },
+    {
+      "file": "22875_15.h5",
+      "aoa": 15,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.8552660197019577,
+          "tke_sum": 17.7862606048584,
+          "mvpe_sum": 2.8403168953955173,
+          "sps_dm_numerator": 1492939.602945082,
+          "sps_tke_numerator": 962190.1958058253,
+          "sps_mvpe_numerator": 1557398.2262511328,
+          "sps_denominator": 3068487,
+          "coverage_numerator": 2489428
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.7969720289111137,
+          "tke_sum": 3.630842387676239,
+          "mvpe_sum": 0.6174047626554966,
+          "sps_dm_numerator": 320544.9417723417,
+          "sps_tke_numerator": 210060.82357322425,
+          "sps_mvpe_numerator": 331887.00673758984,
+          "sps_denominator": 657884,
+          "coverage_numerator": 529786
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.7731431499123573,
+          "tke_sum": 3.909321576356888,
+          "mvpe_sum": 0.5910644978284836,
+          "sps_dm_numerator": 281491.45345234126,
+          "sps_tke_numerator": 171533.97254553437,
+          "sps_mvpe_numerator": 292798.14106649905,
+          "sps_denominator": 584154,
+          "coverage_numerator": 475006
+        }
+      }
+    },
+    {
+      "file": "24150_0.h5",
+      "aoa": 0,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.7527439035475254,
+          "tke_sum": 23.31558409333229,
+          "mvpe_sum": 1.155473355203867,
+          "sps_dm_numerator": 2005085.5856178254,
+          "sps_tke_numerator": 1046871.2912791558,
+          "sps_mvpe_numerator": 2059322.5615938902,
+          "sps_denominator": 3016908,
+          "coverage_numerator": 2750773
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.37734150886535645,
+          "tke_sum": 5.537950962781906,
+          "mvpe_sum": 0.23784556798636913,
+          "sps_dm_numerator": 433167.9565268606,
+          "sps_tke_numerator": 214208.78617618605,
+          "sps_mvpe_numerator": 445967.77459712327,
+          "sps_denominator": 646471,
+          "coverage_numerator": 592206
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.3297071345150471,
+          "tke_sum": 3.6565812826156616,
+          "mvpe_sum": 0.23491068184375763,
+          "sps_dm_numerator": 379083.62020361423,
+          "sps_tke_numerator": 216536.48474022746,
+          "sps_mvpe_numerator": 387612.15722957253,
+          "sps_denominator": 574326,
+          "coverage_numerator": 521379
+        }
+      }
+    },
+    {
+      "file": "24150_10.h5",
+      "aoa": 10,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.485546939074993,
+          "tke_sum": 17.889461487531662,
+          "mvpe_sum": 3.373830810189247,
+          "sps_dm_numerator": 1676838.9816883504,
+          "sps_tke_numerator": 1067150.2433902659,
+          "sps_mvpe_numerator": 1687677.1450504363,
+          "sps_denominator": 3142666,
+          "coverage_numerator": 2627801
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.7719340696930885,
+          "tke_sum": 3.9189175963401794,
+          "mvpe_sum": 0.6822213567793369,
+          "sps_dm_numerator": 352936.8715559691,
+          "sps_tke_numerator": 222587.62579811737,
+          "sps_mvpe_numerator": 359422.00253032893,
+          "sps_denominator": 671023,
+          "coverage_numerator": 557825
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.716494046151638,
+          "tke_sum": 3.3710968792438507,
+          "mvpe_sum": 0.785039946436882,
+          "sps_dm_numerator": 311255.96404515207,
+          "sps_tke_numerator": 203750.56454954296,
+          "sps_mvpe_numerator": 307419.55626280606,
+          "sps_denominator": 599683,
+          "coverage_numerator": 495429
+        }
+      }
+    },
+    {
+      "file": "24150_15.h5",
+      "aoa": 15,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 4.350917540490627,
+          "tke_sum": 19.12236586213112,
+          "mvpe_sum": 2.8540149219334126,
+          "sps_dm_numerator": 1419601.2050215118,
+          "sps_tke_numerator": 902583.6683007963,
+          "sps_mvpe_numerator": 1509406.674983427,
+          "sps_denominator": 3079974,
+          "coverage_numerator": 2438535
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.9490372836589813,
+          "tke_sum": 3.989687979221344,
+          "mvpe_sum": 0.6329516507685184,
+          "sps_dm_numerator": 300694.77534376085,
+          "sps_tke_numerator": 195164.73603147268,
+          "sps_mvpe_numerator": 319143.99457244575,
+          "sps_denominator": 659784,
+          "coverage_numerator": 519485
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.8542364239692688,
+          "tke_sum": 3.672580987215042,
+          "mvpe_sum": 0.5652196407318115,
+          "sps_dm_numerator": 267104.0160907805,
+          "sps_tke_numerator": 169954.0052164495,
+          "sps_mvpe_numerator": 284178.76059511304,
+          "sps_denominator": 586161,
+          "coverage_numerator": 461648
+        }
+      }
+    },
+    {
+      "file": "24150_20.h5",
+      "aoa": 20,
+      "states": {
+        "all": {
+          "samples": 13,
+          "rel_sum": 1.3445766642689705,
+          "tke_sum": 5.475833863019943,
+          "mvpe_sum": 1.1519260182976723,
+          "sps_dm_numerator": 448404.0774240568,
+          "sps_tke_numerator": 295768.02775291353,
+          "sps_mvpe_numerator": 459895.56642941386,
+          "sps_denominator": 987147,
+          "coverage_numerator": 776669
+        },
+        "val": {
+          "samples": 3,
+          "rel_sum": 0.31549834460020065,
+          "tke_sum": 1.3989753127098083,
+          "mvpe_sum": 0.23517928272485733,
+          "sps_dm_numerator": 104832.66790190339,
+          "sps_tke_numerator": 66249.54858822376,
+          "sps_mvpe_numerator": 109670.13918226957,
+          "sps_denominator": 227877,
+          "coverage_numerator": 182635
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.8308094888925552,
+          "tke_sum": 3.289168953895569,
+          "mvpe_sum": 0.7546830847859383,
+          "sps_dm_numerator": 274655.95705685765,
+          "sps_tke_numerator": 183095.77962644398,
+          "sps_mvpe_numerator": 279146.5479099974,
+          "sps_denominator": 607236,
+          "coverage_numerator": 475253
+        }
+      }
+    },
+    {
+      "file": "25425_0.h5",
+      "aoa": 0,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 2.2724559046328068,
+          "tke_sum": 22.782556772232056,
+          "mvpe_sum": 1.1878608744591475,
+          "sps_dm_numerator": 1891571.8283498958,
+          "sps_tke_numerator": 1015947.56910716,
+          "sps_mvpe_numerator": 1984338.059678495,
+          "sps_denominator": 3010475,
+          "coverage_numerator": 2686207
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.47319043427705765,
+          "tke_sum": 4.534942269325256,
+          "mvpe_sum": 0.24170786887407303,
+          "sps_dm_numerator": 407627.18466518074,
+          "sps_tke_numerator": 225398.84879408404,
+          "sps_mvpe_numerator": 427555.0270551145,
+          "sps_denominator": 645037,
+          "coverage_numerator": 578576
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.4492833986878395,
+          "tke_sum": 4.244792491197586,
+          "mvpe_sum": 0.20906296372413635,
+          "sps_dm_numerator": 361292.1195966229,
+          "sps_tke_numerator": 196150.69170790166,
+          "sps_mvpe_numerator": 381920.05067262053,
+          "sps_denominator": 573593,
+          "coverage_numerator": 515958
+        }
+      }
+    },
+    {
+      "file": "25425_10.h5",
+      "aoa": 10,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.540636196732521,
+          "tke_sum": 18.288834512233734,
+          "mvpe_sum": 3.2872862964868546,
+          "sps_dm_numerator": 1652083.0405761972,
+          "sps_tke_numerator": 1039073.320868928,
+          "sps_mvpe_numerator": 1671333.4508209154,
+          "sps_denominator": 3151268,
+          "coverage_numerator": 2604682
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.7587515860795975,
+          "tke_sum": 4.1101396679878235,
+          "mvpe_sum": 0.6897081173956394,
+          "sps_dm_numerator": 353583.7820337117,
+          "sps_tke_numerator": 218323.79463067278,
+          "sps_mvpe_numerator": 358548.07188709825,
+          "sps_denominator": 675905,
+          "coverage_numerator": 558471
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.6675840094685555,
+          "tke_sum": 3.531380742788315,
+          "mvpe_sum": 0.6769472993910313,
+          "sps_dm_numerator": 320529.4499131888,
+          "sps_tke_numerator": 198904.39474654198,
+          "sps_mvpe_numerator": 320386.10829521716,
+          "sps_denominator": 600834,
+          "coverage_numerator": 502732
+        }
+      }
+    },
+    {
+      "file": "25425_15.h5",
+      "aoa": 15,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 4.6799203008413315,
+          "tke_sum": 19.25440341234207,
+          "mvpe_sum": 3.4017177149653435,
+          "sps_dm_numerator": 1348874.571982935,
+          "sps_tke_numerator": 865573.8955676779,
+          "sps_mvpe_numerator": 1420165.2777373493,
+          "sps_denominator": 3079250,
+          "coverage_numerator": 2382438
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.9770569503307343,
+          "tke_sum": 4.018547564744949,
+          "mvpe_sum": 0.6426796950399876,
+          "sps_dm_numerator": 290548.3797905743,
+          "sps_tke_numerator": 188071.23601203412,
+          "sps_mvpe_numerator": 309504.4669867456,
+          "sps_denominator": 659875,
+          "coverage_numerator": 510061
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.9054657369852066,
+          "tke_sum": 3.76292484998703,
+          "mvpe_sum": 0.6634857580065727,
+          "sps_dm_numerator": 256168.05137120187,
+          "sps_tke_numerator": 162424.50049161166,
+          "sps_mvpe_numerator": 269582.1956963539,
+          "sps_denominator": 587016,
+          "coverage_numerator": 454441
+        }
+      }
+    },
+    {
+      "file": "25425_20.h5",
+      "aoa": 20,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 4.784848056733608,
+          "tke_sum": 18.939955085515976,
+          "mvpe_sum": 5.117606468498707,
+          "sps_dm_numerator": 1367058.2552556396,
+          "sps_tke_numerator": 886998.6381469518,
+          "sps_mvpe_numerator": 1351890.1927228495,
+          "sps_denominator": 3176332,
+          "coverage_numerator": 2450434
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 1.0724178478121758,
+          "tke_sum": 4.135753154754639,
+          "mvpe_sum": 1.0959107130765915,
+          "sps_dm_numerator": 287053.7287863642,
+          "sps_tke_numerator": 185335.28987910226,
+          "sps_mvpe_numerator": 286069.5204018131,
+          "sps_denominator": 680504,
+          "coverage_numerator": 520305
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.8522288426756859,
+          "tke_sum": 3.671094626188278,
+          "mvpe_sum": 0.8967300131917,
+          "sps_dm_numerator": 269547.9809626788,
+          "sps_tke_numerator": 171926.50186650455,
+          "sps_mvpe_numerator": 267615.04524217546,
+          "sps_denominator": 604999,
+          "coverage_numerator": 476766
+        }
+      }
+    },
+    {
+      "file": "26700_0.h5",
+      "aoa": 0,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 2.350509822368622,
+          "tke_sum": 22.369051784276962,
+          "mvpe_sum": 1.3329933229833841,
+          "sps_dm_numerator": 1867432.041741429,
+          "sps_tke_numerator": 1015523.1372149801,
+          "sps_mvpe_numerator": 1952689.3821712714,
+          "sps_denominator": 3002239,
+          "coverage_numerator": 2660273
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.5009434074163437,
+          "tke_sum": 4.545865058898926,
+          "mvpe_sum": 0.26332896016538143,
+          "sps_dm_numerator": 399207.445568867,
+          "sps_tke_numerator": 221905.4349288419,
+          "sps_mvpe_numerator": 419138.9201798737,
+          "sps_denominator": 643410,
+          "coverage_numerator": 568101
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.48076678067445755,
+          "tke_sum": 4.594121903181076,
+          "mvpe_sum": 0.30198733136057854,
+          "sps_dm_numerator": 350598.8954906594,
+          "sps_tke_numerator": 183350.14752569702,
+          "sps_mvpe_numerator": 365219.93436213024,
+          "sps_denominator": 571664,
+          "coverage_numerator": 506553
+        }
+      }
+    },
+    {
+      "file": "26700_10.h5",
+      "aoa": 10,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.706406883895397,
+          "tke_sum": 18.21384584903717,
+          "mvpe_sum": 3.2613820396363735,
+          "sps_dm_numerator": 1599908.1871485114,
+          "sps_tke_numerator": 1014165.2947431132,
+          "sps_mvpe_numerator": 1631942.7070410997,
+          "sps_denominator": 3151630,
+          "coverage_numerator": 2567607
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.7873129397630692,
+          "tke_sum": 3.7655547857284546,
+          "mvpe_sum": 0.7599171921610832,
+          "sps_dm_numerator": 340702.62614122033,
+          "sps_tke_numerator": 218578.5070892945,
+          "sps_mvpe_numerator": 342744.3350942135,
+          "sps_denominator": 674921,
+          "coverage_numerator": 545151
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.7176518812775612,
+          "tke_sum": 3.3116430938243866,
+          "mvpe_sum": 0.5856049694120884,
+          "sps_dm_numerator": 306743.71553134173,
+          "sps_tke_numerator": 199248.95049484074,
+          "sps_mvpe_numerator": 315672.8715085462,
+          "sps_denominator": 600971,
+          "coverage_numerator": 491074
+        }
+      }
+    },
+    {
+      "file": "26700_15.h5",
+      "aoa": 15,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 5.125197701156139,
+          "tke_sum": 18.996222764253616,
+          "mvpe_sum": 5.158376410603523,
+          "sps_dm_numerator": 1272597.0470324904,
+          "sps_tke_numerator": 834656.7919425145,
+          "sps_mvpe_numerator": 1276763.0465026349,
+          "sps_denominator": 3062806,
+          "coverage_numerator": 2301959
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 1.1126431748270988,
+          "tke_sum": 3.959813892841339,
+          "mvpe_sum": 1.2721287161111832,
+          "sps_dm_numerator": 271861.69556465745,
+          "sps_tke_numerator": 181381.60595436394,
+          "sps_mvpe_numerator": 266402.98235946894,
+          "sps_denominator": 656052,
+          "coverage_numerator": 492362
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.9942451193928719,
+          "tke_sum": 3.610220283269882,
+          "mvpe_sum": 0.7687477841973305,
+          "sps_dm_numerator": 240193.35241689533,
+          "sps_tke_numerator": 158115.92669974267,
+          "sps_mvpe_numerator": 251798.55832517892,
+          "sps_denominator": 584435,
+          "coverage_numerator": 438787
+        }
+      }
+    },
+    {
+      "file": "3750_0.h5",
+      "aoa": 0,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.9584476836025715,
+          "tke_sum": 12.321159645915031,
+          "mvpe_sum": 1.7314321398735046,
+          "sps_dm_numerator": 2445623.5015932918,
+          "sps_tke_numerator": 1706848.2614579797,
+          "sps_mvpe_numerator": 2471172.6902807355,
+          "sps_denominator": 3035280,
+          "coverage_numerator": 2976080
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.4193686917424202,
+          "tke_sum": 2.1058702617883682,
+          "mvpe_sum": 0.3228734917938709,
+          "sps_dm_numerator": 523559.80681079626,
+          "sps_tke_numerator": 390244.2617586255,
+          "sps_mvpe_numerator": 534122.3097080588,
+          "sps_denominator": 649998,
+          "coverage_numerator": 637927
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.3814617767930031,
+          "tke_sum": 2.2908411622047424,
+          "mvpe_sum": 0.39468608796596527,
+          "sps_dm_numerator": 464182.35858118534,
+          "sps_tke_numerator": 324075.75482574105,
+          "sps_mvpe_numerator": 462968.3384607434,
+          "sps_denominator": 577930,
+          "coverage_numerator": 567599
+        }
+      }
+    },
+    {
+      "file": "3750_10.h5",
+      "aoa": 10,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.029904656112194,
+          "tke_sum": 18.114934623241425,
+          "mvpe_sum": 2.985630050301552,
+          "sps_dm_numerator": 2219608.834821105,
+          "sps_tke_numerator": 1368136.5146075785,
+          "sps_mvpe_numerator": 2224989.1789727807,
+          "sps_denominator": 3034499,
+          "coverage_numerator": 2936514
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.6650398224592209,
+          "tke_sum": 3.726634919643402,
+          "mvpe_sum": 0.6332382969558239,
+          "sps_dm_numerator": 473855.91978278756,
+          "sps_tke_numerator": 299083.16895732284,
+          "sps_mvpe_numerator": 477131.66841608286,
+          "sps_denominator": 650426,
+          "coverage_numerator": 629081
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.5557866469025612,
+          "tke_sum": 3.595563590526581,
+          "mvpe_sum": 0.5744206681847572,
+          "sps_dm_numerator": 426441.5743468702,
+          "sps_tke_numerator": 256025.77316781878,
+          "sps_mvpe_numerator": 424801.5180756748,
+          "sps_denominator": 577578,
+          "coverage_numerator": 559230
+        }
+      }
+    },
+    {
+      "file": "3750_20.h5",
+      "aoa": 20,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 4.2575879618525505,
+          "tke_sum": 18.98823907971382,
+          "mvpe_sum": 3.8100053556263447,
+          "sps_dm_numerator": 2161286.1971930563,
+          "sps_tke_numerator": 1369133.021536529,
+          "sps_mvpe_numerator": 2202931.171323329,
+          "sps_denominator": 3226115,
+          "coverage_numerator": 3080468
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.9201801270246506,
+          "tke_sum": 4.161917150020599,
+          "mvpe_sum": 0.8533219546079636,
+          "sps_dm_numerator": 462068.35021969676,
+          "sps_tke_numerator": 289320.2180068046,
+          "sps_mvpe_numerator": 468557.5955477655,
+          "sps_denominator": 691525,
+          "coverage_numerator": 659454
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.8103775680065155,
+          "tke_sum": 3.763851761817932,
+          "mvpe_sum": 0.6908836923539639,
+          "sps_dm_numerator": 411246.34353914857,
+          "sps_tke_numerator": 255350.47300866246,
+          "sps_mvpe_numerator": 422182.69515153766,
+          "sps_denominator": 614495,
+          "coverage_numerator": 583670
+        }
+      }
+    },
+    {
+      "file": "3750_5.h5",
+      "aoa": 5,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 2.2445038817822933,
+          "tke_sum": 14.417817890644073,
+          "mvpe_sum": 1.9357830416411161,
+          "sps_dm_numerator": 2362534.242557198,
+          "sps_tke_numerator": 1553778.3586741984,
+          "sps_mvpe_numerator": 2395203.510210812,
+          "sps_denominator": 3017594,
+          "coverage_numerator": 2947761
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.4964167922735214,
+          "tke_sum": 3.2285596430301666,
+          "mvpe_sum": 0.4144749119877815,
+          "sps_dm_numerator": 503030.1587372422,
+          "sps_tke_numerator": 326357.8472158909,
+          "sps_mvpe_numerator": 511491.58614864945,
+          "sps_denominator": 646726,
+          "coverage_numerator": 631689
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.4471489414572716,
+          "tke_sum": 2.727480947971344,
+          "mvpe_sum": 0.3917029444128275,
+          "sps_dm_numerator": 446328.35677558184,
+          "sps_tke_numerator": 296015.8505897522,
+          "sps_mvpe_numerator": 452412.45350182056,
+          "sps_denominator": 574879,
+          "coverage_numerator": 562323
+        }
+      }
+    },
+    {
+      "file": "5025_0.h5",
+      "aoa": 0,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.9021380543708801,
+          "tke_sum": 10.131756260991096,
+          "mvpe_sum": 1.3944367617368698,
+          "sps_dm_numerator": 2379492.625979632,
+          "sps_tke_numerator": 1763752.5536296964,
+          "sps_mvpe_numerator": 2433928.5817637444,
+          "sps_denominator": 3035309,
+          "coverage_numerator": 2952128
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.4092601463198662,
+          "tke_sum": 2.4178261160850525,
+          "mvpe_sum": 0.28990242816507816,
+          "sps_dm_numerator": 508680.28216665983,
+          "sps_tke_numerator": 362688.59953558445,
+          "sps_mvpe_numerator": 521372.0386930704,
+          "sps_denominator": 649935,
+          "coverage_numerator": 630748
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.35179560258984566,
+          "tke_sum": 2.04252091050148,
+          "mvpe_sum": 0.2510189972817898,
+          "sps_dm_numerator": 455265.99336990714,
+          "sps_tke_numerator": 332014.6934950352,
+          "sps_mvpe_numerator": 466163.82007962465,
+          "sps_denominator": 577916,
+          "coverage_numerator": 563992
+        }
+      }
+    },
+    {
+      "file": "5025_10.h5",
+      "aoa": 10,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.0986931920051575,
+          "tke_sum": 17.611605137586594,
+          "mvpe_sum": 3.0450658462941647,
+          "sps_dm_numerator": 2143068.5055306256,
+          "sps_tke_numerator": 1341809.5925467014,
+          "sps_mvpe_numerator": 2148988.224208981,
+          "sps_denominator": 3049761,
+          "coverage_numerator": 2918821
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.6454763039946556,
+          "tke_sum": 3.446348786354065,
+          "mvpe_sum": 0.6046472899615765,
+          "sps_dm_numerator": 461171.66725733876,
+          "sps_tke_numerator": 298943.84901183844,
+          "sps_mvpe_numerator": 465138.54596948624,
+          "sps_denominator": 653386,
+          "coverage_numerator": 625911
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.6031337082386017,
+          "tke_sum": 3.3615516424179077,
+          "mvpe_sum": 0.5915250107645988,
+          "sps_dm_numerator": 406371.50468319654,
+          "sps_tke_numerator": 254699.8876017928,
+          "sps_mvpe_numerator": 407556.55091637373,
+          "sps_denominator": 581022,
+          "coverage_numerator": 555913
+        }
+      }
+    },
+    {
+      "file": "5025_15.h5",
+      "aoa": 15,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.75769080221653,
+          "tke_sum": 19.09898218512535,
+          "mvpe_sum": 3.411990597844124,
+          "sps_dm_numerator": 2103837.752510071,
+          "sps_tke_numerator": 1301578.7580500394,
+          "sps_mvpe_numerator": 2134439.044253826,
+          "sps_denominator": 3142197,
+          "coverage_numerator": 2983769
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.7696491256356239,
+          "tke_sum": 4.214405059814453,
+          "mvpe_sum": 0.6964869610965252,
+          "sps_dm_numerator": 457712.9310774207,
+          "sps_tke_numerator": 277314.60168382525,
+          "sps_mvpe_numerator": 464384.26075953245,
+          "sps_denominator": 674199,
+          "coverage_numerator": 642578
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.68830556422472,
+          "tke_sum": 3.66575887799263,
+          "mvpe_sum": 0.604918222874403,
+          "sps_dm_numerator": 405319.98679995537,
+          "sps_tke_numerator": 248121.09508033097,
+          "sps_mvpe_numerator": 412921.60446831584,
+          "sps_denominator": 598463,
+          "coverage_numerator": 570354
+        }
+      }
+    },
+    {
+      "file": "5025_20.h5",
+      "aoa": 20,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 4.268461123108864,
+          "tke_sum": 18.705098509788513,
+          "mvpe_sum": 3.8212403431534767,
+          "sps_dm_numerator": 2073834.7839155495,
+          "sps_tke_numerator": 1323946.1210171133,
+          "sps_mvpe_numerator": 2111980.9013718367,
+          "sps_denominator": 3225745,
+          "coverage_numerator": 3048289
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.8691669180989265,
+          "tke_sum": 3.6871072947978973,
+          "mvpe_sum": 0.7922278195619583,
+          "sps_dm_numerator": 450617.81182429194,
+          "sps_tke_numerator": 295961.49830827117,
+          "sps_mvpe_numerator": 457290.26081463695,
+          "sps_denominator": 691356,
+          "coverage_numerator": 656901
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.8431305065751076,
+          "tke_sum": 3.7478263080120087,
+          "mvpe_sum": 0.7638287842273712,
+          "sps_dm_numerator": 391503.37409865856,
+          "sps_tke_numerator": 245957.19188432395,
+          "sps_mvpe_numerator": 398146.7471731305,
+          "sps_denominator": 614324,
+          "coverage_numerator": 580295
+        }
+      }
+    },
+    {
+      "file": "5025_5.h5",
+      "aoa": 5,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 2.4083695635199547,
+          "tke_sum": 13.80978213250637,
+          "mvpe_sum": 1.8533285446465015,
+          "sps_dm_numerator": 2231510.4522708654,
+          "sps_tke_numerator": 1507372.058517605,
+          "sps_mvpe_numerator": 2286204.0310102105,
+          "sps_denominator": 3008114,
+          "coverage_numerator": 2898763
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.5276086628437042,
+          "tke_sum": 2.822468876838684,
+          "mvpe_sum": 0.41489826887845993,
+          "sps_dm_numerator": 475992.81348496675,
+          "sps_tke_numerator": 327688.4918347001,
+          "sps_mvpe_numerator": 487024.7742586732,
+          "sps_denominator": 644213,
+          "coverage_numerator": 621731
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.46216917037963867,
+          "tke_sum": 2.3193420320749283,
+          "mvpe_sum": 0.35118860751390457,
+          "sps_dm_numerator": 423342.1695892513,
+          "sps_tke_numerator": 300542.27487927675,
+          "sps_mvpe_numerator": 434261.11639004946,
+          "sps_denominator": 572990,
+          "coverage_numerator": 551710
+        }
+      }
+    },
+    {
+      "file": "6300_0.h5",
+      "aoa": 0,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.7852586917579174,
+          "tke_sum": 7.152230218052864,
+          "mvpe_sum": 1.2206177562475204,
+          "sps_dm_numerator": 2351910.1413841844,
+          "sps_tke_numerator": 1907753.8339572847,
+          "sps_mvpe_numerator": 2412037.004748553,
+          "sps_denominator": 3035964,
+          "coverage_numerator": 2942649
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.3933493457734585,
+          "tke_sum": 1.5761820152401924,
+          "mvpe_sum": 0.26408133469522,
+          "sps_dm_numerator": 501007.6398971677,
+          "sps_tke_numerator": 404620.2405747175,
+          "sps_mvpe_numerator": 514701.99215626717,
+          "sps_denominator": 650214,
+          "coverage_numerator": 627921
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.34487657621502876,
+          "tke_sum": 1.4016660451889038,
+          "mvpe_sum": 0.2596159540116787,
+          "sps_dm_numerator": 446695.536563009,
+          "sps_tke_numerator": 359691.02959293127,
+          "sps_mvpe_numerator": 455685.6740022898,
+          "sps_denominator": 577866,
+          "coverage_numerator": 562487
+        }
+      }
+    },
+    {
+      "file": "6300_10.h5",
+      "aoa": 10,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 2.9534813351929188,
+          "tke_sum": 17.764941096305847,
+          "mvpe_sum": 3.171315237879753,
+          "sps_dm_numerator": 2124358.244004488,
+          "sps_tke_numerator": 1316665.103323102,
+          "sps_mvpe_numerator": 2106145.835719228,
+          "sps_denominator": 3058425,
+          "coverage_numerator": 2908536
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.6403345875442028,
+          "tke_sum": 4.079953074455261,
+          "mvpe_sum": 0.6943453885614872,
+          "sps_dm_numerator": 452912.6523824632,
+          "sps_tke_numerator": 272342.11817246675,
+          "sps_mvpe_numerator": 448453.04262408614,
+          "sps_denominator": 655370,
+          "coverage_numerator": 619510
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.5782047361135483,
+          "tke_sum": 3.1570492684841156,
+          "mvpe_sum": 0.6360183209180832,
+          "sps_dm_numerator": 401862.45612978935,
+          "sps_tke_numerator": 257315.32825519145,
+          "sps_mvpe_numerator": 396924.10632044077,
+          "sps_denominator": 582515,
+          "coverage_numerator": 554884
+        }
+      }
+    },
+    {
+      "file": "6300_15.h5",
+      "aoa": 15,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.707175374031067,
+          "tke_sum": 18.10890293121338,
+          "mvpe_sum": 3.843757964670658,
+          "sps_dm_numerator": 1992623.8620174825,
+          "sps_tke_numerator": 1262403.3036664724,
+          "sps_mvpe_numerator": 1983806.26500535,
+          "sps_denominator": 3093628,
+          "coverage_numerator": 2897588
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.830466702580452,
+          "tke_sum": 3.7238475680351257,
+          "mvpe_sum": 0.8960911259055138,
+          "sps_dm_numerator": 421645.2467291653,
+          "sps_tke_numerator": 274749.2021532953,
+          "sps_mvpe_numerator": 417252.17784777284,
+          "sps_denominator": 662878,
+          "coverage_numerator": 619756
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.6881339177489281,
+          "tke_sum": 3.48584845662117,
+          "mvpe_sum": 0.6659190654754639,
+          "sps_dm_numerator": 381898.8792013228,
+          "sps_tke_numerator": 239664.26213115454,
+          "sps_mvpe_numerator": 383911.75790017843,
+          "sps_denominator": 589977,
+          "coverage_numerator": 553206
+        }
+      }
+    },
+    {
+      "file": "6300_20.h5",
+      "aoa": 20,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 4.145548850297928,
+          "tke_sum": 17.982065498828888,
+          "mvpe_sum": 3.8748723939061165,
+          "sps_dm_numerator": 2021259.1451443732,
+          "sps_tke_numerator": 1307229.0715959668,
+          "sps_mvpe_numerator": 2044847.8115217686,
+          "sps_denominator": 3225540,
+          "coverage_numerator": 3008293
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.8797503486275673,
+          "tke_sum": 3.7566707134246826,
+          "mvpe_sum": 0.7720460295677185,
+          "sps_dm_numerator": 434201.1042756438,
+          "sps_tke_numerator": 283352.1965945065,
+          "sps_mvpe_numerator": 443232.42887845635,
+          "sps_denominator": 691341,
+          "coverage_numerator": 644695
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.8017459437251091,
+          "tke_sum": 3.617268145084381,
+          "mvpe_sum": 0.7062448114156723,
+          "sps_dm_numerator": 382280.5982211232,
+          "sps_tke_numerator": 241764.16458015144,
+          "sps_mvpe_numerator": 390227.2056685984,
+          "sps_denominator": 614341,
+          "coverage_numerator": 573940
+        }
+      }
+    },
+    {
+      "file": "6300_5.h5",
+      "aoa": 5,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 2.363148607313633,
+          "tke_sum": 13.824740290641785,
+          "mvpe_sum": 1.9071795158088207,
+          "sps_dm_numerator": 2187950.4977755547,
+          "sps_tke_numerator": 1472335.9569996744,
+          "sps_mvpe_numerator": 2232008.1426430047,
+          "sps_denominator": 3005971,
+          "coverage_numerator": 2882258
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.49246638640761375,
+          "tke_sum": 2.7435407638549805,
+          "mvpe_sum": 0.39854228124022484,
+          "sps_dm_numerator": 471480.0525062084,
+          "sps_tke_numerator": 325890.38042476773,
+          "sps_mvpe_numerator": 480633.4778364599,
+          "sps_denominator": 644130,
+          "coverage_numerator": 618009
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.4486926645040512,
+          "tke_sum": 2.6256547272205353,
+          "mvpe_sum": 0.3734736777842045,
+          "sps_dm_numerator": 416695.74858275056,
+          "sps_tke_numerator": 280102.1294654608,
+          "sps_mvpe_numerator": 423967.65760976076,
+          "sps_denominator": 572706,
+          "coverage_numerator": 548853
+        }
+      }
+    },
+    {
+      "file": "7575_10.h5",
+      "aoa": 10,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 2.751677878201008,
+          "tke_sum": 16.95782509446144,
+          "mvpe_sum": 2.8966347966343164,
+          "sps_dm_numerator": 2151244.7568749487,
+          "sps_tke_numerator": 1352546.2107899487,
+          "sps_mvpe_numerator": 2140047.3278979063,
+          "sps_denominator": 3067409,
+          "coverage_numerator": 2913763
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.6086506024003029,
+          "tke_sum": 3.884949207305908,
+          "mvpe_sum": 0.6741572730243206,
+          "sps_dm_numerator": 459289.3736166656,
+          "sps_tke_numerator": 280435.86876413226,
+          "sps_mvpe_numerator": 453955.4328148961,
+          "sps_denominator": 657222,
+          "coverage_numerator": 623404
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.5023326054215431,
+          "tke_sum": 3.0310124158859253,
+          "mvpe_sum": 0.4943815916776657,
+          "sps_dm_numerator": 413680.24155414104,
+          "sps_tke_numerator": 265588.70525351167,
+          "sps_mvpe_numerator": 414543.00731676817,
+          "sps_denominator": 584255,
+          "coverage_numerator": 558992
+        }
+      }
+    },
+    {
+      "file": "7575_15.h5",
+      "aoa": 15,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.4003912284970284,
+          "tke_sum": 16.78110072016716,
+          "mvpe_sum": 3.52736883610487,
+          "sps_dm_numerator": 2010165.4722856581,
+          "sps_tke_numerator": 1301272.4234140664,
+          "sps_mvpe_numerator": 2001404.9128190577,
+          "sps_denominator": 3090965,
+          "coverage_numerator": 2889588
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.7462276667356491,
+          "tke_sum": 3.621029645204544,
+          "mvpe_sum": 0.778803363442421,
+          "sps_dm_numerator": 428037.41277977824,
+          "sps_tke_numerator": 277481.1149560958,
+          "sps_mvpe_numerator": 425541.1220138371,
+          "sps_denominator": 662253,
+          "coverage_numerator": 617551
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.6494425013661385,
+          "tke_sum": 3.116265594959259,
+          "mvpe_sum": 0.6350804530084133,
+          "sps_dm_numerator": 382447.05016988516,
+          "sps_tke_numerator": 250171.46540172398,
+          "sps_mvpe_numerator": 384312.47174173594,
+          "sps_denominator": 589209,
+          "coverage_numerator": 551399
+        }
+      }
+    },
+    {
+      "file": "7575_20.h5",
+      "aoa": 20,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 4.315855890512466,
+          "tke_sum": 17.823965400457382,
+          "mvpe_sum": 4.094534106552601,
+          "sps_dm_numerator": 1939748.6205108464,
+          "sps_tke_numerator": 1269324.2741964608,
+          "sps_mvpe_numerator": 1958617.3305756748,
+          "sps_denominator": 3228589,
+          "coverage_numerator": 2961668
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.8717567622661591,
+          "tke_sum": 3.3658272325992584,
+          "mvpe_sum": 0.7465511932969093,
+          "sps_dm_numerator": 425451.3666306734,
+          "sps_tke_numerator": 291185.1895618737,
+          "sps_mvpe_numerator": 435714.27955913544,
+          "sps_denominator": 692052,
+          "coverage_numerator": 642485
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.8472263440489769,
+          "tke_sum": 3.300495684146881,
+          "mvpe_sum": 0.8694432750344276,
+          "sps_dm_numerator": 365187.9721554518,
+          "sps_tke_numerator": 243082.1552414298,
+          "sps_mvpe_numerator": 363913.10782927275,
+          "sps_denominator": 614939,
+          "coverage_numerator": 565570
+        }
+      }
+    },
+    {
+      "file": "7575_5.h5",
+      "aoa": 5,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.9745851270854473,
+          "tke_sum": 15.557444453239441,
+          "mvpe_sum": 1.5566000174731016,
+          "sps_dm_numerator": 2279441.056149274,
+          "sps_tke_numerator": 1436761.8912444264,
+          "sps_mvpe_numerator": 2322113.6456102133,
+          "sps_denominator": 3010758,
+          "coverage_numerator": 2906468
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.4131033904850483,
+          "tke_sum": 3.2968665659427643,
+          "mvpe_sum": 0.3404084127396345,
+          "sps_dm_numerator": 491878.0252160728,
+          "sps_tke_numerator": 310345.1604517549,
+          "sps_mvpe_numerator": 499352.51336088777,
+          "sps_denominator": 645070,
+          "coverage_numerator": 624526
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.39128103107213974,
+          "tke_sum": 3.0821731984615326,
+          "mvpe_sum": 0.31636635586619377,
+          "sps_dm_numerator": 431556.7451366484,
+          "sps_tke_numerator": 268628.73567160964,
+          "sps_mvpe_numerator": 439061.22283646464,
+          "sps_denominator": 574016,
+          "coverage_numerator": 554692
+        }
+      }
+    },
+    {
+      "file": "8850_0.h5",
+      "aoa": 0,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.6892699748277664,
+          "tke_sum": 13.21756187081337,
+          "mvpe_sum": 1.2293185200542212,
+          "sps_dm_numerator": 2321558.7825318575,
+          "sps_tke_numerator": 1551946.0301884115,
+          "sps_mvpe_numerator": 2369854.5856367946,
+          "sps_denominator": 3043171,
+          "coverage_numerator": 2931040
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.3698307164013386,
+          "tke_sum": 2.6797629296779633,
+          "mvpe_sum": 0.29135152138769627,
+          "sps_dm_numerator": 496588.00110960007,
+          "sps_tke_numerator": 338285.67276211083,
+          "sps_mvpe_numerator": 504779.41118967533,
+          "sps_denominator": 652545,
+          "coverage_numerator": 628316
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.3177897296845913,
+          "tke_sum": 2.611094295978546,
+          "mvpe_sum": 0.21436337381601334,
+          "sps_dm_numerator": 442078.228336066,
+          "sps_tke_numerator": 292195.2966414988,
+          "sps_mvpe_numerator": 452979.9816854,
+          "sps_denominator": 579114,
+          "coverage_numerator": 558649
+        }
+      }
+    },
+    {
+      "file": "8850_10.h5",
+      "aoa": 10,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 2.6808884404599667,
+          "tke_sum": 16.53639143705368,
+          "mvpe_sum": 2.815838772803545,
+          "sps_dm_numerator": 2120235.687933713,
+          "sps_tke_numerator": 1342967.932844147,
+          "sps_mvpe_numerator": 2109216.631006092,
+          "sps_denominator": 3079259,
+          "coverage_numerator": 2896782
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.5838532485067844,
+          "tke_sum": 3.5560954213142395,
+          "mvpe_sum": 0.6293292604386806,
+          "sps_dm_numerator": 451072.42805302143,
+          "sps_tke_numerator": 285427.7097082138,
+          "sps_mvpe_numerator": 447187.37061676383,
+          "sps_denominator": 660322,
+          "coverage_numerator": 616032
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.4956192634999752,
+          "tke_sum": 3.0901847183704376,
+          "mvpe_sum": 0.4983912631869316,
+          "sps_dm_numerator": 406215.91565200686,
+          "sps_tke_numerator": 259209.25886307657,
+          "sps_mvpe_numerator": 406102.9522396326,
+          "sps_denominator": 586359,
+          "coverage_numerator": 555334
+        }
+      }
+    },
+    {
+      "file": "8850_15.h5",
+      "aoa": 15,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 3.3301917538046837,
+          "tke_sum": 16.878951609134674,
+          "mvpe_sum": 3.1049276515841484,
+          "sps_dm_numerator": 1960671.0011504889,
+          "sps_tke_numerator": 1266052.7967152447,
+          "sps_mvpe_numerator": 1979679.2310788184,
+          "sps_denominator": 3088921,
+          "coverage_numerator": 2860424
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.7429305240511894,
+          "tke_sum": 3.87927907705307,
+          "mvpe_sum": 0.6870416477322578,
+          "sps_dm_numerator": 416772.46888422966,
+          "sps_tke_numerator": 262646.11987127364,
+          "sps_mvpe_numerator": 421329.07393331826,
+          "sps_denominator": 661267,
+          "coverage_numerator": 610072
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.6407356113195419,
+          "tke_sum": 3.1007257401943207,
+          "mvpe_sum": 0.6080344095826149,
+          "sps_dm_numerator": 372231.5873324275,
+          "sps_tke_numerator": 244449.92336899042,
+          "sps_mvpe_numerator": 375035.63325834274,
+          "sps_denominator": 588664,
+          "coverage_numerator": 547120
+        }
+      }
+    },
+    {
+      "file": "8850_20.h5",
+      "aoa": 20,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 4.220062784850597,
+          "tke_sum": 18.36557599902153,
+          "mvpe_sum": 3.8499363139271736,
+          "sps_dm_numerator": 1893023.7504928857,
+          "sps_tke_numerator": 1219820.4937859923,
+          "sps_mvpe_numerator": 1922349.895503357,
+          "sps_denominator": 3226814,
+          "coverage_numerator": 2925312
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.9168991446495056,
+          "tke_sum": 3.7089163959026337,
+          "mvpe_sum": 0.8531656637787819,
+          "sps_dm_numerator": 403804.2431232333,
+          "sps_tke_numerator": 267827.3375811875,
+          "sps_mvpe_numerator": 408811.9168099314,
+          "sps_denominator": 691508,
+          "coverage_numerator": 625255
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.826533205807209,
+          "tke_sum": 4.103171139955521,
+          "mvpe_sum": 0.8299763053655624,
+          "sps_dm_numerator": 357234.11395671964,
+          "sps_tke_numerator": 214235.0881281346,
+          "sps_mvpe_numerator": 357119.69164445996,
+          "sps_denominator": 614753,
+          "coverage_numerator": 556071
+        }
+      }
+    },
+    {
+      "file": "8850_5.h5",
+      "aoa": 5,
+      "states": {
+        "all": {
+          "samples": 42,
+          "rel_sum": 1.8615912273526192,
+          "tke_sum": 17.306724697351456,
+          "mvpe_sum": 1.2424916606396437,
+          "sps_dm_numerator": 2242086.520193726,
+          "sps_tke_numerator": 1346683.9985626638,
+          "sps_mvpe_numerator": 2304763.5611325204,
+          "sps_denominator": 3004994,
+          "coverage_numerator": 2880477
+        },
+        "val": {
+          "samples": 9,
+          "rel_sum": 0.4042370244860649,
+          "tke_sum": 3.7650295197963715,
+          "mvpe_sum": 0.31097681261599064,
+          "sps_dm_numerator": 480198.8629877269,
+          "sps_tke_numerator": 288422.61133885384,
+          "sps_mvpe_numerator": 489613.28963786364,
+          "sps_denominator": 644035,
+          "coverage_numerator": 617672
+        },
+        "early": {
+          "samples": 8,
+          "rel_sum": 0.3503473624587059,
+          "tke_sum": 3.0925820767879486,
+          "mvpe_sum": 0.21927623450756073,
+          "sps_dm_numerator": 427521.8545714915,
+          "sps_tke_numerator": 262580.8493629098,
+          "sps_mvpe_numerator": 440849.3890719116,
+          "sps_denominator": 571993,
+          "coverage_numerator": 549467
+        }
+      }
+    }
+  ],
+  "sources": {
+    "cdf_search_kernel.py": "ac1ecfaf078b06e1fed909176f1315b9ae64cc59bd5c70db9281d4b7236fcbe4",
+    "periodic_cdf.py": "f4e6d7161a3a8d69ecb8bd3b1f5021d94d104bbb1cc61c6789c0767fd4622786",
+    "mean_calibration.npz": "410721c78709f3f1da725357e6dbfe806554f9b6c0d75810f025980bf6d42bea",
+    "regional_amplitude.py": "748e1603c9ef4686f14e688b771ab21b2c6183d983d6b5432638971a084a31eb",
+    "feature_readout_runtime.py": "da617aea52cd9e828fbb49af7d3a950db34d63c88a8e2ee0ab2054f7b273bd64",
+    "moment_fused.py": "4eedb3f805c1fff890f6711082065a295c0306b9a95ffb1231c22e6cfd45e620",
+    "amplitude_overlap.py": "6d84a18574887fd0344c9cc423881507b6a4a3860f633d83c4445b655fc0da46",
+    "ensemble_unet2d.pth": "61d84abc1141c723f02160bce27ab76622e793f18dc0c25393f0d0018e97c001",
+    "shape_model.pth": "c50af36f5a27218ca704e835e805f6fa7d180acce13eea3ffe4ad0e1268b2d7c",
+    "base_submission.py": "b9905eb8633d59020573b9c23eeda8d9ea0497102fa23c15707c5333d1ab18ad",
+    "sps_optimizer.py": "41f42343593cd2ec022dae84d7d70827da0538ef9f4a08a48ec066b93b139085",
+    "causal_shape.py": "4c7b7320df0b3a9c8bc4479d39ea3ef0a47828d230364543a935919d29c486b7",
+    "submission.py": "b288c004d1565d2fa613dabe8450eee6e6a0bfeb950ab5be5c30aa32ebb91780",
+    "shape_model.py": "834559cace6a798bfc868c122ebe0f8cb0eab2c84724bfa94ffd9a34ce7ce9f8",
+    "pixel_parent.py": "d9980d54e4071907c26cb2c6ab318277a7e2ea38034c46695cef1833f01cb781",
+    "packed_point_heads.py": "195d07ae98b2ecb784ea37975af60c27c8ad72d7cedbe9ef747820b0424fe0f3",
+    "policy.json": "ab399dd4d9cfb3afdb65433d53a0d1d7214364b9c87f88f2693e2d6ba6528d0a",
+    "scale_mean.py": "4771503a9301ffa57158bf6325066c0cc73bcb01dcc98b86406522c5df90974c",
+    "models/ensemble_unet2d.py": "5580913347bc758c186d66ce712a3a9328032325fe2d9a7edb1aa9f2aaa66d52",
+    "models/unet2d.py": "8834e0511d63c38f2964bf21e5095f5fdc5271ef285543afc82fe4a321c9476e",
+    "models/__init__.py": "ca44e67d82b6d00c74b8043fd918b91fb17e186b133e45361155e3a949ca3187",
+    "vendor/tinycc/COPYING": "512d2d21b6b3384ba64781abb0208a1b87740bc31e2df48e2b206ddb7e4d5779",
+    "vendor/tinycc/BUILD.md": "72262b9205c6a2dbd4fa40822418cbb0b9151a2bc1ced88933ddaedf429a9097",
+    "vendor/tinycc/tinycc-source.tar.gz": "7cfbbc7e67ceffa035ef8681c551434ca8dbdc3b9bac44639913177b1a7bfee6",
+    "vendor/tinycc/cc": "1dddac65da043e2068aa7d164efb14cbb3c43e26378bc935e86a6d4f968d3cf6",
+    "vendor/tinycc/bin/tcc": "39d909cd5fb3a9e84b9e131e4259ee86c2bcfb1c7993c44b611ca00121e25a56",
+    "vendor/tinycc/lib/tcc/bcheck_run.o": "b7c7ed8ae82c14f4303458c93682338f1102271c2bcb8a76664c91644f4d1c0a",
+    "vendor/tinycc/lib/tcc/bt-log.o": "72e1ac001c9b996f03f6de4b8caadf3e0df8933f597f48d6ccb760230103a6c1",
+    "vendor/tinycc/lib/tcc/libtcc1.a": "7fac7e6c3717e8e82e7b424a69f5ff47f61eea49ea5448e791ebecc208800215",
+    "vendor/tinycc/lib/tcc/bt-exe.o": "47e46747626cefb03ddd819951d1b2f18c0b71c20aca698736a65efe8b446ddb",
+    "vendor/tinycc/lib/tcc/bcheck.o": "4d1cf45e72505e74851c165678cbec60a1e364ba08d02f54e9e4d584fa0bda2f",
+    "vendor/tinycc/lib/tcc/runmain.o": "c4d28fa3699c6c5f752f25f4a24bb66db73dcaa8a1b8a7496e9b9deecf7d210d",
+    "vendor/tinycc/lib/tcc/include/stdarg.h": "a38f8d34f5e09658cc3a8892b3a7e80ff566eaeedc194e5a85ece0b675993137",
+    "vendor/tinycc/lib/tcc/include/stdnoreturn.h": "ec64d8fbf7fb2e800df9784b2efca0a99fc25a3eb5e8da56e4df098937f787f2",
+    "vendor/tinycc/lib/tcc/include/tgmath.h": "e60c66ff9017f13ab18ee38824792ca771b9235bcb4df57688fec582739524a5",
+    "vendor/tinycc/lib/tcc/include/float.h": "484ffee95fcdbc00cdc154b9dc2fe03fed65610bf1a73b610871cc39698e6f8e",
+    "vendor/tinycc/lib/tcc/include/stdbool.h": "5252824225ddc486b0460677f765e4157af5d3ed7acd65b310a4045eafb56af7",
+    "vendor/tinycc/lib/tcc/include/tccdefs.h": "d1016b6170c45f1b8e7f8d83bf1f00f21e288eb2e446d9f141457f6f821acf7b",
+    "vendor/tinycc/lib/tcc/include/stddef.h": "c42eaa62f574527b8d0d64f802b20c27ebeb66feb2c3608e9b9659225ad6ed45",
+    "vendor/tinycc/lib/tcc/include/varargs.h": "07858857f4eed0a61df94beb1a9d678b53fc3d67a0b0e8936155f85ddbcd1dcc",
+    "vendor/tinycc/lib/tcc/include/tcclib.h": "2cfbd6b9c5e039721fbfb8e6f95a0a9fc30597bbcb2aefa3dda572c278009429",
+    "vendor/tinycc/lib/tcc/include/stdalign.h": "7612d46571099ccaa7616a510f78f180cb1e91671e6e5e9223a2e297b84b789d",
+    "vendor/tinycc/lib/tcc/include/stdatomic.h": "4fbd9d6ec9add338d41c06f44115121925f087dd91f445b56cca1aacb84360e1"
+  },
+  "data_sha256": {
+    "input": "2f53f44d02682fe0bf21cdf6aa121715cd45619d782ee75d77310506d6725264",
+    "target": "2bf21cfce927181156fd93ccd89ee46fc91524f63e1cff2f053964cda30de54d",
+    "output": "85dfbf374fe88dbceb3f628881948ec8f92c6b5d687d5b9e4e8ee44a646ddd40"
+  },
+  "manifest_sha256": "efe4c2fe3f2266a61407e90761b23a818f48ce21f0527a9c214bef42768de67e",
+  "scorer_sha256": "655257f5827dc464f61b222bf49f6c58822ecba5f40a00243fbe400c38fc92e3",
+  "source_sha256": "0ece38e29b231d76df1c9e7f91a8630773dc65b45e6e485f85cbfb8294779433",
+  "torch": "2.4.1+cu124",
+  "evidence": "Full-fit public overlap; complete causal compiled quality and engineering timing, not an official score"
+}

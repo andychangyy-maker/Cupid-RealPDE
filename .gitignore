@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+/data/
+/output/
+/outputs/
+*.log
+# The only .pt in the release is the official normalization artifact.
+*.pth
+*.pt
+!/submission/assets/mean_std_real.pt
+*.ckpt
+/submission/**/__pycache__/

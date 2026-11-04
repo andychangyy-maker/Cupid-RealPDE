@@ -1,0 +1,267 @@
+{
+  "track": 2,
+  "data": {
+    "real_files": 81,
+    "sim_files": 100,
+    "real_stats_sha256": "bae5235f73431ac7d76e6bdcea480b8ca9fda0ac01e57ab26af66bad20dc3b40",
+    "excluded": "7575_0.h5",
+    "prefix_windows": 2544,
+    "tail_windows": 716
+  },
+  "stages": [
+    {
+      "index": 1,
+      "stage": "teacher",
+      "scope": "A",
+      "complete": true,
+      "seconds": 771.0316047190008,
+      "log": "/output/training/logs/01_teacher_A.log"
+    },
+    {
+      "index": 2,
+      "stage": "teacher",
+      "scope": "B",
+      "complete": true,
+      "seconds": 1044.7520594159996,
+      "log": "/output/training/logs/02_teacher_B.log"
+    },
+    {
+      "index": 3,
+      "stage": "teacher",
+      "scope": "C",
+      "complete": true,
+      "seconds": 794.3020618869996,
+      "log": "/output/training/logs/03_teacher_C.log"
+    },
+    {
+      "index": 4,
+      "stage": "cache",
+      "scope": "full",
+      "complete": true,
+      "seconds": 29.16064132700012,
+      "log": "/output/training/logs/04_cache_full.log"
+    },
+    {
+      "index": 5,
+      "stage": "closure",
+      "scope": "full",
+      "complete": true,
+      "seconds": 66.8168856100001,
+      "log": "/output/training/logs/05_closure_full.log"
+    },
+    {
+      "index": 6,
+      "stage": "sim",
+      "scope": "pretext",
+      "complete": true,
+      "seconds": 143.1809255799999,
+      "log": "/output/training/logs/06_sim_pretext.log"
+    },
+    {
+      "index": 7,
+      "stage": "sim",
+      "scope": "standard1",
+      "complete": true,
+      "seconds": 1061.275569722001,
+      "log": "/output/training/logs/07_sim_standard1.log"
+    },
+    {
+      "index": 8,
+      "stage": "sim",
+      "scope": "standard2",
+      "complete": true,
+      "seconds": 1071.575884582,
+      "log": "/output/training/logs/08_sim_standard2.log"
+    },
+    {
+      "index": 9,
+      "stage": "point",
+      "scope": "0",
+      "complete": true,
+      "seconds": 904.4969071199994,
+      "log": "/output/training/logs/09_point_0.log"
+    },
+    {
+      "index": 10,
+      "stage": "shape",
+      "scope": "0",
+      "complete": true,
+      "seconds": 448.4778527540002,
+      "log": "/output/training/logs/10_shape_0.log"
+    },
+    {
+      "index": 11,
+      "stage": "mean_cache",
+      "scope": "0",
+      "complete": true,
+      "seconds": 7.7759995279993745,
+      "log": "/output/training/logs/11_mean_cache_0.log"
+    },
+    {
+      "index": 12,
+      "stage": "point",
+      "scope": "5",
+      "complete": true,
+      "seconds": 907.7247257140007,
+      "log": "/output/training/logs/12_point_5.log"
+    },
+    {
+      "index": 13,
+      "stage": "shape",
+      "scope": "5",
+      "complete": true,
+      "seconds": 449.9882948329996,
+      "log": "/output/training/logs/13_shape_5.log"
+    },
+    {
+      "index": 14,
+      "stage": "mean_cache",
+      "scope": "5",
+      "complete": true,
+      "seconds": 6.975672356000359,
+      "log": "/output/training/logs/14_mean_cache_5.log"
+    },
+    {
+      "index": 15,
+      "stage": "point",
+      "scope": "10",
+      "complete": true,
+      "seconds": 896.292605658,
+      "log": "/output/training/logs/15_point_10.log"
+    },
+    {
+      "index": 16,
+      "stage": "shape",
+      "scope": "10",
+      "complete": true,
+      "seconds": 446.58636548100003,
+      "log": "/output/training/logs/16_shape_10.log"
+    },
+    {
+      "index": 17,
+      "stage": "mean_cache",
+      "scope": "10",
+      "complete": true,
+      "seconds": 8.629049544000736,
+      "log": "/output/training/logs/17_mean_cache_10.log"
+    },
+    {
+      "index": 18,
+      "stage": "point",
+      "scope": "15",
+      "complete": true,
+      "seconds": 899.3635680610005,
+      "log": "/output/training/logs/18_point_15.log"
+    },
+    {
+      "index": 19,
+      "stage": "shape",
+      "scope": "15",
+      "complete": true,
+      "seconds": 445.99075953600004,
+      "log": "/output/training/logs/19_shape_15.log"
+    },
+    {
+      "index": 20,
+      "stage": "mean_cache",
+      "scope": "15",
+      "complete": true,
+      "seconds": 8.07547443600015,
+      "log": "/output/training/logs/20_mean_cache_15.log"
+    },
+    {
+      "index": 21,
+      "stage": "point",
+      "scope": "20",
+      "complete": true,
+      "seconds": 900.1132092669995,
+      "log": "/output/training/logs/21_point_20.log"
+    },
+    {
+      "index": 22,
+      "stage": "shape",
+      "scope": "20",
+      "complete": true,
+      "seconds": 444.6310674340002,
+      "log": "/output/training/logs/22_shape_20.log"
+    },
+    {
+      "index": 23,
+      "stage": "mean_cache",
+      "scope": "20",
+      "complete": true,
+      "seconds": 7.627778194000712,
+      "log": "/output/training/logs/23_mean_cache_20.log"
+    },
+    {
+      "index": 24,
+      "stage": "point",
+      "scope": "full",
+      "complete": true,
+      "seconds": 1129.4334451859995,
+      "log": "/output/training/logs/24_point_full.log"
+    },
+    {
+      "index": 25,
+      "stage": "native_uq",
+      "scope": "full",
+      "complete": true,
+      "seconds": 306.4658583229975,
+      "log": "/output/training/logs/25_native_uq_full.log"
+    },
+    {
+      "index": 26,
+      "stage": "shape",
+      "scope": "full",
+      "complete": true,
+      "seconds": 461.1333818960011,
+      "log": "/output/training/logs/26_shape_full.log"
+    },
+    {
+      "index": 27,
+      "stage": "mean",
+      "scope": "full",
+      "complete": true,
+      "seconds": 5.222716827000113,
+      "log": "/output/training/logs/27_mean_full.log"
+    },
+    {
+      "index": 28,
+      "stage": "tail",
+      "scope": "uq8000",
+      "complete": true,
+      "seconds": 635.9084882949974,
+      "log": "/output/training/logs/28_tail_uq8000.log"
+    },
+    {
+      "index": 29,
+      "stage": "tail",
+      "scope": "reflection4000",
+      "complete": true,
+      "seconds": 476.19569411499833,
+      "log": "/output/training/logs/29_tail_reflection4000.log"
+    },
+    {
+      "index": 30,
+      "stage": "tail",
+      "scope": "blend",
+      "complete": true,
+      "seconds": 57.80146720199991,
+      "log": "/output/training/logs/30_tail_blend.log"
+    },
+    {
+      "index": 31,
+      "stage": "export",
+      "scope": "full",
+      "complete": true,
+      "seconds": 6.524502319000021,
+      "log": "/output/training/logs/31_export_full.log"
+    }
+  ],
+  "complete": true,
+  "budget_seconds": 86400,
+  "network_isolation": "must be enforced by docker --network none",
+  "elapsed_seconds": 14843.55007923,
+  "peak_allocated_bytes": 23974356992,
+  "peak_reserved_bytes": 25352470528
+}

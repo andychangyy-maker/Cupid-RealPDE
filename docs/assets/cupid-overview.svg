@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="780" viewBox="0 0 1480 780" role="img" aria-labelledby="title desc">
+  <title id="title">Cupid: frozen forecasting, causal online calibration</title>
+  <desc id="desc">Offline, public simulation and real measurements train teachers, a student, and point, shape, and uncertainty components. Online, observed history passes through frozen networks and a causal calibration layer to generate future flow and bounds. Only already revealed targets update the calibration state.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#51647d" stroke-width="1.5"/></marker>
+    <marker id="teal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#0a8078" stroke-width="1.5"/></marker>
+    <style>text{font-family:Arial,Helvetica,sans-serif}.label{font-size:15px;font-weight:700;letter-spacing:2px;fill:#68778b}.head{font-size:23px;font-weight:700;fill:#172b46}.body{font-size:18px;fill:#4b5f76}.flow{stroke:#51647d;stroke-width:2;fill:none;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="1480" height="780" rx="24" fill="#f7f9fc"/>
+  <text x="48" y="67" font-size="38" font-weight="700" fill="#172b46">CUPID</text>
+  <text x="230" y="65" font-size="25" fill="#34516c">Frozen forecasting. Causal online calibration.</text>
+  <text x="48" y="103" class="body">RealPDE 2026 · Track 2 · Team Cupid</text>
+  <line x1="48" y1="130" x2="1432" y2="130" stroke="#dce3eb"/>
+  <text x="48" y="166" class="label">OFFLINE · ALL LEARNED COMPONENTS REBUILT FROM SCRATCH</text>
+  <g>
+    <rect x="48" y="192" width="275" height="142" rx="16" fill="#fff" stroke="#dce3eb"/>
+    <text x="70" y="230" class="head">Public Sim + Real</text>
+    <text x="70" y="266" class="body">100 Sim trajectories</text>
+    <text x="70" y="296" class="body">81 clean Real trajectories</text>
+    <path d="M326 263 H365" class="flow"/>
+    <rect x="380" y="192" width="285" height="142" rx="16" fill="#eaf0fe" stroke="#c6d5f4"/>
+    <text x="402" y="230" class="head">Teachers → student</text>
+    <text x="402" y="266" class="body">Three Sim teachers</text>
+    <text x="402" y="296" class="body">Four-member U-Net</text>
+    <path d="M668 263 H707" class="flow"/>
+    <rect x="722" y="192" width="338" height="142" rx="16" fill="#eaf0fe" stroke="#c6d5f4"/>
+    <text x="744" y="230" class="head">Fit deployed components</text>
+    <text x="744" y="266" class="body">Point · shape · mean calibration</text>
+    <text x="744" y="296" class="body">Asymmetric uncertainty bounds</text>
+    <path d="M1063 263 H1102" class="flow"/>
+    <rect x="1117" y="192" width="315" height="142" rx="16" fill="#fff" stroke="#dce3eb"/>
+    <text x="1139" y="230" class="head">Frozen inference package</text>
+    <text x="1139" y="266" class="body">31-stage training pipeline</text>
+    <text x="1139" y="296" class="body">Mixed INT8 / FP16 storage</text>
+  </g>
+  <text x="48" y="404" class="label">ONLINE · NO NEURAL-NETWORK GRADIENT UPDATES</text>
+  <g>
+    <rect x="48" y="434" width="250" height="159" rx="16" fill="#fff" stroke="#dce3eb"/>
+    <text x="70" y="475" class="head">Observed history</text>
+    <text x="70" y="513" class="body">20 frames · 32 × 64</text>
+    <text x="70" y="545" class="body">u, v, zero Real pressure</text>
+    <path d="M301 512 H340" class="flow"/>
+    <rect x="355" y="434" width="275" height="159" rx="16" fill="#eaf0fe" stroke="#c6d5f4"/>
+    <text x="377" y="475" class="head">Frozen networks</text>
+    <text x="377" y="513" class="body">Point + fluctuation shape</text>
+    <text x="377" y="545" class="body">Uncertainty prediction</text>
+    <path d="M633 512 H672" class="flow"/>
+    <rect x="687" y="434" width="371" height="159" rx="16" fill="#e3f4ef" stroke="#8dc8b9" stroke-width="1.5"/>
+    <text x="709" y="475" class="head">Causal online calibration</text>
+    <text x="709" y="513" class="body">Regional mean / amplitude · CDF</text>
+    <text x="709" y="545" class="body">32-feature regularized readout</text>
+    <path d="M1061 512 H1100" class="flow"/>
+    <rect x="1115" y="434" width="317" height="159" rx="16" fill="#fff" stroke="#dce3eb"/>
+    <text x="1137" y="475" class="head">Future flow + bounds</text>
+    <text x="1137" y="513" class="body">Next 20 frames</text>
+    <text x="1137" y="545" class="body">Prediction · lower · upper</text>
+    <path d="M872 657 V598" stroke="#0a8078" stroke-width="2" fill="none" marker-end="url(#teal)"/>
+    <rect x="619" y="661" width="508" height="60" rx="14" fill="#fff" stroke="#8dc8b9"/>
+    <text x="646" y="699" font-size="20" font-weight="700" fill="#0a716b">Update only with already revealed targets</text>
+  </g>
+  <text x="48" y="748" font-size="17" fill="#68778b">Reset online state at every trajectory boundary. Current targets never inform their own forecast.</text>
+</svg>

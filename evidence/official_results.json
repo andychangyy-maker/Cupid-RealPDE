@@ -1,0 +1,15 @@
+{
+  "checked_date": "2026-11-04",
+  "source_url": "https://realpdecompetition.github.io/results.html",
+  "organizer_publication_date": "2026-10-17",
+  "track": "Track 2 LTTTA",
+  "team": "Cupid",
+  "codabench": "andychang",
+  "place_as_published": "9=",
+  "total_score_mean": 82.6104,
+  "total_score_std": 0.0653,
+  "training_runs": 3,
+  "evaluations_per_trained_model": 5,
+  "evidence_class": "organizer_published_private_test_results",
+  "transcribed_from": "Live official results table; values are not computed from local replay."
+}

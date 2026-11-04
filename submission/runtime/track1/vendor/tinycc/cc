@@ -1,0 +1,3 @@
+#!/bin/sh
+root=${0%/*}
+exec "$root/bin/tcc" -B"$root/lib/tcc" "$@"
