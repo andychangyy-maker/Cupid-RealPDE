@@ -1,62 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="780" viewBox="0 0 1480 780" role="img" aria-labelledby="title desc">
-  <title id="title">Cupid: frozen forecasting, causal online calibration</title>
-  <desc id="desc">Offline, public simulation and real measurements train teachers, a student, and point, shape, and uncertainty components. Online, observed history passes through frozen networks and a causal calibration layer to generate future flow and bounds. Only already revealed targets update the calibration state.</desc>
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#51647d" stroke-width="1.5"/></marker>
-    <marker id="teal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#0a8078" stroke-width="1.5"/></marker>
-    <style>text{font-family:Arial,Helvetica,sans-serif}.label{font-size:15px;font-weight:700;letter-spacing:2px;fill:#68778b}.head{font-size:23px;font-weight:700;fill:#172b46}.body{font-size:18px;fill:#4b5f76}.flow{stroke:#51647d;stroke-width:2;fill:none;marker-end:url(#arrow)}</style>
-  </defs>
-  <rect width="1480" height="780" rx="24" fill="#f7f9fc"/>
-  <text x="48" y="67" font-size="38" font-weight="700" fill="#172b46">CUPID</text>
-  <text x="230" y="65" font-size="25" fill="#34516c">Frozen forecasting. Causal online calibration.</text>
-  <text x="48" y="103" class="body">RealPDE 2026 · Track 2 · Team Cupid</text>
-  <line x1="48" y1="130" x2="1432" y2="130" stroke="#dce3eb"/>
-  <text x="48" y="166" class="label">OFFLINE · ALL LEARNED COMPONENTS REBUILT FROM SCRATCH</text>
-  <g>
-    <rect x="48" y="192" width="275" height="142" rx="16" fill="#fff" stroke="#dce3eb"/>
-    <text x="70" y="230" class="head">Public Sim + Real</text>
-    <text x="70" y="266" class="body">100 Sim trajectories</text>
-    <text x="70" y="296" class="body">81 clean Real trajectories</text>
-    <path d="M326 263 H365" class="flow"/>
-    <rect x="380" y="192" width="285" height="142" rx="16" fill="#eaf0fe" stroke="#c6d5f4"/>
-    <text x="402" y="230" class="head">Teachers → student</text>
-    <text x="402" y="266" class="body">Three Sim teachers</text>
-    <text x="402" y="296" class="body">Four-member U-Net</text>
-    <path d="M668 263 H707" class="flow"/>
-    <rect x="722" y="192" width="338" height="142" rx="16" fill="#eaf0fe" stroke="#c6d5f4"/>
-    <text x="744" y="230" class="head">Fit deployed components</text>
-    <text x="744" y="266" class="body">Point · shape · mean calibration</text>
-    <text x="744" y="296" class="body">Asymmetric uncertainty bounds</text>
-    <path d="M1063 263 H1102" class="flow"/>
-    <rect x="1117" y="192" width="315" height="142" rx="16" fill="#fff" stroke="#dce3eb"/>
-    <text x="1139" y="230" class="head">Frozen inference package</text>
-    <text x="1139" y="266" class="body">31-stage training pipeline</text>
-    <text x="1139" y="296" class="body">Mixed INT8 / FP16 storage</text>
-  </g>
-  <text x="48" y="404" class="label">ONLINE · NO NEURAL-NETWORK GRADIENT UPDATES</text>
-  <g>
-    <rect x="48" y="434" width="250" height="159" rx="16" fill="#fff" stroke="#dce3eb"/>
-    <text x="70" y="475" class="head">Observed history</text>
-    <text x="70" y="513" class="body">20 frames · 32 × 64</text>
-    <text x="70" y="545" class="body">u, v, zero Real pressure</text>
-    <path d="M301 512 H340" class="flow"/>
-    <rect x="355" y="434" width="275" height="159" rx="16" fill="#eaf0fe" stroke="#c6d5f4"/>
-    <text x="377" y="475" class="head">Frozen networks</text>
-    <text x="377" y="513" class="body">Point + fluctuation shape</text>
-    <text x="377" y="545" class="body">Uncertainty prediction</text>
-    <path d="M633 512 H672" class="flow"/>
-    <rect x="687" y="434" width="371" height="159" rx="16" fill="#e3f4ef" stroke="#8dc8b9" stroke-width="1.5"/>
-    <text x="709" y="475" class="head">Causal online calibration</text>
-    <text x="709" y="513" class="body">Regional mean / amplitude · CDF</text>
-    <text x="709" y="545" class="body">32-feature regularized readout</text>
-    <path d="M1061 512 H1100" class="flow"/>
-    <rect x="1115" y="434" width="317" height="159" rx="16" fill="#fff" stroke="#dce3eb"/>
-    <text x="1137" y="475" class="head">Future flow + bounds</text>
-    <text x="1137" y="513" class="body">Next 20 frames</text>
-    <text x="1137" y="545" class="body">Prediction · lower · upper</text>
-    <path d="M872 657 V598" stroke="#0a8078" stroke-width="2" fill="none" marker-end="url(#teal)"/>
-    <rect x="619" y="661" width="508" height="60" rx="14" fill="#fff" stroke="#8dc8b9"/>
-    <text x="646" y="699" font-size="20" font-weight="700" fill="#0a716b">Update only with already revealed targets</text>
-  </g>
-  <text x="48" y="748" font-size="17" fill="#68778b">Reset online state at every trajectory boundary. Current targets never inform their own forecast.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="730" viewBox="0 0 1280 730" role="img" aria-labelledby="title desc">
+<title id="title">One frozen forecaster. A calibration state that keeps adapting.</title>
+<desc id="desc">Offline, three Sim teachers train a student and Real data trains point, shape and uncertainty components. Online, 20 observed frames enter frozen networks then causal calibration to predict 20 future frames and bounds. Only targets already revealed at forecast time update calibration. State resets for each trajectory.</desc>
+<defs>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#526c75" stroke-width="1.5"/></marker>
+<marker id="teal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#1b8c7b" stroke-width="1.5"/></marker>
+<style>text{font-family:Arial,Helvetica,sans-serif}.k{font-size:16px;font-weight:700;letter-spacing:1.5px}.h{font-size:26px;font-weight:700;fill:#14303d}.b{font-size:20px;fill:#4e6872}.flow{stroke:#526c75;stroke-width:2;fill:none;marker-end:url(#arrow)}</style>
+</defs>
+<rect x="1" y="1" width="1278" height="728" rx="20" fill="#f6f7f3" stroke="#dce3dd"/>
+<text x="38" y="48" class="k" fill="#187e6d">THE CORE IDEA</text>
+<text x="38" y="91" font-size="33" font-weight="700" fill="#14303d">Keep the network fixed. Let calibration adapt.</text>
+<path d="M38 121H1242" stroke="#d5dfd8"/>
+<rect x="38" y="150" width="79" height="30" rx="15" fill="#dbe8ee"/>
+<text x="52" y="171" font-size="15" font-weight="700" fill="#365f76">OFFLINE</text>
+<text x="134" y="171" class="b">31 stages · all learned components trained from scratch</text>
+<rect x="38" y="200" width="352" height="112" rx="14" fill="#fff" stroke="#d5dfd8"/>
+<text x="58" y="240" class="h">Three Sim teachers</text>
+<text x="58" y="276" class="b">Public simulation → student</text>
+<path d="M400 256H441" class="flow"/>
+<rect x="456" y="200" width="376" height="112" rx="14" fill="#fff" stroke="#d5dfd8"/>
+<text x="476" y="240" class="h">Fit to real measurements</text>
+<text x="476" y="276" class="b">Point · shape · uncertainty</text>
+<path d="M842 256H883" class="flow"/>
+<rect x="898" y="200" width="344" height="112" rx="14" fill="#e6edf5" stroke="#c8d8e7"/>
+<text x="918" y="240" class="h">Export frozen networks</text>
+<text x="918" y="276" class="b">Efficient FP16 inference</text>
+<rect x="38" y="352" width="79" height="30" rx="15" fill="#d2eee2"/>
+<text x="52" y="373" font-size="15" font-weight="700" fill="#177262">ONLINE</text>
+<text x="134" y="373" class="b">Forecast first · update only when targets have been revealed</text>
+<rect x="38" y="408" width="230" height="164" rx="14" fill="#fff" stroke="#d5dfd8"/>
+<text x="58" y="445" class="k" fill="#71858c">01 · OBSERVE</text>
+<text x="58" y="493" class="h">20 past frames</text>
+<text x="58" y="532" class="b">Flow history</text>
+<path d="M279 490H310" class="flow"/>
+<rect x="324" y="408" width="246" height="164" rx="14" fill="#e6edf5" stroke="#c8d8e7"/>
+<text x="344" y="445" class="k" fill="#476b91">02 · FORECAST</text>
+<text x="344" y="493" class="h">Frozen networks</text>
+<text x="344" y="532" class="b">Point + shape + bounds</text>
+<path d="M581 490H612" class="flow"/>
+<rect x="626" y="408" width="300" height="164" rx="14" fill="#d9f1e5" stroke="#83c4af" stroke-width="2"/>
+<text x="646" y="445" class="k" fill="#177262">03 · CALIBRATE</text>
+<text x="646" y="493" class="h">Adaptive online state</text>
+<text x="646" y="532" class="b">Regional statistics + ridge</text>
+<path d="M937 490H968" class="flow"/>
+<rect x="982" y="408" width="260" height="164" rx="14" fill="#fff" stroke="#d5dfd8"/>
+<text x="1002" y="445" class="k" fill="#71858c">04 · PREDICT</text>
+<text x="1002" y="493" class="h">20 future frames</text>
+<text x="1002" y="532" class="b">Forecast + lower / upper</text>
+<path d="M1112 584V627Q1112 645 1092 645H797Q776 645 776 624V584" stroke="#1b8c7b" stroke-width="2.5" fill="none" marker-end="url(#teal)"/>
+<rect x="831" y="608" width="220" height="70" rx="13" fill="#f6f7f3" stroke="#c0d7ca"/>
+<text x="847" y="636" font-size="18" font-weight="700" fill="#177262">Once targets arrive:</text>
+<text x="847" y="660" font-size="18" fill="#177262">update for later forecasts</text>
+<text x="38" y="632" class="b">No neural backpropagation at inference.</text>
+<text x="38" y="664" class="b">Reset online state at each new trajectory.</text>
+<text x="38" y="708" font-size="16" fill="#687d84">Schematic: the update uses revealed observations, never a forecast's own hidden targets.</text>
 </svg>

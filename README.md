@@ -1,91 +1,73 @@
 <div align="center">
 
-# Cupid
+<a href="https://github.com/andychangyy-maker/Cupid-RealPDE"><img src="docs/assets/cupid-hero.svg" alt="Cupid — Forecast the flow. Calibrate as observations arrive." width="100%"></a>
 
-### Uncertainty-Aware Flow Forecasting with Causal Online Calibration
-
-**NeurIPS 2026 RealPDE Competition · Track 2: Long-Term Test-Time Adaptation**
+### Uncertainty-Aware Flow Forecasting<br>with Causal Online Calibration
 
 **Yaoyu Chang · Wenhao Liu · Hao Shi**
 
-[Official final results](https://realpdecompetition.github.io/results.html) · [Method](docs/method.md) · [Reproduce](docs/reproduction.md) · [Results & evidence](docs/results.md) · [中文](README_ZH.md)
+NeurIPS 2026 RealPDE Competition · Track 2: Long-Term Test-Time Adaptation
 
-**Joint 9th place on the official private test set** · **31-stage training from scratch** · **Single-A800 Docker reproduction**
+**[Method](#how-cupid-works)** &nbsp; / &nbsp; **[Reproduce](#reproduce-cupid)** &nbsp; / &nbsp; **[Results](#results-with-provenance)** &nbsp; / &nbsp; **[Code map](docs/code-map.md)** &nbsp; / &nbsp; **[中文](README_ZH.md)**
 
 </div>
 
-![Cupid method overview: offline training, frozen forecasting, and causal online calibration](docs/assets/cupid-overview.svg)
+Cupid forecasts future flow fields and their uncertainty while adapting to incoming
+observations. **The neural networks stay frozen. Lightweight calibration learns
+from targets that have already been revealed.** This is the complete release of
+Team Cupid's competition solution, **submission 948801 (L33)**.
 
-## Forecast the flow. Calibrate as observations arrive.
+[![Official: joint 9th, 82.6104 ± 0.0653. Local Docker training: 31 stages on one A800 in 4 h 07 min. Release: 1,835 original package files.](docs/assets/cupid-evidence.svg)](docs/results.md)
 
-Real-world flow forecasting must handle a gap between simulation and measurement,
-uncertainty in future velocity fields, and changing conditions during deployment.
-Cupid combines a frozen flow forecaster with lightweight online calibration:
-**neural-network weights stay fixed; statistics and a regional linear readout
-adapt using already revealed targets.**
+## A real flow, in motion
 
-This repository presents Team Cupid's competition solution, **Codabench 948801
-(L33)**. It preserves the complete submitted training package and adds a navigable
-method guide, reproduction instructions, and clearly separated official and local
-results.
+![Observed public RealPDE velocity fields evolving over time; these are measurements, not model predictions.](docs/assets/real-flow-preview.gif)
 
-## At a glance
+<sub>Observed <i>u</i> and <i>v</i> from the public RealPDE trajectory <code>10125_10.h5</code>. Fixed color scales; illustrative playback speed. This is a data preview, not a model forecast. [Static image](docs/assets/real-flow-preview.png) · [Source, rendering details & attribution](docs/assets/README.md)</sub>
 
-| Item | Details |
-|---|---|
-| Task | Predict the next 20 flow frames from 20 observed frames |
-| Evaluation grid | 32 × 64; channels `u`, `v`, and zero pressure on Real data |
-| Offline learning | Three Sim teachers → student → Real point/shape/UQ training → export |
-| Online adaptation | Regional mean/amplitude calibration, residual-CDF intervals, and a 32-feature ridge readout |
-| Neural gradient updates at inference | None |
-| Public Final API | `train(data_dir, output_dir, device)` and `get_ttt_model(output_dir, device)` |
-| Official identity | Team **Cupid** · Codabench **andychang** · submission **948801** |
+**The task:** use 20 observed frames to predict the next 20 frames, together with
+lower and upper bounds. Evaluation uses a 32 × 64 grid; the Real pressure channel is zero.
+The preview above shows the original 64 × 128 observation grid.
 
-## Results
+## How Cupid works
 
-| Evidence | Result | Meaning |
-|---|---|---|
-| **Official final/private test** | **Joint 9th; 82.6104 ± 0.0653** | Organizer-reported mean and standard deviation over 15 evaluations |
-| Development submission | 82.186978 | Historical official score for submission 948801 |
-| Local Docker training | 31/31 stages; **4 h 07 min 24 s** | One A800-SXM4-80GB; 16 CPUs; 128 GB RAM; network disabled |
-| Local paired public replay | Tail quality mean **83.271780 vs. 83.277454** | Fresh model vs. sealed submission; difference −0.005674 points |
+![Cupid pipeline: train teachers and student offline; use frozen networks and causally updated calibration online.](docs/assets/cupid-overview.svg)
 
-The [official results page](https://realpdecompetition.github.io/results.html)
-describes three independent organizer training runs and five evaluations per
-trained model. The local replay is a **training-overlap diagnostic**, and its
-four-metric quality mean excludes the official Time score. It is not comparable
-to the official total scores. See [results and limitations](docs/results.md).
+1. **Learn offline.** Three independent Sim teachers supervise a multi-member
+   U-Net. Real-data training fits point forecasts, fluctuation shape, mean
+   calibration, and asymmetric uncertainty bounds.
+2. **Calibrate online.** Revealed past targets update regional means, fluctuation
+   amplitudes, residual distributions, and a 32-feature regularized linear readout.
+   State resets for each trajectory; no neural backpropagation is used at inference.
+3. **Run efficiently.** FP16 inference, Torch compilation, reusable buffers, and
+   CUDA graphs execute the frozen runtime. Mixed INT8/FP16 **weight storage** does
+   not imply INT8 compute kernels.
 
-## Method in three parts
+[Read the method →](docs/method.md) &nbsp; · &nbsp; [Exact 31-stage recipe →](submission/METHOD.md)
 
-1. **Learn offline from simulation and measurements.** Three independently trained
-   Sim teachers supervise a compact multi-member U-Net. Real-data fits learn point
-   forecasts, fluctuation shape, input-conditioned mean calibration, and asymmetric
-   uncertainty bounds.
-2. **Adapt causally without neural backpropagation.** Revealed past targets update
-   regional means, fluctuation amplitudes, empirical residual distributions, and
-   a regularized linear readout. State is reset for every trajectory.
-3. **Execute efficiently.** The frozen runtime combines mixed INT8/FP16 weight
-   storage, FP16 inference, Torch compilation, reusable buffers, and CUDA graphs.
-   Storage compression does not imply INT8 compute kernels.
+## Reproduce Cupid
 
-[Method guide →](docs/method.md) · [Exact 31-stage recipe →](submission/METHOD.md) · [Code map →](docs/code-map.md)
+**Build from source → train from scratch → load the Final API.**
+The tested setup is Linux/amd64, Docker Engine, NVIDIA container support,
+and one A800 80 GB. The historical private Docker Hub repository is not required.
 
-## Reproduce
-
-The public path is to **build from source**. Pull access to the historical private
-Docker Hub repository is not required. Use a Linux host with Docker Engine,
-NVIDIA container support, and one exposed A800 80 GB GPU for the tested setup.
+First read the [public data guide](docs/data.md), then run from the repository root:
 
 ```bash
-# From this repository's root; this check needs only Python's standard library.
+# Standard-library integrity check; no GPU required.
 python scripts/verify_source.py
 
-# Build needs access to the pinned base image unless it is already cached.
-# All additional Python wheels are bundled.
+# Pinned base image; all additional Python wheels are bundled.
 docker build --platform linux/amd64 -t cupid-realpde:948801 ./submission
+```
 
-# DATA must contain the official flat-HDF5 training release; see the data guide.
+<details>
+<summary><strong>Run all 31 training stages with networking disabled</strong></summary>
+
+The image build may download the pinned base image. Training itself is offline.
+`DATA` must contain the official flat-HDF5 training layout; `OUTPUT` must be empty.
+
+```bash
 DATA=/absolute/path/to/public-training-data
 OUTPUT=/absolute/path/to/new-empty-output
 mkdir -p "$OUTPUT"
@@ -98,51 +80,82 @@ docker run --rm --network none --gpus '"device=0"' \
   python -c "import solution; solution.train('/data', '/output', 'cuda')"
 ```
 
-Training starts with empty output and rebuilds every learned component, including
-teachers and caches. It does not use historical weights or a sealed submission.
-Full training requires CUDA; the standard-library integrity check does not.
+This rebuilds every learned component, including teachers and caches, without
+historical weights. The public interfaces are `train(data_dir, output_dir, device)`
+and `get_ttt_model(output_dir, device)`.
 
-**Read the [data layout](docs/data.md) and [complete reproduction guide](docs/reproduction.md)
-before running.** The raw benchmark download and the competition-ready HDF5 layout
-must not be confused.
+</details>
 
-## Repository guide
+**[Complete reproduction guide →](docs/reproduction.md)** · [Data layout →](docs/data.md) · [Execution records →](evidence/README.md)
 
-| Path | Purpose |
-|---|---|
-| [`submission/`](submission/) | All 1,835 files from the frozen Final source ZIP, byte-for-byte |
-| [`submission/solution.py`](submission/solution.py) | Official training and inference entry points |
-| [`submission/pipeline.py`](submission/pipeline.py) | Fixed 31-stage schedule, data checks, and training report |
-| [`submission/runtime/track2/`](submission/runtime/track2/) | Deployed L33 inference and online calibration |
-| [`docs/`](docs/) | Method, data, reproduction, results, and provenance |
-| [`evidence/`](evidence/) | Selected local Docker execution receipts and result tables |
-| [`scripts/verify_source.py`](scripts/verify_source.py) | Verify the frozen package against its SHA256 manifest |
+## Results with provenance
 
-The retained `legacy/`, `teacher_legacy/`, and `runtime/track1/` directories inside
-the package are historical dependencies, not separate supported releases. The
-executable training entry point in this repository is **Track 2 only**.
+| Evidence | Result | What was measured |
+|:--|:--|:--|
+| **Official final / private test** | **Joint 9th · 82.6104 ± 0.0653** | Organizer-reported mean ± SD over 15 evaluations |
+| Official development submission | 82.186978 | Historical leaderboard score for 948801 |
+| Local Docker training | **31 / 31 stages · 4 h 07 min 24 s** | One A800; 16 CPUs; 128 GB RAM; network disabled |
+| Local paired public replay | 83.271780 fresh / 83.277454 sealed | 716-tail-window quality mean; −0.005674 points |
 
-The original package documentation is kept unchanged as a dated submission
-record. The October 10 Docker Engine run happened later; its evidence is described
-in [the current reproduction guide](docs/reproduction.md).
+The [official final results](https://realpdecompetition.github.io/results.html)
+combine three independent training runs and five evaluations per trained model.
+The local replay is a **training-overlap diagnostic**. Its four-metric quality
+mean excludes the official Time score and cannot be compared to official totals.
 
-## Team and citation
+[Full results, metric definitions & limitations →](docs/results.md)
 
-Team Cupid: **Yaoyu Chang** (team leader), **Wenhao Liu**, **Hao Shi**.
-The software citation metadata is in [CITATION.cff](CITATION.cff).
-This is a competition solution release, not a claim of an accepted research paper.
+## Explore the release
 
-We thank the [RealPDE competition organizers](https://realpdecompetition.github.io/)
-and [RealPDEBench authors](https://github.com/AI4Science-WestlakeU/RealPDEBench)
-for the benchmark, public data, interfaces, and evaluation infrastructure.
-Please also cite the upstream work when using the benchmark.
+| Start here | What you will find |
+|:--|:--|
+| [Method guide](docs/method.md) | Architecture, online state, and causal boundaries |
+| [Code map](docs/code-map.md) | Entry points and the implementation behind each component |
+| [Frozen submission](submission/) | All 1,835 original Final-package files, byte-for-byte |
+| [Reproduction evidence](evidence/) | Docker execution, API checks, and paired public replay |
+| [Source manifest](docs/frozen-source-manifest.json) | SHA256 values checked by `scripts/verify_source.py` |
 
-## Licensing and data
+<details>
+<summary>About the preserved historical directories</summary>
 
-Cupid's team-authored code and documentation use the [MIT License](LICENSE).
-Third-party notices and source licenses are preserved in
-[`submission/THIRD_PARTY_NOTICES.md`](submission/THIRD_PARTY_NOTICES.md).
-The [public competition dataset](https://huggingface.co/datasets/AI4Science-WestlakeU/RealPDE-Competition-Data)
-is distributed separately under its own terms. No training trajectories, model
-checkpoints, Docker image layers, account credentials, or private correspondence
-are included here. See [licensing status](docs/licensing.md) for reuse conditions.
+`legacy/`, `teacher_legacy/`, and `runtime/track1/` inside the package are retained
+training/runtime dependencies, not separate supported releases. The public
+training entry point is **Track 2 only**. Original package documentation is kept
+unchanged as a dated submission record. The later October 10 Docker Engine
+reproduction is documented in [the current guide](docs/reproduction.md).
+
+</details>
+
+## Team, citation & acknowledgments
+
+**Team Cupid:** Yaoyu Chang (team leader), Wenhao Liu, Hao Shi.
+Software citation metadata is available in [CITATION.cff](CITATION.cff).
+This repository releases a competition solution.
+
+<details>
+<summary>Copy the software citation</summary>
+
+```bibtex
+@software{cupid_realpde_2026,
+  author  = {Chang, Yaoyu and Liu, Wenhao and Shi, Hao},
+  title   = {Cupid: Uncertainty-Aware Flow Forecasting with Causal Online Calibration},
+  year    = {2026},
+  version = {948801-public.1},
+  url     = {https://github.com/andychangyy-maker/Cupid-RealPDE}
+}
+```
+
+</details>
+
+We thank the [RealPDE organizers](https://realpdecompetition.github.io/) and
+[RealPDEBench authors](https://github.com/AI4Science-WestlakeU/RealPDEBench)
+for the benchmark, public data, and evaluation infrastructure. Please cite their
+upstream work when using the benchmark.
+
+---
+
+Team-authored code and documentation: **[MIT](LICENSE)**. Third-party licenses
+remain in [the original notices](submission/THIRD_PARTY_NOTICES.md).
+The observed-flow preview derives from the **CC BY-NC 4.0** public dataset;
+see [asset attribution](docs/assets/README.md) and [licensing](docs/licensing.md).
+Raw training trajectories, model checkpoints, Docker layers, and credentials
+are not bundled in this release.

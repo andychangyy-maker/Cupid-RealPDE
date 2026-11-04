@@ -1,55 +1,103 @@
-# Cupid：不确定性感知流场预测与因果在线校准
+<div align="center">
 
-**NeurIPS 2026 RealPDE Competition · Track 2（LTTTA）**
+<a href="README.md"><img src="docs/assets/cupid-hero.svg" alt="Cupid：预测流场，随观测到来进行校准" width="100%"></a>
 
-Yaoyu Chang · Wenhao Liu · Hao Shi
+### 不确定性感知流场预测与因果在线校准
 
-[English](README.md) · [官方最终榜](https://realpdecompetition.github.io/results.html) · [完整方法](submission/METHOD.md) · [复现说明](docs/reproduction.md)
+**Yaoyu Chang · Wenhao Liu · Hao Shi**
 
-![Cupid 方法概览](docs/assets/cupid-overview.svg)
+NeurIPS 2026 RealPDE Competition · Track 2：长期测试时适应（LTTTA）
 
-真实流场预测同时面临仿真到实测的差异、未来预测的不确定性，以及部署过程中的分布变化。
-Cupid 将离线训练的流场预测网络与轻量在线校准结合：**神经网络保持冻结，已经揭示的历史目标用于更新统计量和区域线性读出。**
+**[English](README.md)** &nbsp; / &nbsp; **[方法](#方法如何工作)** &nbsp; / &nbsp; **[复现](#从源码复现)** &nbsp; / &nbsp; **[结果](#已验证的结果)** &nbsp; / &nbsp; **[代码导航](docs/code-map.md)**
 
-本仓库展示 Cupid 队的 Track2 最终提交 **948801（L33）**，并保留完整的从头训练链路。
+</div>
 
-## 已验证结果
+Cupid 在预测未来流场及其不确定性的同时，利用持续到来的观测进行校准。
+**神经网络保持冻结；已经揭示的历史目标，驱动轻量校准状态不断更新。**
+这里完整公开了 Cupid 队的比赛方案 **948801（L33）**。
 
-| 证据类型 | 结果 |
-|---|---|
-| 官方最终私有测试集 | **并列第 9，总分 82.6104，标准差 0.0653** |
-| 历史开发榜提交 | 948801，总分 82.186978 |
-| 本地 Docker Engine + A800 复训 | 31 阶段全部完成，4 小时 7 分 24 秒 |
-| 本地公开数据配对回放 | 716 尾窗质量均值：复训 83.271780，封存版 83.277454，差 −0.005674 |
+[![官方私有测试集并列第 9；本地单 A800 Docker 从头训练 31 阶段；1,835 个原始源码文件完整保留](docs/assets/cupid-evidence.svg)](docs/results.md)
 
-最终排名来自[官方结果页](https://realpdecompetition.github.io/results.html)。官方结果汇总了三次从头训练、每次五次评测。
-本地公开回放与训练数据重叠，其质量均值不含官方 Time 分数，不能替代或直接对比官方隐藏集总分。
+## 看见真实流动
 
-## 方法结构
+![RealPDE 公开实测流场随时间变化；展示的是观测数据，不是模型预测](docs/assets/real-flow-preview.gif)
 
-1. **完整离线训练**：三个 Sim 教师、学生模型、Real 点预测、形状分支、均值校准及不确定性学习，依次构成固定的 31 阶段链路。
-2. **因果在线适应**：只使用已经揭示的历史目标，更新区域均值、波动幅度、残差分布以及 32 维特征的正则线性读出；每条轨迹重置状态。
-3. **高效推理**：权重混合 INT8/FP16 存储、FP16 推理、Torch 编译、复用缓冲区和 CUDA Graph。在线阶段没有神经网络梯度更新。
+<sub>公开轨迹 <code>10125_10.h5</code> 的实测速度分量 u、v。色标固定，播放速度仅用于展示，不代表真实时间比例。[静态版本](docs/assets/real-flow-preview.png) · [数据来源、绘制参数与署名](docs/assets/README.md)</sub>
 
-输入为 20 帧，输出为未来 20 帧及上下界，评测网格为 32×64。Real 数据的压力通道为零。
+**任务：**从 20 帧历史观测预测未来 20 帧及上下界。评测使用 32×64 网格，Real 数据的压力通道为零；上方动图展示原始 64×128 观测网格。
 
-## 从哪里开始
+## 方法如何工作
 
-- [方法说明与因果边界](docs/method.md)
-- [公开数据来源与目录要求](docs/data.md)
-- [Docker 构建、从头训练与 Final API](docs/reproduction.md)
-- [结果、证据及局限](docs/results.md)
-- [核心代码导航](docs/code-map.md)
+![Cupid 方法：离线训练教师和学生；在线冻结网络，仅用已揭示观测更新校准状态](docs/assets/cupid-overview.svg)
 
-`submission/` 的 1,835 个文件逐字节保留原 Final 源码包。运行 `python scripts/verify_source.py` 可检查完整性；完整训练在 Linux + CUDA 环境中执行。
-从源码构建即可复现，不依赖访问历史私有 Docker Hub 仓库。
+1. **离线学习。**三个独立 Sim 教师指导多成员 U-Net，再通过 Real 数据拟合点预测、波动形状、均值校准和非对称不确定性区间，形成固定的 31 阶段链路。
+2. **因果校准。**已经揭示的历史目标更新区域均值、波动幅度、残差分布和 32 维特征的正则线性读出；每条轨迹重置状态，推理阶段没有神经网络反向传播。
+3. **高效执行。**FP16 推理、Torch 编译、缓冲区复用和 CUDA Graph。权重混合 INT8/FP16 **存储**不等于使用 INT8 计算内核。
 
-原包 README 是提交时点的记录；10 月 10 日完成的 Docker Engine 全流程证据在外层文档中补充说明。
-仓库中的历史依赖目录不表示另一个受支持的 Track1 发布，当前训练入口只支持 Track2。
+[方法详解 →](docs/method.md) · [完整 31 阶段配方 →](submission/METHOD.md)
 
-## 团队与来源
+## 从源码复现
 
-Cupid：Yaoyu Chang（队长）、Wenhao Liu、Hao Shi。
-这是比赛方案发布；不将比赛结果或本地诊断包装为已发表论文。
-感谢 RealPDE 与 RealPDEBench 团队提供数据、接口与评测环境。
-团队原创代码与文档采用 [MIT 许可](LICENSE)，第三方许可保留在原包中，复用条件见[许可说明](docs/licensing.md)。
+**构建镜像 → 从头训练 → 加载 Final 接口。**
+已实测环境为 Linux/amd64、Docker Engine、NVIDIA 容器支持和单张 A800 80 GB。
+从公开源码构建即可，不依赖历史私有 Docker Hub 仓库。
+
+```bash
+# 无需 GPU，仅使用 Python 标准库核验原始包。
+python scripts/verify_source.py
+
+# 固定基础镜像；额外 Python wheels 已包含。
+docker build --platform linux/amd64 -t cupid-realpde:948801 ./submission
+```
+
+正式训练从空输出目录开始，在断网容器内重建教师、缓存及全部学习组件，不复用旧权重。
+构建镜像本身可能需要联网获取基础镜像。运行前请先核对官方数据的目录格式。
+
+**[完整复现指南 →](docs/reproduction.md)** · [数据准备 →](docs/data.md) · [执行记录 →](evidence/README.md)
+
+## 已验证的结果
+
+| 证据类型 | 结果 | 含义 |
+|:--|:--|:--|
+| **官方最终私有测试集** | **并列第 9；82.6104 ± 0.0653** | 15 次官方评测的总分均值与标准差 |
+| 官方开发榜提交 | 82.186978 | 948801 的历史开发榜成绩 |
+| 本地 Docker + A800 复训 | **31/31 阶段；4 小时 7 分 24 秒** | 单 A800、16 CPU、128 GB 内存、训练断网 |
+| 本地公开数据配对回放 | 复训 83.271780 / 封存版 83.277454 | 716 尾窗质量均值；差 −0.005674 |
+
+最终名次来自[官方结果页](https://realpdecompetition.github.io/results.html)：三次独立从头训练，每次五次评测。
+本地回放与训练数据重叠，属于复现诊断；其质量均值不包含官方 Time 分数，不能替代或直接对比官方总分。
+
+[指标定义、证据与局限 →](docs/results.md)
+
+## 探索代码
+
+| 入口 | 内容 |
+|:--|:--|
+| [方法说明](docs/method.md) | 模型结构、校准状态和因果边界 |
+| [核心代码导航](docs/code-map.md) | 每个组件对应的实现位置 |
+| [冻结源码](submission/) | 原 Final 源码包 1,835 个文件，逐字节保留 |
+| [复现记录](evidence/) | Docker 训练、Final API 与公开配对回放 |
+| [SHA256 清单](docs/frozen-source-manifest.json) | 可用完整性脚本独立核对 |
+
+<details>
+<summary>保留历史目录的说明</summary>
+
+原包的 `legacy/`、`teacher_legacy/` 和 `runtime/track1/` 是训练或推理依赖，不代表单独支持 Track1 发布。
+当前公共训练入口只支持 Track2。原包 README 保持提交时的内容，10 月 10 日完成的 Docker Engine 全流程记录由外层复现指南补充。
+
+</details>
+
+## 团队、引用与致谢
+
+**Cupid：**Yaoyu Chang（队长）、Wenhao Liu、Hao Shi。
+软件引用信息见 [CITATION.cff](CITATION.cff)。这是比赛方案的公开发布。
+
+感谢 [RealPDE 组织方](https://realpdecompetition.github.io/)和
+[RealPDEBench 作者](https://github.com/AI4Science-WestlakeU/RealPDEBench)提供数据、接口与评测环境。
+使用基准时，请同时引用上游工作。
+
+---
+
+团队原创代码和文档采用 **[MIT 许可](LICENSE)**，原有第三方许可保留。
+流场动图来源于 **CC BY-NC 4.0** 公开数据，其使用条件单独保留，详见[图像署名](docs/assets/README.md)及[许可说明](docs/licensing.md)。
+仓库不包含原始训练轨迹、模型检查点、Docker 镜像层或账号凭据。

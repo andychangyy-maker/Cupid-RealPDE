@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="448" viewBox="0 0 1280 448" role="img" aria-labelledby="title desc">
+  <title id="title">Cupid — Forecast the flow. Calibrate as observations arrive.</title>
+  <desc id="desc">NeurIPS 2026 RealPDE Track 2. A conceptual streamline illustration connects observations, frozen forecasting, and causal calibration.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#091625"/><stop offset="1" stop-color="#123743"/></linearGradient>
+    <linearGradient id="line"><stop stop-color="#32d5c5" stop-opacity=".08"/><stop offset=".48" stop-color="#45dfcf"/><stop offset="1" stop-color="#ffae8b"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#37d5c2" stop-opacity=".18"/><stop offset="1" stop-color="#37d5c2" stop-opacity="0"/></radialGradient>
+    <clipPath id="clip"><rect width="1280" height="448" rx="24"/></clipPath>
+    <style>text{font-family:Arial,Helvetica,sans-serif}</style>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="1280" height="448" fill="url(#bg)"/>
+    <ellipse cx="955" cy="190" rx="390" ry="280" fill="url(#halo)"/>
+    <g stroke="#8bcecf" stroke-opacity=".07" fill="none">
+      <path d="M640 0V448M720 0V448M800 0V448M880 0V448M960 0V448M1040 0V448M1120 0V448M1200 0V448"/>
+      <path d="M600 64H1280M600 144H1280M600 224H1280M600 304H1280M600 384H1280"/>
+    </g>
+    <g stroke="url(#line)" stroke-width="2.2" fill="none">
+      <path d="M610 98C740 98 756 64 841 74S949 165 1028 130S1169 61 1310 83"/>
+      <path d="M610 116C736 116 764 83 838 92S941 181 1032 149S1161 82 1310 104"/>
+      <path d="M610 134C740 134 767 104 835 112S939 200 1031 170S1169 100 1310 126"/>
+      <path d="M610 152C746 152 770 123 831 133S929 218 1032 190S1174 121 1310 148"/>
+      <path d="M610 170C749 170 772 144 829 155S928 236 1035 213S1175 142 1310 172"/>
+      <path d="M610 188C746 188 777 163 828 177S918 256 1039 235S1182 166 1310 195"/>
+      <path d="M610 206C746 206 779 184 824 198S917 276 1044 258S1184 189 1310 219"/>
+      <path d="M610 224C746 224 781 204 822 222S914 296 1048 280S1189 214 1310 245"/>
+      <path d="M610 242C744 242 781 227 820 246S914 315 1053 302S1191 240 1310 271"/>
+      <path d="M610 260C744 260 783 250 819 270S913 335 1056 324S1192 266 1310 298"/>
+      <path d="M610 278C744 278 784 273 818 294S914 355 1061 346S1196 292 1310 324"/>
+    </g>
+    <path d="M970 63V365" stroke="#c7eee3" stroke-opacity=".3" stroke-dasharray="4 7"/>
+    <circle cx="969" cy="236" r="7" fill="#ffb18c"/>
+    <circle cx="969" cy="236" r="18" fill="none" stroke="#ffb18c" stroke-opacity=".5"/>
+    <path d="M1063 355C1080 400 896 418 857 356" fill="none" stroke="#45dfcf" stroke-width="2"/>
+    <path d="M853 366L855 353L867 358" fill="none" stroke="#45dfcf" stroke-width="2"/>
+    <text x="986" y="60" fill="#b8dcd8" font-size="14" letter-spacing="2">FORECAST ORIGIN</text>
+    <text x="882" y="415" fill="#70dfd1" font-size="14" letter-spacing="2">REVEALED TARGETS ONLY</text>
+    <rect x="50" y="44" width="356" height="32" rx="16" fill="#24504f"/>
+    <circle cx="67" cy="60" r="4" fill="#47ddc6"/>
+    <text x="81" y="65" fill="#c7f7e9" font-size="14" font-weight="700" letter-spacing="1.5">NEURIPS 2026 · REALPDE · TRACK 2</text>
+    <text x="46" y="207" fill="#f4f7ed" font-size="126" font-weight="700" letter-spacing="-6">Cupid</text>
+    <path d="M422 120C443 96 465 106 465 124C465 145 442 156 422 169C402 156 379 145 379 124C379 106 401 96 422 120Z" fill="none" stroke="#55deca" stroke-width="3" transform="translate(12 -7) scale(.92)"/>
+    <path d="M363 155L434 111M421 111H434V124" fill="none" stroke="#ffae8b" stroke-width="3"/>
+    <text x="52" y="263" fill="#f4f7ed" font-size="32" font-weight="700">Forecast the flow.</text>
+    <text x="52" y="307" fill="#91d9d1" font-size="28">Calibrate as observations arrive.</text>
+    <path d="M52 347H534" stroke="#42615e"/>
+    <text x="52" y="378" fill="#bbd0cf" font-size="18">Frozen neural weights. Causal online adaptation.</text>
+    <text x="52" y="409" fill="#91a9ad" font-size="15" letter-spacing="1">TEAM CUPID  /  SUBMISSION 948801</text>
+  </g>
+</svg>

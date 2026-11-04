@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="218" viewBox="0 0 1280 218" role="img" aria-labelledby="title desc">
+  <title id="title">Official final result and local reproduction highlights</title>
+  <desc id="desc">Official private test: joint ninth, mean 82.6104 plus or minus 0.0653 standard deviation. Local reproduction: 31 stages, one A800, 4 hours 7 minutes 24 seconds. Source release: all 1835 frozen package files verified by SHA256.</desc>
+  <style>text{font-family:Arial,Helvetica,sans-serif}.k{font-size:15px;letter-spacing:1.8px;font-weight:700}.v{font-size:48px;letter-spacing:-1px;font-weight:700;fill:#132b39}.b{font-size:18px;fill:#47606a}</style>
+  <rect x="1" y="1" width="410" height="216" rx="18" fill="#eaf7f2" stroke="#c5e2d6"/>
+  <rect x="435" y="1" width="410" height="216" rx="18" fill="#f5f3ed" stroke="#e3dfd2"/>
+  <rect x="869" y="1" width="410" height="216" rx="18" fill="#edf3fa" stroke="#d5e1ee"/>
+  <text x="29" y="39" class="k" fill="#177262">OFFICIAL · PRIVATE TEST</text>
+  <text x="29" y="106" class="v">Joint 9th</text>
+  <text x="29" y="147" class="b">82.6104 ± 0.0653 total score</text>
+  <text x="29" y="178" class="b">3 training runs · 15 evaluations</text>
+  <text x="463" y="39" class="k" fill="#86613c">LOCAL · DOCKER REPRODUCTION</text>
+  <text x="463" y="106" class="v">4 h 07 min</text>
+  <text x="463" y="147" class="b">31 stages · one A800 80 GB</text>
+  <text x="463" y="178" class="b">From scratch · network disabled</text>
+  <text x="897" y="39" class="k" fill="#365f87">RELEASE · FROZEN SOURCE</text>
+  <text x="897" y="106" class="v">1,835 files</text>
+  <text x="897" y="147" class="b">Original Final training package</text>
+  <text x="897" y="178" class="b">Byte-for-byte · SHA256 checked</text>
+</svg>
