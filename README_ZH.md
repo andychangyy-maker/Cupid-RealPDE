@@ -34,7 +34,7 @@ Cupid 在预测未来流场及其不确定性的同时，利用持续到来的�
 
 <sub>公开轨迹 <code>10125_10.h5</code> 的实测速度分量 u、v。色标固定，播放速度仅用于展示，不代表真实时间比例。[静态版本](docs/assets/real-flow-preview.png) · [数据来源、绘制参数与署名](docs/assets/README.md)</sub>
 
-**任务：**从 20 帧历史观测预测未来 20 帧及上下界。评测使用 32×64 网格，Real 数据的压力通道为零；上方动图展示原始 64×128 观测网格。
+**任务**：从 20 帧历史观测预测未来 20 帧及上下界。评测使用 32×64 网格，Real 数据的压力通道为零；上方动图展示原始 64×128 观测网格。
 
 ## 方法如何工作
 
@@ -43,9 +43,9 @@ Cupid 在预测未来流场及其不确定性的同时，利用持续到来的�
   <img src="docs/assets/cupid-overview.svg" alt="Cupid 方法：离线训练教师和学生；在线冻结网络，仅用已揭示观测更新校准状态" width="100%">
 </picture>
 
-1. **离线学习。**三个独立 Sim 教师指导多成员 U-Net，再通过 Real 数据拟合点预测、波动形状、均值校准和非对称不确定性区间，形成固定的 31 阶段链路。
-2. **因果校准。**已经揭示的历史目标更新区域均值、波动幅度、残差分布和 32 维特征的正则线性读出；每条轨迹重置状态，推理阶段没有神经网络反向传播。
-3. **高效执行。**FP16 推理、Torch 编译、缓冲区复用和 CUDA Graph。权重混合 INT8/FP16 **存储**不等于使用 INT8 计算内核。
+1. **离线学习**。三个独立 Sim 教师指导多成员 U-Net，再通过 Real 数据拟合点预测、波动形状、均值校准和非对称不确定性区间，形成固定的 31 阶段链路。
+2. **因果校准**。已经揭示的历史目标更新区域均值、波动幅度、残差分布和 32 维特征的正则线性读出；每条轨迹重置状态，推理阶段没有神经网络反向传播。
+3. **高效执行**。FP16 推理、Torch 编译、缓冲区复用和 CUDA Graph。权重混合 INT8/FP16 **存储**不等于使用 INT8 计算内核。
 
 [方法详解 →](docs/method.md) · [完整 31 阶段配方 →](submission/METHOD.md)
 
@@ -105,7 +105,7 @@ docker build --platform linux/amd64 -t cupid-realpde:948801 ./submission
 
 ## 团队、引用与致谢
 
-**Cupid：**Yaoyu Chang（队长）、Wenhao Liu、Hao Shi。
+**Cupid**：Yaoyu Chang（队长）、Wenhao Liu、Hao Shi。
 软件引用信息见 [CITATION.cff](CITATION.cff)。这是比赛方案的公开发布。
 
 感谢 [RealPDE 组织方](https://realpdecompetition.github.io/)和
