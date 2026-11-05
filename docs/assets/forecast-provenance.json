@@ -1,0 +1,401 @@
+{
+  "kind": "Qualitative inference on public training data; not a held-out or official score",
+  "rendered_at_utc": "2026-11-05T16:27:33.171630+00:00",
+  "source": "https://huggingface.co/datasets/AI4Science-WestlakeU/RealPDE-Competition-Data",
+  "credit": "AI4Science-WestlakeU / RealPDE and RealPDEBench contributors; Cupid model by Team Cupid",
+  "data_and_derived_visuals_license": "CC-BY-NC-4.0",
+  "selection": "Same trajectory as homepage observation preview; first clean81 tail origin, selected before inference",
+  "capture": {
+    "kind": "single public-training trajectory qualitative replay; not an official score",
+    "complete": true,
+    "trajectory": "10125_10.h5",
+    "trajectory_sha256": "7a83a11d7893d5976b753f6ffd1c4e68c6d59e89fbdece2e2014283d221e8de7",
+    "input_start": 660,
+    "target_frame_indices": [
+      680,
+      681,
+      682,
+      683,
+      684,
+      685,
+      686,
+      687,
+      688,
+      689,
+      690,
+      691,
+      692,
+      693,
+      694,
+      695,
+      696,
+      697,
+      698,
+      699
+    ],
+    "target_times": [
+      13.680000305175781,
+      13.699999809265137,
+      13.720000267028809,
+      13.739999771118164,
+      13.760000228881836,
+      13.779999732971191,
+      13.800000190734863,
+      13.819999694824219,
+      13.84000015258789,
+      13.859999656677246,
+      13.880000114440918,
+      13.899999618530273,
+      13.920000076293945,
+      13.9399995803833,
+      13.960000038146973,
+      13.979999542236328,
+      14.0,
+      14.020000457763672,
+      14.039999961853027,
+      14.0600004196167
+    ],
+    "replay_steps": [
+      {
+        "input_start": 0,
+        "feedback_target_start": null,
+        "forecast_target_start": 20
+      },
+      {
+        "input_start": 20,
+        "feedback_target_start": 20,
+        "forecast_target_start": 40
+      },
+      {
+        "input_start": 40,
+        "feedback_target_start": 40,
+        "forecast_target_start": 60
+      },
+      {
+        "input_start": 60,
+        "feedback_target_start": 60,
+        "forecast_target_start": 80
+      },
+      {
+        "input_start": 80,
+        "feedback_target_start": 80,
+        "forecast_target_start": 100
+      },
+      {
+        "input_start": 100,
+        "feedback_target_start": 100,
+        "forecast_target_start": 120
+      },
+      {
+        "input_start": 120,
+        "feedback_target_start": 120,
+        "forecast_target_start": 140
+      },
+      {
+        "input_start": 140,
+        "feedback_target_start": 140,
+        "forecast_target_start": 160
+      },
+      {
+        "input_start": 160,
+        "feedback_target_start": 160,
+        "forecast_target_start": 180
+      },
+      {
+        "input_start": 180,
+        "feedback_target_start": 180,
+        "forecast_target_start": 200
+      },
+      {
+        "input_start": 200,
+        "feedback_target_start": 200,
+        "forecast_target_start": 220
+      },
+      {
+        "input_start": 220,
+        "feedback_target_start": 220,
+        "forecast_target_start": 240
+      },
+      {
+        "input_start": 240,
+        "feedback_target_start": 240,
+        "forecast_target_start": 260
+      },
+      {
+        "input_start": 260,
+        "feedback_target_start": 260,
+        "forecast_target_start": 280
+      },
+      {
+        "input_start": 280,
+        "feedback_target_start": 280,
+        "forecast_target_start": 300
+      },
+      {
+        "input_start": 300,
+        "feedback_target_start": 300,
+        "forecast_target_start": 320
+      },
+      {
+        "input_start": 320,
+        "feedback_target_start": 320,
+        "forecast_target_start": 340
+      },
+      {
+        "input_start": 340,
+        "feedback_target_start": 340,
+        "forecast_target_start": 360
+      },
+      {
+        "input_start": 360,
+        "feedback_target_start": 360,
+        "forecast_target_start": 380
+      },
+      {
+        "input_start": 380,
+        "feedback_target_start": 380,
+        "forecast_target_start": 400
+      },
+      {
+        "input_start": 400,
+        "feedback_target_start": 400,
+        "forecast_target_start": 420
+      },
+      {
+        "input_start": 420,
+        "feedback_target_start": 420,
+        "forecast_target_start": 440
+      },
+      {
+        "input_start": 440,
+        "feedback_target_start": 440,
+        "forecast_target_start": 460
+      },
+      {
+        "input_start": 460,
+        "feedback_target_start": 460,
+        "forecast_target_start": 480
+      },
+      {
+        "input_start": 480,
+        "feedback_target_start": 480,
+        "forecast_target_start": 500
+      },
+      {
+        "input_start": 500,
+        "feedback_target_start": 500,
+        "forecast_target_start": 520
+      },
+      {
+        "input_start": 520,
+        "feedback_target_start": 520,
+        "forecast_target_start": 540
+      },
+      {
+        "input_start": 540,
+        "feedback_target_start": 540,
+        "forecast_target_start": 560
+      },
+      {
+        "input_start": 560,
+        "feedback_target_start": 560,
+        "forecast_target_start": 580
+      },
+      {
+        "input_start": 580,
+        "feedback_target_start": 580,
+        "forecast_target_start": 600
+      },
+      {
+        "input_start": 600,
+        "feedback_target_start": 600,
+        "forecast_target_start": 620
+      },
+      {
+        "input_start": 620,
+        "feedback_target_start": 620,
+        "forecast_target_start": 640
+      },
+      {
+        "input_start": 640,
+        "feedback_target_start": 640,
+        "forecast_target_start": 660
+      },
+      {
+        "input_start": 660,
+        "feedback_target_start": 660,
+        "forecast_target_start": 680
+      }
+    ],
+    "device": "cuda",
+    "torch": "2.4.1+cu124",
+    "model_dtype": "torch.float16",
+    "gpu_name": "NVIDIA H200 NVL",
+    "cuda_build": "12.4",
+    "compile_status": {
+      "common_compiled": true,
+      "common_graph": true,
+      "refresh_graph": true,
+      "readout_compiled": true,
+      "readout_observe_graph": true,
+      "readout_apply_graph": true
+    },
+    "peak_gpu_allocated_bytes": 653009920,
+    "cpu_threads": 4,
+    "reset_maxabs": 0.0,
+    "elapsed_seconds": 609.8099599441048,
+    "timing_scope": "Unoptimized qualitative replay including loading and checks; not a benchmark",
+    "source_hashes": {
+      "amplitude_overlap.py": "6d84a18574887fd0344c9cc423881507b6a4a3860f633d83c4445b655fc0da46",
+      "base_submission.py": "b9905eb8633d59020573b9c23eeda8d9ea0497102fa23c15707c5333d1ab18ad",
+      "causal_shape.py": "4c7b7320df0b3a9c8bc4479d39ea3ef0a47828d230364543a935919d29c486b7",
+      "cdf_search_kernel.py": "ac1ecfaf078b06e1fed909176f1315b9ae64cc59bd5c70db9281d4b7236fcbe4",
+      "ensemble_unet2d.pth": "0fac98b597053d8460a0e53332f24c74a306d86575b72fdffc57eb448c367c76",
+      "export_receipt.json": "aa19b9ae794b11353898332fd3e8bed2cf04c890de7cbdcc1cce28d5b3d1d4cb",
+      "feature_readout_runtime.py": "da617aea52cd9e828fbb49af7d3a950db34d63c88a8e2ee0ab2054f7b273bd64",
+      "mean_calibration.npz": "df81818160056b1d5d33c2a2202d25f43ea7b862a63f39bc7ee5bd198283a79b",
+      "models/__init__.py": "ca44e67d82b6d00c74b8043fd918b91fb17e186b133e45361155e3a949ca3187",
+      "models/ensemble_unet2d.py": "5580913347bc758c186d66ce712a3a9328032325fe2d9a7edb1aa9f2aaa66d52",
+      "models/unet2d.py": "8834e0511d63c38f2964bf21e5095f5fdc5271ef285543afc82fe4a321c9476e",
+      "moment_fused.py": "4eedb3f805c1fff890f6711082065a295c0306b9a95ffb1231c22e6cfd45e620",
+      "packed_point_heads.py": "195d07ae98b2ecb784ea37975af60c27c8ad72d7cedbe9ef747820b0424fe0f3",
+      "periodic_cdf.py": "f4e6d7161a3a8d69ecb8bd3b1f5021d94d104bbb1cc61c6789c0767fd4622786",
+      "pixel_parent.py": "d9980d54e4071907c26cb2c6ab318277a7e2ea38034c46695cef1833f01cb781",
+      "policy.json": "ab399dd4d9cfb3afdb65433d53a0d1d7214364b9c87f88f2693e2d6ba6528d0a",
+      "regional_amplitude.py": "748e1603c9ef4686f14e688b771ab21b2c6183d983d6b5432638971a084a31eb",
+      "scale_mean.py": "4771503a9301ffa57158bf6325066c0cc73bcb01dcc98b86406522c5df90974c",
+      "shape_model.pth": "18d68144d9d1d25d86bc5d129b3714dbdedaf7e1a5c2458b72c5a250e135a714",
+      "shape_model.py": "834559cace6a798bfc868c122ebe0f8cb0eab2c84724bfa94ffd9a34ce7ce9f8",
+      "sps_optimizer.py": "41f42343593cd2ec022dae84d7d70827da0538ef9f4a08a48ec066b93b139085",
+      "submission.py": "b288c004d1565d2fa613dabe8450eee6e6a0bfeb950ab5be5c30aa32ebb91780",
+      "vendor/tinycc/BUILD.md": "72262b9205c6a2dbd4fa40822418cbb0b9151a2bc1ced88933ddaedf429a9097",
+      "vendor/tinycc/COPYING": "512d2d21b6b3384ba64781abb0208a1b87740bc31e2df48e2b206ddb7e4d5779",
+      "vendor/tinycc/bin/tcc": "39d909cd5fb3a9e84b9e131e4259ee86c2bcfb1c7993c44b611ca00121e25a56",
+      "vendor/tinycc/cc": "1dddac65da043e2068aa7d164efb14cbb3c43e26378bc935e86a6d4f968d3cf6",
+      "vendor/tinycc/lib/tcc/bcheck.o": "4d1cf45e72505e74851c165678cbec60a1e364ba08d02f54e9e4d584fa0bda2f",
+      "vendor/tinycc/lib/tcc/bcheck_run.o": "b7c7ed8ae82c14f4303458c93682338f1102271c2bcb8a76664c91644f4d1c0a",
+      "vendor/tinycc/lib/tcc/bt-exe.o": "47e46747626cefb03ddd819951d1b2f18c0b71c20aca698736a65efe8b446ddb",
+      "vendor/tinycc/lib/tcc/bt-log.o": "72e1ac001c9b996f03f6de4b8caadf3e0df8933f597f48d6ccb760230103a6c1",
+      "vendor/tinycc/lib/tcc/include/float.h": "484ffee95fcdbc00cdc154b9dc2fe03fed65610bf1a73b610871cc39698e6f8e",
+      "vendor/tinycc/lib/tcc/include/stdalign.h": "7612d46571099ccaa7616a510f78f180cb1e91671e6e5e9223a2e297b84b789d",
+      "vendor/tinycc/lib/tcc/include/stdarg.h": "a38f8d34f5e09658cc3a8892b3a7e80ff566eaeedc194e5a85ece0b675993137",
+      "vendor/tinycc/lib/tcc/include/stdatomic.h": "4fbd9d6ec9add338d41c06f44115121925f087dd91f445b56cca1aacb84360e1",
+      "vendor/tinycc/lib/tcc/include/stdbool.h": "5252824225ddc486b0460677f765e4157af5d3ed7acd65b310a4045eafb56af7",
+      "vendor/tinycc/lib/tcc/include/stddef.h": "c42eaa62f574527b8d0d64f802b20c27ebeb66feb2c3608e9b9659225ad6ed45",
+      "vendor/tinycc/lib/tcc/include/stdnoreturn.h": "ec64d8fbf7fb2e800df9784b2efca0a99fc25a3eb5e8da56e4df098937f787f2",
+      "vendor/tinycc/lib/tcc/include/tccdefs.h": "d1016b6170c45f1b8e7f8d83bf1f00f21e288eb2e446d9f141457f6f821acf7b",
+      "vendor/tinycc/lib/tcc/include/tcclib.h": "2cfbd6b9c5e039721fbfb8e6f95a0a9fc30597bbcb2aefa3dda572c278009429",
+      "vendor/tinycc/lib/tcc/include/tgmath.h": "e60c66ff9017f13ab18ee38824792ca771b9235bcb4df57688fec582739524a5",
+      "vendor/tinycc/lib/tcc/include/varargs.h": "07858857f4eed0a61df94beb1a9d678b53fc3d67a0b0e8936155f85ddbcd1dcc",
+      "vendor/tinycc/lib/tcc/libtcc1.a": "7fac7e6c3717e8e82e7b424a69f5ff47f61eea49ea5448e791ebecc208800215",
+      "vendor/tinycc/lib/tcc/runmain.o": "c4d28fa3699c6c5f752f25f4a24bb66db73dcaa8a1b8a7496e9b9deecf7d210d",
+      "vendor/tinycc/tinycc-source.tar.gz": "7cfbbc7e67ceffa035ef8681c551434ca8dbdc3b9bac44639913177b1a7bfee6"
+    },
+    "capture_script_sha256": "7693a9e5baa8b9f8024b7dc9102f80b69fc3e402e06a0c67d2da5018200e610b",
+    "array_sha256": "2bc595e4c8abc19c2d5b2b12eb7ff9681df787f849ce3bc1ca8c5d58f46e459e",
+    "data_transform": "Original float32 conversion and every-second-point subsampling; zero pressure",
+    "causality": "Reset at origin 0; target is read after its forecast, then supplied on the next step"
+  },
+  "color_limits_per_channel_per_column": [
+    [
+      [
+        -0.04,
+        0.19
+      ],
+      [
+        -0.04,
+        0.19
+      ],
+      [
+        0.0,
+        0.09
+      ],
+      [
+        0.0,
+        0.075
+      ]
+    ],
+    [
+      [
+        -0.065,
+        0.065
+      ],
+      [
+        -0.065,
+        0.065
+      ],
+      [
+        0.0,
+        0.04
+      ],
+      [
+        0.0,
+        0.045
+      ]
+    ]
+  ],
+  "colormaps": [
+    [
+      "viridis",
+      "viridis",
+      "magma",
+      "cividis"
+    ],
+    [
+      "RdBu_r",
+      "RdBu_r",
+      "magma",
+      "cividis"
+    ]
+  ],
+  "display": "Bilinear display enlargement only; fixed scales across all 20 horizons; no clipping or field filtering",
+  "orientation": "Stored array orientation: x increases rightwards; y decreases downwards",
+  "playback_ms_per_frame": 200,
+  "playback_scope": "Illustrative, not real-time",
+  "static_horizon": 20,
+  "trace_pixel_zero_based": [
+    16,
+    48
+  ],
+  "descriptive_metrics": {
+    "u": {
+      "mae": 0.004909923765808344,
+      "rmse": 0.008694800548255444,
+      "mean_interval_width": 0.016331246122717857,
+      "empirical_pointwise_coverage": 0.90283203125
+    },
+    "v": {
+      "mae": 0.0023790057748556137,
+      "rmse": 0.004066155757755041,
+      "mean_interval_width": 0.009782799519598484,
+      "empirical_pointwise_coverage": 0.95361328125
+    }
+  },
+  "metrics_scope": "Single window, 20 x 32 x 64 points per channel; stored units, no official scoring",
+  "renderer_sha256": "58084adf688f656780c25bbb178c5d3af45098ba708cc674322c04ae35732c78",
+  "render_environment": {
+    "numpy": "2.3.4",
+    "matplotlib": "3.10.6",
+    "pillow": "11.3.0",
+    "font_file": "arial.ttf",
+    "font_sha256": "b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a"
+  },
+  "assets": {
+    "forecast-comparison-mobile.png": "935b9479f95bbc64af2d13dcba3efbf9f168f5d3938ae1fa5b91dfd71fa438ae",
+    "forecast-comparison.png": "b6c09609121e1726fb5b959dd165707933f090f67ae240dca84964155e5398a0",
+    "forecast-interval-trace.png": "669e7bda66746a6862caa066d7175250121fe34a211737290828f48e8c0b1036",
+    "forecast-comparison-mobile.gif": "3cbfce9acfdbbbdee0239d5980d65032dd8ec223e333fbb2d105257b4fd912ea",
+    "forecast-comparison.gif": "7a62ca02d74d85f901bfe9a86bccc8caa1c37c4a42b44ff2fff9d0169bb2931c"
+  },
+  "execution": {
+    "complete": true,
+    "exit_code": 0,
+    "elapsed_seconds": 627.2858712673187,
+    "image_id": "sha256:f01f44bb9f08e445df647e2dab208c29e727be7eb97e7e74b2fee30c548cc9df",
+    "container_running": false,
+    "container_exit_code": 0,
+    "network": "none",
+    "source_zip_sha256": "57d75bbb16c1ef7195b3f8be30dc08e724dcc51d296c30b857b2ad0326fe308b",
+    "method": "Frozen source Docker build, historical weights; H200 qualitative inference, no training"
+  }
+}

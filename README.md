@@ -13,7 +13,7 @@ NeurIPS 2026 RealPDE Competition · Track 2: Long-Term Test-Time Adaptation
 
 **[NeurIPS poster entry](https://nips.cc/virtual/2026/loc/sydney/181002)** · **[Official final results](https://realpdecompetition.github.io/results.html)**
 
-**[Method](#how-cupid-works)** &nbsp; / &nbsp; **[Reproduce](#reproduce-cupid)** &nbsp; / &nbsp; **[Results](#results-with-provenance)** &nbsp; / &nbsp; **[Code map](docs/code-map.md)** &nbsp; / &nbsp; **[中文](README_ZH.md)**
+**[Gallery](#watch-the-forecast)** &nbsp; / &nbsp; **[Method](#how-cupid-works)** &nbsp; / &nbsp; **[Reproduce](#reproduce-cupid)** &nbsp; / &nbsp; **[Results](#results-with-provenance)** &nbsp; / &nbsp; **[中文](README_ZH.md)**
 
 </div>
 
@@ -29,15 +29,34 @@ Team Cupid's competition solution, **submission 948801 (L33)**.
 
 [Explore the evidence →](docs/results.md)
 
-## A real flow, in motion
+## Watch the forecast
+
+**20 observed frames → 20 future frames, with prediction intervals.**
+See the measurement, the model's prediction, where it misses, and how wide its
+interval is—side by side, across the complete forecast horizon.
+
+<picture>
+  <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="docs/assets/forecast-comparison-mobile.png">
+  <source media="(prefers-reduced-motion: reduce)" srcset="docs/assets/forecast-comparison.png">
+  <source media="(max-width: 600px)" srcset="docs/assets/forecast-comparison-mobile.gif">
+  <img src="docs/assets/forecast-comparison.gif" alt="Actual Cupid inference: ground truth, forecast, absolute error and interval width, for u and v over all 20 future frames." width="100%">
+</picture>
+
+<sub>The October 10 retrained model, replayed causally on public trajectory <code>10125_10.h5</code>. Fixed scales; window selected before inference. Public-training overlap, not an unseen-test result. [Static image](docs/assets/forecast-comparison.png)</sub>
+
+**[Inspect the intervals, selection and provenance →](docs/qualitative.md)**
+
+<details>
+<summary>Explore the measured flow before prediction</summary>
 
 ![Observed public RealPDE velocity fields evolving over time; these are measurements, not model predictions.](docs/assets/real-flow-preview.gif)
 
 <sub>Observed <i>u</i> and <i>v</i> from the public RealPDE trajectory <code>10125_10.h5</code>. Fixed color scales; illustrative playback speed. This is a data preview, not a model forecast. [Static image](docs/assets/real-flow-preview.png) · [Source, rendering details & attribution](docs/assets/README.md)</sub>
 
-**The task:** use 20 observed frames to predict the next 20 frames, together with
-lower and upper bounds. Evaluation uses a 32 × 64 grid; the Real pressure channel is zero.
-The preview above shows the original 64 × 128 observation grid.
+This observation preview uses the original 64 × 128 grid. The forecast gallery
+uses the 32 × 64 evaluation grid; the Real pressure channel is zero.
+
+</details>
 
 ## How Cupid works
 
@@ -125,6 +144,7 @@ mean excludes the official Time score and cannot be compared to official totals.
 | Start here | What you will find |
 |:--|:--|
 | [Method guide](docs/method.md) | Architecture, online state, and causal boundaries |
+| [Forecast gallery](docs/qualitative.md) | Actual predictions, errors, intervals, and regeneration steps |
 | [Code map](docs/code-map.md) | Entry points and the implementation behind each component |
 | [Frozen submission](submission/) | All 1,835 original Final-package files, byte-for-byte |
 | [Reproduction evidence](evidence/) | Docker execution, API checks, and paired public replay |
@@ -171,7 +191,7 @@ upstream work when using the benchmark.
 
 Team-authored code and documentation: **[MIT](LICENSE)**. Third-party licenses
 remain in [the original notices](submission/THIRD_PARTY_NOTICES.md).
-The observed-flow preview derives from the **CC BY-NC 4.0** public dataset;
+The observed-flow preview and forecast gallery derive from the **CC BY-NC 4.0** public dataset;
 see [asset attribution](docs/assets/README.md) and [licensing](docs/licensing.md).
 Raw training trajectories, model checkpoints, Docker layers, and credentials
 are not bundled in this release.

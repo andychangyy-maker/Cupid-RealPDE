@@ -12,8 +12,8 @@ code does not replace these terms.
 
 The [competition dataset](https://huggingface.co/datasets/AI4Science-WestlakeU/RealPDE-Competition-Data)
 has its own CC BY-NC 4.0 terms. Raw trajectories are obtained from the official
-release, not redistributed in this repository. The small observed-flow GIF/PNG
-preview is a data-derived visualization under those same terms; see its
+release, not redistributed in this repository. The observed-flow preview and
+forecast-gallery GIF/PNG files are data-derived visualizations under those same terms; see their
 [attribution and rendering record](assets/README.md). The bundled `mean_std_real.pt` is the
 official normalization artifact, not a pretrained model. Interfaces, scoring
 helpers, and normalization artifacts originating from the competition starting

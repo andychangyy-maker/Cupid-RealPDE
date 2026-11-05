@@ -13,7 +13,7 @@ NeurIPS 2026 RealPDE Competition · Track 2：长期测试时适应（LTTTA）
 
 **[NeurIPS 官方 Poster 展示页](https://nips.cc/virtual/2026/loc/sydney/181002)** · **[官方最终结果](https://realpdecompetition.github.io/results.html)**
 
-**[English](README.md)** &nbsp; / &nbsp; **[方法](#方法如何工作)** &nbsp; / &nbsp; **[复现](#从源码复现)** &nbsp; / &nbsp; **[结果](#已验证的结果)** &nbsp; / &nbsp; **[代码导航](docs/code-map.md)**
+**[English](README.md)** &nbsp; / &nbsp; **[预测展示](#看见模型如何预测)** &nbsp; / &nbsp; **[方法](#方法如何工作)** &nbsp; / &nbsp; **[复现](#从源码复现)** &nbsp; / &nbsp; **[结果](#已验证的结果)**
 
 </div>
 
@@ -28,13 +28,32 @@ Cupid 在预测未来流场及其不确定性的同时，利用持续到来的�
 
 [查看结果与证据 →](docs/results.md)
 
-## 看见真实流动
+## 看见模型如何预测
+
+**20 帧历史观测 → 20 帧未来流场及预测区间。**
+把真值、预测、绝对误差和区间宽度放在一起，完整观察每一个预测时刻。
+
+<picture>
+  <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="docs/assets/forecast-comparison-mobile.png">
+  <source media="(prefers-reduced-motion: reduce)" srcset="docs/assets/forecast-comparison.png">
+  <source media="(max-width: 600px)" srcset="docs/assets/forecast-comparison-mobile.gif">
+  <img src="docs/assets/forecast-comparison.gif" alt="真实 Cupid 推理：未来 20 帧 u、v 的真值、预测、绝对误差和区间宽度" width="100%">
+</picture>
+
+<sub>使用 10 月 10 日完成从头复训的模型，对公开轨迹 <code>10125_10.h5</code> 做因果回放。色标固定，样例在推理前选定；存在训练数据重叠，不是未见测试集结果。[静态版本](docs/assets/forecast-comparison.png)</sub>
+
+**[查看区间曲线、样例选择与完整来源 →](docs/qualitative.md#中文说明)**
+
+<details>
+<summary>展开查看原始实测流场</summary>
 
 ![RealPDE 公开实测流场随时间变化；展示的是观测数据，不是模型预测](docs/assets/real-flow-preview.gif)
 
 <sub>公开轨迹 <code>10125_10.h5</code> 的实测速度分量 u、v。色标固定，播放速度仅用于展示，不代表真实时间比例。[静态版本](docs/assets/real-flow-preview.png) · [数据来源、绘制参数与署名](docs/assets/README.md)</sub>
 
-**任务**：从 20 帧历史观测预测未来 20 帧及上下界。评测使用 32×64 网格，Real 数据的压力通道为零；上方动图展示原始 64×128 观测网格。
+这段观测动图展示原始 64×128 网格；预测对照图使用 32×64 评测网格，Real 数据的压力通道为零。
+
+</details>
 
 ## 方法如何工作
 
