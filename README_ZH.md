@@ -21,10 +21,12 @@ Cupid 在预测未来流场及其不确定性的同时，利用持续到来的�
 **神经网络保持冻结；已经揭示的历史目标，驱动轻量校准状态不断更新。**
 这里完整公开了 Cupid 队的比赛方案 **948801（L33）**。
 
-<a href="docs/results.md"><picture>
+<picture>
   <source media="(max-width: 600px)" srcset="docs/assets/cupid-evidence-mobile.svg">
   <img src="docs/assets/cupid-evidence.svg" alt="官方私有测试集并列第 9；本地单 A800 Docker 从头训练 31 阶段；1,835 个原始源码文件完整保留" width="100%">
-</picture></a>
+</picture>
+
+[查看结果与证据 →](docs/results.md)
 
 ## 看见真实流动
 

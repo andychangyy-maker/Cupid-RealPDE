@@ -22,10 +22,12 @@ observations. **The neural networks stay frozen. Lightweight calibration learns
 from targets that have already been revealed.** This is the complete release of
 Team Cupid's competition solution, **submission 948801 (L33)**.
 
-<a href="docs/results.md"><picture>
+<picture>
   <source media="(max-width: 600px)" srcset="docs/assets/cupid-evidence-mobile.svg">
   <img src="docs/assets/cupid-evidence.svg" alt="Official: joint 9th, 82.6104 ± 0.0653. Local Docker training: 31 stages on one A800 in 4 h 07 min. Release: 1,835 original package files." width="100%">
-</picture></a>
+</picture>
+
+[Explore the evidence →](docs/results.md)
 
 ## A real flow, in motion
 
