@@ -37,6 +37,8 @@ This visualization helper is separate from the frozen training environment.
 - `cupid-overview.svg`: explanatory method schematic.
 - `cupid-evidence.svg`: official final result and separately labeled local reproduction/source facts. Sources: [results guide](../results.md).
 - `cupid-social.png`: repository link-preview cover, derived from the team-authored hero.
+- `cupid-*-mobile.svg`: vertically arranged versions for narrow README layouts;
+  they present the same method and evidence as the desktop graphics.
 
 These team-authored graphics use the repository's MIT License. The root license
 does not relicense the observed-flow preview or the upstream dataset.

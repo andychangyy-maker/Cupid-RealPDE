@@ -1,12 +1,17 @@
 <div align="center">
 
-<a href="README.md"><img src="docs/assets/cupid-hero.svg" alt="Cupid：预测流场，随观测到来进行校准" width="100%"></a>
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/cupid-hero-mobile.svg">
+  <img src="docs/assets/cupid-hero.svg" alt="Cupid：预测流场，随观测到来进行校准" width="100%">
+</picture>
 
 ### 不确定性感知流场预测与因果在线校准
 
 **Yaoyu Chang · Wenhao Liu · Hao Shi**
 
 NeurIPS 2026 RealPDE Competition · Track 2：长期测试时适应（LTTTA）
+
+**[NeurIPS 官方 Poster 展示页](https://nips.cc/virtual/2026/loc/sydney/181002)** · **[官方最终结果](https://realpdecompetition.github.io/results.html)**
 
 **[English](README.md)** &nbsp; / &nbsp; **[方法](#方法如何工作)** &nbsp; / &nbsp; **[复现](#从源码复现)** &nbsp; / &nbsp; **[结果](#已验证的结果)** &nbsp; / &nbsp; **[代码导航](docs/code-map.md)**
 
@@ -16,7 +21,10 @@ Cupid 在预测未来流场及其不确定性的同时，利用持续到来的�
 **神经网络保持冻结；已经揭示的历史目标，驱动轻量校准状态不断更新。**
 这里完整公开了 Cupid 队的比赛方案 **948801（L33）**。
 
-[![官方私有测试集并列第 9；本地单 A800 Docker 从头训练 31 阶段；1,835 个原始源码文件完整保留](docs/assets/cupid-evidence.svg)](docs/results.md)
+<a href="docs/results.md"><picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/cupid-evidence-mobile.svg">
+  <img src="docs/assets/cupid-evidence.svg" alt="官方私有测试集并列第 9；本地单 A800 Docker 从头训练 31 阶段；1,835 个原始源码文件完整保留" width="100%">
+</picture></a>
 
 ## 看见真实流动
 
@@ -28,7 +36,10 @@ Cupid 在预测未来流场及其不确定性的同时，利用持续到来的�
 
 ## 方法如何工作
 
-![Cupid 方法：离线训练教师和学生；在线冻结网络，仅用已揭示观测更新校准状态](docs/assets/cupid-overview.svg)
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/cupid-overview-mobile.svg">
+  <img src="docs/assets/cupid-overview.svg" alt="Cupid 方法：离线训练教师和学生；在线冻结网络，仅用已揭示观测更新校准状态" width="100%">
+</picture>
 
 1. **离线学习。**三个独立 Sim 教师指导多成员 U-Net，再通过 Real 数据拟合点预测、波动形状、均值校准和非对称不确定性区间，形成固定的 31 阶段链路。
 2. **因果校准。**已经揭示的历史目标更新区域均值、波动幅度、残差分布和 32 维特征的正则线性读出；每条轨迹重置状态，推理阶段没有神经网络反向传播。
@@ -43,6 +54,9 @@ Cupid 在预测未来流场及其不确定性的同时，利用持续到来的�
 从公开源码构建即可，不依赖历史私有 Docker Hub 仓库。
 
 ```bash
+git clone https://github.com/andychangyy-maker/Cupid-RealPDE.git
+cd Cupid-RealPDE
+
 # 无需 GPU，仅使用 Python 标准库核验原始包。
 python scripts/verify_source.py
 

@@ -40,6 +40,7 @@ The public normalization file is already included at
 Copy that small artifact to the data root; it is not a model checkpoint:
 
 ```bash
+DATA=/absolute/path/to/public-training-data
 cp submission/assets/mean_std_real.pt "$DATA/mean_std_real.pt"
 ```
 
@@ -60,6 +61,9 @@ unique dataset for every required field and copies those datasets to the root,
 preserving values, dtypes, and dataset attributes. It does not resize arrays,
 invent metadata, change physical units, or infer angle/Reynolds values from
 filenames. Ambiguous or missing fields cause an error before copying begins.
+
+First build `cupid-realpde:948801` using the [reproduction guide](reproduction.md).
+Run the following commands from the repository root:
 
 ```bash
 # RAW contains unpacked train_real/ and train_sim/ directories.

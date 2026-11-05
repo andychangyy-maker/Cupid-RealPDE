@@ -1,12 +1,17 @@
 <div align="center">
 
-<a href="https://github.com/andychangyy-maker/Cupid-RealPDE"><img src="docs/assets/cupid-hero.svg" alt="Cupid — Forecast the flow. Calibrate as observations arrive." width="100%"></a>
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/cupid-hero-mobile.svg">
+  <img src="docs/assets/cupid-hero.svg" alt="Cupid — Forecast the flow. Calibrate as observations arrive." width="100%">
+</picture>
 
 ### Uncertainty-Aware Flow Forecasting<br>with Causal Online Calibration
 
 **Yaoyu Chang · Wenhao Liu · Hao Shi**
 
 NeurIPS 2026 RealPDE Competition · Track 2: Long-Term Test-Time Adaptation
+
+**[NeurIPS poster entry](https://nips.cc/virtual/2026/loc/sydney/181002)** · **[Official final results](https://realpdecompetition.github.io/results.html)**
 
 **[Method](#how-cupid-works)** &nbsp; / &nbsp; **[Reproduce](#reproduce-cupid)** &nbsp; / &nbsp; **[Results](#results-with-provenance)** &nbsp; / &nbsp; **[Code map](docs/code-map.md)** &nbsp; / &nbsp; **[中文](README_ZH.md)**
 
@@ -17,7 +22,10 @@ observations. **The neural networks stay frozen. Lightweight calibration learns
 from targets that have already been revealed.** This is the complete release of
 Team Cupid's competition solution, **submission 948801 (L33)**.
 
-[![Official: joint 9th, 82.6104 ± 0.0653. Local Docker training: 31 stages on one A800 in 4 h 07 min. Release: 1,835 original package files.](docs/assets/cupid-evidence.svg)](docs/results.md)
+<a href="docs/results.md"><picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/cupid-evidence-mobile.svg">
+  <img src="docs/assets/cupid-evidence.svg" alt="Official: joint 9th, 82.6104 ± 0.0653. Local Docker training: 31 stages on one A800 in 4 h 07 min. Release: 1,835 original package files." width="100%">
+</picture></a>
 
 ## A real flow, in motion
 
@@ -31,7 +39,10 @@ The preview above shows the original 64 × 128 observation grid.
 
 ## How Cupid works
 
-![Cupid pipeline: train teachers and student offline; use frozen networks and causally updated calibration online.](docs/assets/cupid-overview.svg)
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/cupid-overview-mobile.svg">
+  <img src="docs/assets/cupid-overview.svg" alt="Cupid pipeline: train teachers and student offline; use frozen networks and causally updated calibration online." width="100%">
+</picture>
 
 1. **Learn offline.** Three independent Sim teachers supervise a multi-member
    U-Net. Real-data training fits point forecasts, fluctuation shape, mean
@@ -54,6 +65,9 @@ and one A800 80 GB. The historical private Docker Hub repository is not required
 First read the [public data guide](docs/data.md), then run from the repository root:
 
 ```bash
+git clone https://github.com/andychangyy-maker/Cupid-RealPDE.git
+cd Cupid-RealPDE
+
 # Standard-library integrity check; no GPU required.
 python scripts/verify_source.py
 

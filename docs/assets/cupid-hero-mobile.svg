@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="340" viewBox="0 0 480 340" role="img" aria-labelledby="title desc">
+  <title id="title">Cupid — Forecast the flow. Calibrate as observations arrive.</title>
+  <desc id="desc">Compact conceptual graphic for the NeurIPS 2026 RealPDE Track 2 solution.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#091625"/><stop offset="1" stop-color="#123743"/></linearGradient>
+    <clipPath id="clip"><rect width="480" height="340" rx="22"/></clipPath>
+    <style>text{font-family:Arial,Helvetica,sans-serif}</style>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="480" height="340" fill="url(#bg)"/>
+    <g fill="none" stroke="#45dfcf" stroke-opacity=".22" stroke-width="2">
+      <path d="M290 130C350 130 340 72 402 82S449 128 500 106"/>
+      <path d="M290 147C350 147 340 89 402 99S449 145 500 123"/>
+      <path d="M290 164C350 164 340 106 402 116S449 162 500 140"/>
+      <path d="M290 181C350 181 340 123 402 133S449 179 500 157"/>
+    </g>
+    <text x="28" y="40" fill="#91d9d1" font-size="19" font-weight="700">NEURIPS 2026 · REALPDE · TRACK 2</text>
+    <text x="24" y="143" fill="#f4f7ed" font-size="92" font-weight="700" letter-spacing="-4">Cupid</text>
+    <path d="M310 74C326 55 344 63 344 77C344 93 326 103 310 113C294 103 276 93 276 77C276 63 294 55 310 74Z" fill="none" stroke="#55deca" stroke-width="2.5"/>
+    <path d="M276 106L330 71M320 71H330V81" fill="none" stroke="#ffae8b" stroke-width="2.5"/>
+    <text x="28" y="195" fill="#f4f7ed" font-size="29" font-weight="700">Forecast the flow.</text>
+    <text x="28" y="233" fill="#91d9d1" font-size="24">Calibrate as observations arrive.</text>
+    <path d="M28 263H452" stroke="#42615e"/>
+    <text x="28" y="298" fill="#bbd0cf" font-size="20">Frozen networks. Causal calibration.</text>
+  </g>
+</svg>

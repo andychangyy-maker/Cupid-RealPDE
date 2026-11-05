@@ -5,7 +5,7 @@
 ## Official final result
 
 The [organizers' final results](https://realpdecompetition.github.io/results.html),
-published October 17 and checked November 4, 2026, list **Cupid (andychang)** at
+published October 17, updated November 4, and checked November 5, 2026, list **Cupid (andychang)** at
 **joint 9th place** in Track 2. The total score is **82.6104**, with standard
 deviation **0.0653**.
 
@@ -13,6 +13,10 @@ Organizers trained each team's package from scratch three times on A800 GPUs,
 then evaluated each resulting model five times. The table reports the mean and
 standard deviation across those 15 evaluations. Shared places follow the
 organizers' stated rule; we retain their `9=` designation.
+
+The [official NeurIPS poster entry](https://nips.cc/virtual/2026/loc/sydney/181002)
+lists the solution title and all three authors. This is a competition-session
+poster listing, not a claim of an accepted NeurIPS main-track paper.
 
 This is an official private-test result. The earlier development submission
 948801 scored 82.186978; these are different evaluation sets and should not be

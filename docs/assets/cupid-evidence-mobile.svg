@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="460" viewBox="0 0 480 460" role="img" aria-labelledby="title desc">
+  <title id="title">Official final result and local reproduction highlights</title>
+  <desc id="desc">Official private test: joint ninth, mean 82.6104, standard deviation 0.0653. Local Docker training: 31 stages, one A800, 4 hours 7 minutes. Release: 1835 original package files.</desc>
+  <style>text{font-family:Arial,Helvetica,sans-serif}.k{font-size:20px;font-weight:700}.v{font-size:38px;font-weight:700;fill:#132b39}.b{font-size:22px;fill:#47606a}</style>
+  <rect x="1" y="1" width="478" height="142" rx="18" fill="#eaf7f2" stroke="#c5e2d6"/>
+  <rect x="1" y="159" width="478" height="142" rx="18" fill="#f5f3ed" stroke="#e3dfd2"/>
+  <rect x="1" y="317" width="478" height="142" rx="18" fill="#edf3fa" stroke="#d5e1ee"/>
+  <text x="24" y="35" class="k" fill="#177262">OFFICIAL · PRIVATE TEST</text>
+  <text x="24" y="84" class="v">Joint 9th</text>
+  <text x="24" y="119" class="b">82.6104 ± 0.0653 total score</text>
+  <text x="24" y="193" class="k" fill="#86613c">LOCAL · DOCKER REPRODUCTION</text>
+  <text x="24" y="242" class="v">4 h 07 min</text>
+  <text x="24" y="277" class="b">31 stages · one A800 · from scratch</text>
+  <text x="24" y="351" class="k" fill="#365f87">RELEASE · FROZEN SOURCE</text>
+  <text x="24" y="400" class="v">1,835 files</text>
+  <text x="24" y="435" class="b">Original package · SHA256 checked</text>
+</svg>

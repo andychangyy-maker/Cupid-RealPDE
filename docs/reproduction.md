@@ -21,9 +21,12 @@ memory measurements are from the A800 run.
 
 ## 1. Verify and build
 
-From the repository root:
+Clone the public repository (or enter your existing checkout), then verify and
+build from its root:
 
 ```bash
+git clone https://github.com/andychangyy-maker/Cupid-RealPDE.git
+cd Cupid-RealPDE
 python scripts/verify_source.py
 docker build --platform linux/amd64 -t cupid-realpde:948801 ./submission
 ```

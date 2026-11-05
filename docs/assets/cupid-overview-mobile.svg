@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="920" viewBox="0 0 480 920" role="img" aria-labelledby="title desc">
+  <title id="title">Keep the network fixed. Let calibration adapt.</title>
+  <desc id="desc">Offline: train three Sim teachers and a student, fit Real point, shape and uncertainty components, then freeze the networks. Online: observe 20 frames, forecast with frozen networks, calibrate, and predict 20 future frames with bounds. Only revealed targets update later predictions; reset state per trajectory.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#526c75" stroke-width="1.5"/></marker>
+    <style>text{font-family:Arial,Helvetica,sans-serif}.k{font-size:20px;font-weight:700}.h{font-size:27px;font-weight:700;fill:#14303d}.b{font-size:22px;fill:#4e6872}.flow{stroke:#526c75;stroke-width:2;fill:none;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect x="1" y="1" width="478" height="918" rx="20" fill="#f6f7f3" stroke="#dce3dd"/>
+  <text x="24" y="36" class="k" fill="#187e6d">THE CORE IDEA</text>
+  <text x="24" y="78" class="h">Keep the network fixed.</text>
+  <text x="24" y="113" class="h">Let calibration adapt.</text>
+  <path d="M24 140H456" stroke="#d5dfd8"/>
+  <text x="24" y="178" class="k" fill="#365f76">OFFLINE · 31 STAGES FROM SCRATCH</text>
+  <text x="24" y="215" class="b">Three Sim teachers → student</text>
+  <text x="24" y="247" class="b">Real data → point, shape, uncertainty</text>
+  <text x="24" y="279" class="b">Export frozen networks</text>
+  <path d="M24 309H456" stroke="#d5dfd8"/>
+  <text x="24" y="348" class="k" fill="#177262">ONLINE · CAUSAL UPDATES ONLY</text>
+  <rect x="24" y="373" width="398" height="84" rx="12" fill="#fff" stroke="#d5dfd8"/>
+  <text x="42" y="406" class="h">01  Observe 20 past frames</text>
+  <text x="42" y="437" class="b">Flow history at forecast time</text>
+  <path d="M223 459V479" class="flow"/>
+  <rect x="24" y="490" width="398" height="84" rx="12" fill="#e6edf5" stroke="#c8d8e7"/>
+  <text x="42" y="523" class="h">02  Frozen networks</text>
+  <text x="42" y="554" class="b">Point + shape + bounds</text>
+  <path d="M223 576V596" class="flow"/>
+  <rect x="24" y="607" width="398" height="84" rx="12" fill="#d9f1e5" stroke="#83c4af" stroke-width="2"/>
+  <text x="42" y="640" class="h">03  Adaptive calibration</text>
+  <text x="42" y="671" class="b">Regional statistics + ridge readout</text>
+  <path d="M223 693V713" class="flow"/>
+  <rect x="24" y="724" width="398" height="84" rx="12" fill="#fff" stroke="#d5dfd8"/>
+  <text x="42" y="757" class="h">04  Predict 20 future frames</text>
+  <text x="42" y="788" class="b">Forecast + lower / upper bounds</text>
+  <path d="M424 766H450V649H426" class="flow"/>
+  <text x="24" y="848" font-size="21" font-weight="700" fill="#177262">Revealed targets update later forecasts.</text>
+  <text x="24" y="880" font-size="21" fill="#4e6872">No neural backprop. Reset per trajectory.</text>
+</svg>
